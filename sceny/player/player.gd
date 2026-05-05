@@ -3,9 +3,9 @@ extends CharacterBody3D
 var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 9.0
-const JUMP_VELOCITY = 4.5
-const SENSITIVITY =0.01
-
+const JUMP_VELOCITY = 5.5
+const SENSITIVITY = 0.005
+const GRAVITY = 2.0
 
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.08
@@ -14,11 +14,9 @@ var t_bob = 0.0
 const BASE_FOV = 75.0
 const FOV_CHANGE =1.5
 
-var gravity = 9.8
-
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
-
+@onready var raycast = $Head/RayCast3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -32,9 +30,16 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta: float) -> void:
+	
+	if Input.is_action_just_pressed("interact"):
+		if raycast.is_colliding():
+			var body = raycast.get_collider()
+			if body.is_in_group("interactable"):
+				body.get_parent().interact()
+	
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta * GRAVITY
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

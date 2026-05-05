@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dvqeoowuayc5e"]
+
+[ext_resource type="Script" uid="uid://dh7s2ekrt810y" path="res://sceny/npc/npc.gd" id="1_iptxb"]
+[ext_resource type="PackedScene" uid="uid://d2esiyskwhxm6" path="res://Licencjat/licencjat modele final/kobitka.glb" id="1_tvel4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_exjxd"]
+height = 4.026367
+
+[node name="NPC" type="Node3D" unique_id=777428972]
+script = ExtResource("1_iptxb")
+
+[node name="kobitka" parent="." unique_id=1252221637 instance=ExtResource("1_tvel4")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1053622764 groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1653754383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1057702, 0)
+shape = SubResource("CapsuleShape3D_exjxd")

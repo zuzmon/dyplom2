@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cf4nbwg63xliq"]
 
-[ext_resource type="Script" uid="uid://brgobbaxt67d0" path="res://player.gd" id="1_cgyju"]
+[ext_resource type="Script" uid="uid://brgobbaxt67d0" path="res://sceny/player/player.gd" id="1_cgyju"]
 [ext_resource type="Texture2D" uid="uid://bta5kdqmh7bl0" path="res://tekstury/roboczo/13121.jpg" id="1_llyix"]
 [ext_resource type="PackedScene" uid="uid://ctgyvlt64o4tb" path="res://assety/tablice.glb" id="2_cgyju"]
 [ext_resource type="PackedScene" uid="uid://bm3lvmsw0vpm1" path="res://assety/stolnarad.glb" id="3_5n6s8"]
