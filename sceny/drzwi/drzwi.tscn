@@ -9,7 +9,7 @@ size = Vector3(2.55365, 5.074852, 0.34545898)
 [node name="drzwi" unique_id=1793167788 instance=ExtResource("1_5uv85")]
 script = ExtResource("2_dtoqp")
 
-[node name="Cube_059" parent="." index="0" unique_id=966506950]
+[node name="Cube_059" parent="." index="0" unique_id=1860765867]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.001021, -2, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=797344460 groups=["interactable"]]
