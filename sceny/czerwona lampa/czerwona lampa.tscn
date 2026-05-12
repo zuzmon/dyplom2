@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://lgphw2pcqmw7"]
+
+[ext_resource type="PackedScene" uid="uid://dilum8opol7ed" path="res://Licencjat/licencjat modele final/lampa.glb" id="1_gqcvb"]
+
+[node name="CzerwonaLampa" type="Node3D" unique_id=798374613]
+
+[node name="lampa" parent="." unique_id=1654787474 instance=ExtResource("1_gqcvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9538897, -0.6259892, -0.5804484)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="lampa" unique_id=487905247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.8031397, 0.5883205)
+light_color = Color(0.74509805, 0.11764706, 0.10980392, 1)
+light_energy = 6.069
+omni_range = 197.432

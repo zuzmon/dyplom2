@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dxm7nha75cbhs"]
+
+[ext_resource type="PackedScene" uid="uid://b6yoh0ffruyfc" path="res://assety/lampa.glb" id="1_bmntj"]
+
+[node name="Lampa" type="Node3D" unique_id=561674145]
+
+[node name="lampa" parent="." unique_id=103372760 instance=ExtResource("1_bmntj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18732768, 0, -0.28182077)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2064697412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8536406, 0)
+shadow_enabled = true
+shadow_blur = 4.267
+omni_range = 10.785074
+omni_attenuation = -0.386

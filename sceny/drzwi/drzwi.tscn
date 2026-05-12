@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b13dytxeo2ybt" path="res://assety/drzwi.glb" id="1_5uv85"]
 [ext_resource type="Script" uid="uid://b4ue8wlhhe" path="res://sceny/drzwi/drzwi.gd" id="2_dtoqp"]
+[ext_resource type="PackedScene" uid="uid://c4kb7mbnryfau" path="res://Licencjat/licencjat modele final/drzwi.glb" id="3_8x3aq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_644ot"]
 size = Vector3(2.55365, 5.074852, 0.34545898)
@@ -11,6 +12,7 @@ script = ExtResource("2_dtoqp")
 
 [node name="Cube_059" parent="." index="0" unique_id=1860765867]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.001021, -2, 0)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=797344460 groups=["interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.001021, 0, 0)
@@ -18,3 +20,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.001021, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1501490634]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32126617, 0.58815384, -0.08044815)
 shape = SubResource("BoxShape3D_644ot")
+
+[node name="drzwi" parent="." index="2" unique_id=436897005 instance=ExtResource("3_8x3aq")]
+transform = Transform3D(1.0403161, 0, 0, 0, 1, 0, 0, 0, 1, 1.3436904, -1.959293, 0)
