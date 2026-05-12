@@ -54,6 +54,7 @@
 [ext_resource type="PackedScene" uid="uid://byq8teaw17h51" path="res://Licencjat/licencjat modele final/automat1.glb" id="51_d5qac"]
 [ext_resource type="PackedScene" uid="uid://blypjhmm1ifq0" path="res://Licencjat/licencjat modele final/telewizorglb.glb" id="52_2t3yc"]
 [ext_resource type="PackedScene" uid="uid://cd4vdf82fafva" path="res://Licencjat/licencjat modele final/stanowisko solo.glb" id="54_4yosy"]
+[ext_resource type="PackedScene" uid="uid://d2h3uuuihn2ag" path="res://sceny/Teleport/teleport.tscn" id="55_4yosy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orym7"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -797,22 +798,21 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1388661416]
+[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=758078935]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -0.875
-offset_top = -0.875
-offset_right = 0.875
-offset_bottom = 0.875
+offset_left = -6.25
+offset_top = -6.5
+offset_right = 6.25
+offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_mcxmv")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="drzwi" parent="." unique_id=1793167788 instance=ExtResource("15_xgtly")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.0854907, 1.8019617, -2.582337)
@@ -1532,3 +1532,7 @@ light_energy = 16.0
 shadow_enabled = true
 spot_range = 17.656874
 spot_angle = 50.029446
+
+[node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("55_4yosy")]
+transform = Transform3D(0.25411248, 0, -0.96717465, 0, 1, 0, 0.96717465, 0, 0.25411248, 21.453667, 2.0432146, 3.3828223)
+scene = 3

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d2h3uuuihn2ag"]
+
+[ext_resource type="PackedScene" uid="uid://ctpsjdycb2s5o" path="res://Licencjat/licencjat modele final/czerwony.glb" id="1_gwqk3"]
+[ext_resource type="Script" uid="uid://7hl5s5ll3pa1" path="res://sceny/Teleport/teleport.gd" id="1_ukdxx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ukdxx"]
+
+[node name="Teleport" type="Node3D" unique_id=206469578]
+script = ExtResource("1_ukdxx")
+
+[node name="czerwony" parent="." unique_id=777005374 instance=ExtResource("1_gwqk3")]
+transform = Transform3D(0.059554607, 0, 0, 0, 0.059554607, 0, 0, 0, 0.059554603, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=706359907 groups=["interactable"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1374218497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14330614, 0.15796232, -0.11955178)
+shape = SubResource("BoxShape3D_ukdxx")

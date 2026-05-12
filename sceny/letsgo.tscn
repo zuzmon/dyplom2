@@ -37,9 +37,6 @@
 [ext_resource type="PackedScene" uid="uid://b0hqq2gsqf1v0" path="res://Licencjat/licencjat modele final/wc znak baba.glb" id="35_g7gjp"]
 [ext_resource type="PackedScene" uid="uid://cx8hjxeauryy3" path="res://Licencjat/licencjat modele final/wc znak chlop.glb" id="36_0xhqn"]
 [ext_resource type="PackedScene" uid="uid://dshjc1c5d3gqe" path="res://Licencjat/licencjat modele final/drukarka.glb" id="36_g7gjp"]
-[ext_resource type="PackedScene" uid="uid://ctlvboeoomciv" path="res://Licencjat/licencjat modele final/szef.glb" id="36_gy0d6"]
-[ext_resource type="PackedScene" uid="uid://d2esiyskwhxm6" path="res://Licencjat/licencjat modele final/kobitka.glb" id="37_xgjbx"]
-[ext_resource type="PackedScene" uid="uid://cp1r5glxpoavq" path="res://Licencjat/licencjat modele final/meżczyzna.glb" id="38_kqbgl"]
 [ext_resource type="PackedScene" uid="uid://c67hr1c5upm81" path="res://Licencjat/licencjat modele final/obraz2.glb" id="39_kqbgl"]
 [ext_resource type="PackedScene" uid="uid://dqahdpkh4g1i3" path="res://Licencjat/licencjat modele final/obraz3.glb" id="40_ygngh"]
 [ext_resource type="PackedScene" uid="uid://dt2xdq7mc5k8" path="res://Licencjat/licencjat modele final/kibelglb.glb" id="41_s7xwn"]
@@ -48,8 +45,12 @@
 [ext_resource type="PackedScene" uid="uid://5vhyu0ts4my7" path="res://Licencjat/licencjat modele final/cukier.glb" id="45_jl2av"]
 [ext_resource type="PackedScene" uid="uid://chrbxrrhi0vlb" path="res://Licencjat/licencjat modele final/kubekkuchnia.glb" id="46_mf821"]
 [ext_resource type="PackedScene" uid="uid://dto366wg1dur6" path="res://Licencjat/licencjat modele final/suszarka do naczyn.glb" id="47_q50ps"]
+[ext_resource type="PackedScene" uid="uid://bjenal6iq5rh3" path="res://sceny/npc/boss.tscn" id="48_nulnx"]
+[ext_resource type="PackedScene" uid="uid://b061q0opmqii6" path="res://sceny/npc/kolega.tscn" id="49_nudkn"]
 [ext_resource type="Texture2D" uid="uid://dc6yb5pk0emhl" path="res://tekstury/za oknem.png" id="49_q50ps"]
+[ext_resource type="PackedScene" uid="uid://drurs85s0q4vn" path="res://sceny/npc/kobieta.tscn" id="50_a4n3v"]
 [ext_resource type="PackedScene" uid="uid://ctpsjdycb2s5o" path="res://Licencjat/licencjat modele final/czerwony.glb" id="50_nulnx"]
+[ext_resource type="PackedScene" uid="uid://d2h3uuuihn2ag" path="res://sceny/Teleport/teleport.tscn" id="51_nudkn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orym7"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -423,6 +424,15 @@ _surfaces = [{
 albedo_texture = ExtResource("19_tv31b")
 uv1_scale = Vector3(7.815, 1, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nulnx"]
+size = Vector3(1, 9.502075, 28.483826)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nudkn"]
+size = Vector3(1, 9.513123, 24.007446)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a4n3v"]
+size = Vector3(1, 9.331512, 2.9528809)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_mf821"]
 size = Vector3(16.025497, 4.645508, 1.7453613)
 
@@ -435,7 +445,7 @@ shader_parameter/dither_strength = 0.03
 shader_parameter/jitter_amount = 0.001
 shader_parameter/jitter_speed = 1.2
 shader_parameter/jitter_frequency = 180.0
-shader_parameter/chromatic_aberration_strength = 0.0050000002375
+shader_parameter/chromatic_aberration_strength = 0.0010000000475
 shader_parameter/vignette_strength = 0.8
 shader_parameter/vignette_radius = 0.9
 
@@ -779,6 +789,22 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5qf8k")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sciany/CSGBakedMeshInstance3D20" unique_id=1817708849]
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sciany/CSGBakedMeshInstance3D20/StaticBody3D" unique_id=574299904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6758165, 4.2510376, 11.940643)
+shape = SubResource("BoxShape3D_nulnx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sciany/CSGBakedMeshInstance3D20/StaticBody3D" unique_id=1401221065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7072334, 4.2565613, -17.281067)
+shape = SubResource("BoxShape3D_nudkn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Sciany/CSGBakedMeshInstance3D20/StaticBody3D" unique_id=935169213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.703727, 4.165756, 30.54829)
+shape = SubResource("BoxShape3D_a4n3v")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Sciany/CSGBakedMeshInstance3D20/StaticBody3D" unique_id=2070658675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.703727, 4.165756, 50.453636)
+shape = SubResource("BoxShape3D_a4n3v")
+
 [node name="kosz" parent="Sciany" unique_id=149845718 instance=ExtResource("10_s7xwn")]
 transform = Transform3D(1.7479682, 0, 0, 0, 1.9061482, 0, 0, 0, 1.7479682, 8.299154, 0.6431873, 86.82469)
 
@@ -830,15 +856,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -0.875
-offset_top = -0.875
-offset_right = 0.875
-offset_bottom = 0.875
+offset_left = -6.25
+offset_top = -6.5
+offset_right = 6.25
+offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("32_0rws3")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="drzwi" parent="." unique_id=1793167788 instance=ExtResource("34_mgq3b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.0854907, 1.8019617, -2.582337)
@@ -1316,15 +1341,6 @@ transform = Transform3D(-0.9999967, 0, 0.002565532, 0, 1, 0, -0.002565532, 0, -0
 [node name="drukarka2" parent="." unique_id=1558193998 instance=ExtResource("36_g7gjp")]
 transform = Transform3D(-0.9999967, 0, 0.002565532, 0, 1, 0, -0.002565532, 0, -0.9999967, 28.325722, 0.844962, 49.007607)
 
-[node name="szef" parent="." unique_id=966850818 instance=ExtResource("36_gy0d6")]
-transform = Transform3D(0.8585432, 0, 0.7346137, 0, 1.1299353, 0, -0.7346137, 0, 0.8585432, -14.5243435, 0.74917316, -7.5047426)
-
-[node name="kobitka" parent="." unique_id=1185984658 instance=ExtResource("37_xgjbx")]
-transform = Transform3D(-0.41196877, 0, -0.9672972, 0, 1.0513716, 0, 0.9672972, 0, -0.41196877, 35.51295, -0.17716503, 45.133923)
-
-[node name="meżczyzna" parent="." unique_id=1977890167 instance=ExtResource("38_kqbgl")]
-transform = Transform3D(-0.70694816, 0, -0.8635373, 0, 1.1160074, 0, 0.8635373, 0, -0.70694816, 17.19794, -0.15839864, -9.571766)
-
 [node name="obraz2" parent="." unique_id=745556276 instance=ExtResource("39_kqbgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.422226, 5.7094603, 1.6581333)
 
@@ -1413,3 +1429,15 @@ size = Vector3(23.910278, 14.407684, 1)
 
 [node name="czerwony" parent="." unique_id=1988325870 instance=ExtResource("50_nulnx")]
 transform = Transform3D(-0.04182475, -0.008472605, 0.04154102, -0.006011391, 0.058948845, 0.0059706117, -0.0419679, 0, -0.04225454, 14.357275, 2.4341602, 22.510834)
+
+[node name="NPC_Boss" parent="." unique_id=777428972 instance=ExtResource("48_nulnx")]
+transform = Transform3D(0.80453265, 0, 0.7574641, 0, 1.1049999, 0, -0.7574641, 0, 0.80453265, -14.486123, -0.137223, -7.6403904)
+
+[node name="NPC_Kolega" parent="." unique_id=851700360 instance=ExtResource("49_nudkn")]
+transform = Transform3D(-0.64001626, 0, -0.8197433, 0, 1.04, 0, 0.8197433, 0, -0.64001626, 17.490965, -0.17216974, -9.427159)
+
+[node name="NPC_Kobieta" parent="." unique_id=725520134 instance=ExtResource("50_a4n3v")]
+transform = Transform3D(-0.3658191, 0, -0.930686, 0, 1, 0, 0.930686, 0, -0.3658191, 35.45991, -0.1768943, 45.23934)
+
+[node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("51_nudkn")]
+transform = Transform3D(-0.96761674, 0, 0.2524239, 0, 1, 0, -0.2524239, 0, -0.96761674, 16.70742, 2.6122818, 84.55833)

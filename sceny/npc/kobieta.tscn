@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://drurs85s0q4vn"]
+
+[ext_resource type="PackedScene" uid="uid://dvqeoowuayc5e" path="res://sceny/npc/npc.tscn" id="1_sv16d"]
+[ext_resource type="PackedScene" uid="uid://d2esiyskwhxm6" path="res://Licencjat/licencjat modele final/kobitka.glb" id="2_1iq8f"]
+
+[node name="NPC_Kobieta" unique_id=777428972 instance=ExtResource("1_sv16d")]
+
+[node name="kobitka" parent="." index="0" unique_id=89664907 instance=ExtResource("2_1iq8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11607504, 0, 0)
+
+[node name="Default" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="0" unique_id=151041152]
+dialog = Array[String](["Hejka", "Co tam"])

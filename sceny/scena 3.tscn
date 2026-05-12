@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bpy0dr2lahuob" path="res://tekstury/white-wall-textures.jpg" id="8_f2yyf"]
 [ext_resource type="Texture2D" uid="uid://cjywwkxq8oddh" path="res://tekstury/gray-wall-textures.jpg" id="9_en7r5"]
 [ext_resource type="PackedScene" uid="uid://dd70sn13mr1y4" path="res://Licencjat/licencjat modele final/kosz.glb" id="10_r2vai"]
+[ext_resource type="Shader" uid="uid://cw164wcly5qnd" path="res://sceny/letsgo.gdshader" id="11_7bdtf"]
 [ext_resource type="PackedScene" uid="uid://c3naqq12uoowf" path="res://Licencjat/licencjat modele final/krzak.glb" id="11_yawpl"]
 [ext_resource type="Texture2D" uid="uid://dd7djbf08jxr1" path="res://kursor.png" id="13_a5rlq"]
 [ext_resource type="PackedScene" uid="uid://dycq0xeij5qsh" path="res://sceny/drzwi/drzwi.tscn" id="14_g6qfv"]
@@ -42,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://chrbxrrhi0vlb" path="res://Licencjat/licencjat modele final/kubekkuchnia.glb" id="42_f0bq8"]
 [ext_resource type="PackedScene" uid="uid://dto366wg1dur6" path="res://Licencjat/licencjat modele final/suszarka do naczyn.glb" id="43_hip82"]
 [ext_resource type="Texture2D" uid="uid://dc6yb5pk0emhl" path="res://tekstury/za oknem.png" id="44_052fu"]
+[ext_resource type="PackedScene" uid="uid://d2h3uuuihn2ag" path="res://sceny/Teleport/teleport.tscn" id="44_oqnvv"]
 [ext_resource type="PackedScene" uid="uid://ctpsjdycb2s5o" path="res://Licencjat/licencjat modele final/czerwony.glb" id="45_i26te"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orym7"]
@@ -417,105 +419,18 @@ size = Vector3(5.273939, 4.645508, 1.7453613)
 [sub_resource type="BoxShape3D" id="BoxShape3D_7bdtf"]
 size = Vector3(5.1269226, 4.3514404, 1.6550598)
 
-[sub_resource type="Shader" id="Shader_sy3uv"]
-code = "shader_type spatial;
-
-render_mode cull_disabled, unshaded;
-uniform sampler2D depth_texture : source_color, hint_depth_texture;
-uniform sampler2D screen_texture : source_color, hint_screen_texture, repeat_disable, filter_nearest;
-
-uniform bool enable_fog = true; 
-uniform vec3 fog_color : source_color;
-uniform vec3 noise_color : source_color;
-uniform float fog_distance : hint_range(1, 6000) = 100;
-uniform float fog_fade_range : hint_range(1, 6000) = 50;
-uniform bool enable_noise = true;
-uniform float noise_time_fac : hint_range(0.1, 10) = 4;
-uniform bool enable_color_limitation = true;
-uniform int color_levels : hint_range(2, 256) = 32;
-uniform bool enable_dithering = true;
-uniform float dither_strength : hint_range(0.0, 1.0) = 0.3; 
-
-float hashOld12(vec2 p){
-	return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453 + (sin((TIME)) / noise_time_fac)) ;
-}
-
-vec3 color_mix(vec3 a, vec3 b, float f ){
-	f = clamp(abs(f), 0,1);
-	float invf = 1.0 - f;
-	return (a*f) + (b*invf);
-}
-
-vec3 quantize_color(vec3 color, int levels) {
-    float quantizer = float(levels - 1);
-    return floor(color * quantizer + 0.5) / quantizer;
-}
-
-float dither(vec2 position, float brightness) {
-    int x = int(mod(position.x, 4.0));
-    int y = int(mod(position.y, 4.0));
-    int index = x + y * 4;
-    float dithering[16] = float[](
-        0.0, 0.5, 0.125, 0.625,
-        0.75, 0.25, 0.875, 0.375,
-        0.1875, 0.6875, 0.0625, 0.5625,
-        0.9375, 0.4375, 1.0, 0.8125
-    );
-    float threshold = dithering[index];
-    return brightness < threshold ? 0.0 : 1.0;
-}
-
-void vertex() {
-  POSITION = vec4(VERTEX.xy, 1.0, 1.0);
-}
-
-void fragment(){
-	vec3 screen_color = texture(screen_texture, SCREEN_UV).rgb;
-	vec2 screen_coords = SCREEN_UV * 2.0 - 1.0;
-	float depth = texture(depth_texture, SCREEN_UV).x;
-	vec3 ndc = vec3(screen_coords, depth);
-	
-	vec4 view = INV_PROJECTION_MATRIX * vec4(ndc, 1.0);
-	view.xyz /= view.w;
-	
-	float linear_depth = -view.z;
-	
-	float depth_mask_inv = clamp((linear_depth - (fog_distance - fog_fade_range)) / fog_fade_range, 0.0, 1.0);
-	
-	vec3 final_color = screen_color;
-	
-	if (enable_noise){
-		vec3 twocolornoise = color_mix(fog_color, noise_color, hashOld12(screen_coords));
-		final_color = color_mix(twocolornoise, final_color, depth_mask_inv);
-	}
-	if (enable_fog){
-		final_color = color_mix(fog_color, final_color, depth_mask_inv);
-	}
-	if (enable_color_limitation){
-		final_color = quantize_color(final_color, color_levels);
-	}
-	if (enable_dithering){
-		float brightness = dot(final_color, vec3(0.3, 0.59, 0.11));
-		brightness += dither_strength * (dither(FRAGCOORD.xy, brightness) - 0.5);
-		final_color *= (1.0 + dither_strength * (dither(FRAGCOORD.xy, brightness) - 0.5));
-	}
-	ALBEDO = final_color;
-}"
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oqnvv"]
-render_priority = 0
-shader = SubResource("Shader_sy3uv")
-shader_parameter/enable_fog = true
-shader_parameter/fog_color = Color(0.27752772, 0.27752772, 0.27752772, 1)
-shader_parameter/noise_color = Color(0, 0, 0, 1)
-shader_parameter/fog_distance = 1.0
-shader_parameter/fog_fade_range = 50.0
-shader_parameter/enable_noise = true
-shader_parameter/noise_time_fac = 4.0
-shader_parameter/enable_color_limitation = true
-shader_parameter/color_levels = 32
-shader_parameter/enable_dithering = true
+shader = ExtResource("11_7bdtf")
+shader_parameter/resolution_x = 320
+shader_parameter/resolution_y = 240
+shader_parameter/color_bit_depth = 4
 shader_parameter/dither_strength = 0.3
+shader_parameter/jitter_amount = 0.008
+shader_parameter/jitter_speed = 1.2
+shader_parameter/jitter_frequency = 180.0
+shader_parameter/chromatic_aberration_strength = 0.015
+shader_parameter/vignette_strength = 0.8
+shader_parameter/vignette_radius = 0.9
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ctkkg"]
 size = Vector3(4.2756042, 5.3603516, 1.2416992)
@@ -1071,22 +986,21 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1388661416]
+[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1972867590]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -0.875
-offset_top = -0.875
-offset_right = 0.875
-offset_bottom = 0.875
+offset_left = -6.25
+offset_top = -6.5
+offset_right = 6.25
+offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("13_a5rlq")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="drzwi" parent="." unique_id=1793167788 instance=ExtResource("14_g6qfv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.0854907, 1.8019617, -2.582337)
@@ -1740,3 +1654,7 @@ transform = Transform3D(56.815292, 0, 0, 0, 0.00190624, 0, 0, 0, 102.398, 26.388
 use_collision = true
 size = Vector3(2.0398788, 1, 1.2877884)
 material = SubResource("StandardMaterial3D_oqnvv")
+
+[node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("44_oqnvv")]
+transform = Transform3D(-0.90478987, 0, 0.42585832, 0, 1, 0, -0.42585832, 0, -0.90478987, 16.052374, 0.65597177, 62.508503)
+scene = 0

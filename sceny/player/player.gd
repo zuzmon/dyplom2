@@ -4,7 +4,7 @@ var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 9.0
 const JUMP_VELOCITY = 5.5
-const SENSITIVITY = 0.005
+const SENSITIVITY = 0.002
 const GRAVITY = 2.0
 
 const BOB_FREQ = 2.0
@@ -16,30 +16,119 @@ const FOV_CHANGE =1.5
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
-@onready var raycast = $Head/RayCast3D
+@onready var raycast = $Head/Camera3D/RayCast3D
+@onready var dialog_text = $CanvasLayer/Control/Panel/Label
+
+var talking := false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
-	
+	$CanvasLayer/Control/Panel.hide()
+
 func _unhandled_input(event):
+	if talking:
+		return
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
+func start_dialog():
+	talking = true
+	$CanvasLayer/Control/Panel.show()
+
+# Przechowywanie aktualnej linii dialogu i indeksu litery
+var current_line_index = 0
+var current_char_index = 0
+var is_text_scrolling = false
+var full_line = ""
+var typing_speed = 0.05  # Czas (w sekundach) między literami
+var typing_active = false  # Flaga kontrolująca, czy animacja jest aktywna
+var dialog = null
+
+func _process(_delta):
+	# Sprawdzenie kliknięcia w trakcie wyświetlania tekstu
+	if not talking:
+		return
+	if Input.is_action_just_pressed("skip"):
+		if is_text_scrolling:
+			# Jeśli tekst jest w trakcie przewijania, wyświetl go od razu
+			skip_text_animation()
+		else:
+			# Jeśli tekst został w pełni wyświetlony, przejdź do następnej linii
+			show_next_line()
+
+# Funkcja do wyświetlenia kolejnej linii dialogu
+func show_next_line():
+	if current_line_index < dialog.size():
+		full_line = dialog[current_line_index]
+		#if full_line[0] == "?":
+			#animation_player.play("ghost_talk")
+		#elif full_line[0] == "!":
+			#animation_player.play("burgmaster_talk")
+		#full_line[0] = ""
+		current_char_index = 0
+		dialog_text.text = ""
+		is_text_scrolling = true
+		typing_active = true
+		# Rozpoczynamy animację liter
+		start_typing_text()
+
+	else:
+		$CanvasLayer/Control/Panel.hide()
+		talking = false
+		current_line_index = 0
+		current_char_index = 0
+		dialog = null
+		#get_parent().get_parent().after_dialog()
+		#animation_player.play("popout")
+		#queue_free()
+		# Koniec dialogu, np. zamknij scenę dialogu
+		#print("Koniec dialogów.")
+
+# Funkcja stopniowo wyświetlająca tekst
+func start_typing_text():
+	# Wywołuje się co "typing_speed" sekund, aż wyświetli cały tekst
+	if typing_active:
+		await get_tree().create_timer(typing_speed).timeout
+		if current_char_index < full_line.length() and typing_active:
+			dialog_text.text += full_line[current_char_index]
+			current_char_index += 1
+			# Kontynuujemy wyświetlanie liter, jeśli jeszcze nie skończono
+			start_typing_text()
+		else:
+			# Cała linia została wyświetlona
+			is_text_scrolling = false
+			typing_active = false
+			#display_label.text = full_line
+			current_line_index += 1
+
+# Funkcja natychmiastowego wyświetlenia całego tekstu
+func skip_text_animation():
+	is_text_scrolling = false
+	typing_active = false  # Przerywamy dalsze animowanie liter
+	dialog_text.text = full_line
+
+	# Zwiększ indeks dialogu na następny
+	#current_line_index += 1
 
 func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta * GRAVITY
+	
+	if talking:
+		return
 	
 	if Input.is_action_just_pressed("interact"):
 		if raycast.is_colliding():
 			var body = raycast.get_collider()
 			if body.is_in_group("interactable"):
 				body.get_parent().interact()
-	
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta * GRAVITY
+				print("int")
+			elif body.is_in_group("talking"):
+				dialog = body.get_parent().interact()
+				start_dialog()
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

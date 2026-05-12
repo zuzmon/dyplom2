@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bjenal6iq5rh3"]
+
+[ext_resource type="PackedScene" uid="uid://dvqeoowuayc5e" path="res://sceny/npc/npc.tscn" id="1_kjtfd"]
+[ext_resource type="PackedScene" uid="uid://ctlvboeoomciv" path="res://Licencjat/licencjat modele final/szef.glb" id="2_io38e"]
+
+[node name="NPC_Boss" unique_id=777428972 instance=ExtResource("1_kjtfd")]
+
+[node name="szef" parent="." index="0" unique_id=1556954455 instance=ExtResource("2_io38e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09468877, 0.7961209, 0.07406509)
+
+[node name="Default" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="0" unique_id=151041152]
+dialog = Array[String](["Witam"])

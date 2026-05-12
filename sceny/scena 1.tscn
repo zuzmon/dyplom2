@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://byq8teaw17h51" path="res://Licencjat/licencjat modele final/automat1.glb" id="52_yiq6o"]
 [ext_resource type="PackedScene" uid="uid://blypjhmm1ifq0" path="res://Licencjat/licencjat modele final/telewizorglb.glb" id="53_mqyja"]
 [ext_resource type="PackedScene" uid="uid://cwgt6j6c2ovvs" path="res://Licencjat/licencjat modele final/ściana.glb" id="53_vkh3c"]
+[ext_resource type="PackedScene" uid="uid://d2h3uuuihn2ag" path="res://sceny/Teleport/teleport.tscn" id="54_04to7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orym7"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -794,22 +795,21 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1388661416]
+[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=451678939]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -0.875
-offset_top = -0.875
-offset_right = 0.875
-offset_bottom = 0.875
+offset_left = -6.25
+offset_top = -6.5
+offset_right = 6.25
+offset_bottom = 6.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_a45ad")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="drzwi" parent="." unique_id=1793167788 instance=ExtResource("15_nku6m")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.0854907, 1.8019617, -2.582337)
@@ -1603,3 +1603,14 @@ visible = false
 [node name="Lampa45" parent="." unique_id=29000744 instance=ExtResource("32_1qqa7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.667068, 9.498528, -6.881624)
 visible = false
+
+[node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("54_04to7")]
+transform = Transform3D(-0.98467106, 0, 0.17442165, 0, 1, 0, -0.17442165, 0, -0.98467106, 17.015312, 3.1161375, 83.03165)
+scene = 2
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1323258308]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 17.385393, 5.490654, 83.33736)
+light_energy = 13.04
+spot_range = 12.371
+spot_attenuation = 0.21
+spot_angle = 32.52

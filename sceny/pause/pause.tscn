@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://5nsh2uw68450"]
+
+[ext_resource type="Script" uid="uid://pcoho3wte1ud" path="res://sceny/pause/pause.gd" id="1_h1w7q"]
+
+[node name="Pause" type="CanvasLayer" unique_id=1434705603]
+process_mode = 3
+layer = 2
+script = ExtResource("1_h1w7q")
+
+[node name="Control" type="Control" parent="." unique_id=428636314]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=289756435]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.4392157)
+
+[node name="ResumeButton" type="Button" parent="Control" unique_id=330778479]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.25
+offset_top = -125.0
+offset_right = 96.25
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "RESUME"
+
+[node name="MenuButton" type="Button" parent="Control" unique_id=1363201290]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.75
+offset_top = 39.0
+offset_right = 98.75
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "MENU"
+
+[connection signal="pressed" from="Control/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Control/MenuButton" to="." method="_on_menu_button_pressed"]
