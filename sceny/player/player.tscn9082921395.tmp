@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://io4w536jw6ob"]
+
+[ext_resource type="Script" uid="uid://brgobbaxt67d0" path="res://sceny/player/player.gd" id="1_d6lse"]
+[ext_resource type="Script" uid="uid://dxl4nxcdctael" path="res://sceny/player/camera_3d.gd" id="2_plpq8"]
+[ext_resource type="Texture2D" uid="uid://d07ehcjuahy83" path="res://assety/final.png" id="3_aj7iy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c3n2s"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rqoa2"]
+radius = 0.7783203
+height = 4.411621
+
+[node name="player" type="CharacterBody3D" unique_id=1535646083]
+script = ExtResource("1_d6lse")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=544652675]
+transform = Transform3D(1.5012, 0, 0, 0, 2.4008, 0, 0, 0, 1.5388, 0, 2.21878, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_c3n2s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=131286194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1836946, 0)
+shape = SubResource("CapsuleShape3D_rqoa2")
+
+[node name="Head" type="Node3D" parent="." unique_id=875197071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.17423, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=293298521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030993, -0.148832, 0.0997055)
+script = ExtResource("2_plpq8")
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=1968863393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030993, 0.14883184, -0.0997055)
+target_position = Vector3(0, 0, -4)
+collision_mask = 2
+
+[node name="Node3D" type="Node3D" parent="Head/Camera3D" unique_id=1006272744]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D/Node3D" unique_id=561780113]
+light_energy = 6.703
+light_volumetric_fog_energy = 3.059
+light_projector = ExtResource("3_aj7iy")
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 13.432
+spot_angle = 37.53317
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=105857858]
+layer = 2
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1874046826]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=322657773]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 129.0
+offset_top = -246.0
+offset_right = -124.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel" unique_id=1849489468]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 14.0
+offset_right = -16.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+autowrap_mode = 2
