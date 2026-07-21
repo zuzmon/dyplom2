@@ -1,12 +1,42 @@
 [gd_scene format=3 uid="uid://drurs85s0q4vn"]
 
 [ext_resource type="PackedScene" uid="uid://dvqeoowuayc5e" path="res://sceny/npc/npc.tscn" id="1_sv16d"]
-[ext_resource type="PackedScene" uid="uid://d2esiyskwhxm6" path="res://Licencjat/licencjat modele final/kobitka.glb" id="2_1iq8f"]
+[ext_resource type="PackedScene" uid="uid://6acdpauk5t06" path="res://animacje/baba stoi.glb" id="2_1iq8f"]
+[ext_resource type="Script" uid="uid://bcd2nrtft5fdy" path="res://sceny/npc/kobieta.gd" id="2_co7cq"]
+[ext_resource type="Script" uid="uid://d122rldkwn4mi" path="res://assety/szef_siedzi.gd" id="3_ev7wg"]
+[ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="5_jciym"]
 
 [node name="NPC_Kobieta" unique_id=777428972 instance=ExtResource("1_sv16d")]
+script = ExtResource("2_co7cq")
 
-[node name="kobitka" parent="." index="0" unique_id=89664907 instance=ExtResource("2_1iq8f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11607504, 0, 0)
+[node name="baba stoi" parent="." index="0" unique_id=300081084 instance=ExtResource("2_1iq8f")]
+script = ExtResource("3_ev7wg")
+
+[node name="StaticBody3D" parent="." index="1" unique_id=1053622764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.131975, 0)
+
+[node name="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1653754383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.1414423, 0)
 
 [node name="Default" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="0" unique_id=151041152]
-dialog = Array[String](["Hejka", "Co tam"])
+dialog = Array[String](["domyślny dialog"])
+
+[node name="FirstPrinter" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="1" unique_id=341674911]
+script = ExtResource("5_jciym")
+dialog = Array[String](["pierwsze drukowanie"])
+
+[node name="DefaultFirstPrinter" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="2" unique_id=513868141]
+script = ExtResource("5_jciym")
+dialog = Array[String](["domyślny dialog pierwszego drukowania"])
+
+[node name="AfterFirstPrinter" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="3" unique_id=1885595358]
+script = ExtResource("5_jciym")
+dialog = Array[String](["pierwsze poprawione drukowanie"])
+
+[node name="Ask" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="4" unique_id=828152197]
+script = ExtResource("5_jciym")
+dialog = Array[String](["zapyatnie o misia"])
+
+[node name="SecondPrinter" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="5" unique_id=2017042308]
+script = ExtResource("5_jciym")
+dialog = Array[String](["drugie drukowanie"])

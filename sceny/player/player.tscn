@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://brgobbaxt67d0" path="res://sceny/player/player.gd" id="1_d6lse"]
 [ext_resource type="Script" uid="uid://dxl4nxcdctael" path="res://sceny/player/camera_3d.gd" id="2_plpq8"]
-[ext_resource type="Texture2D" uid="uid://d07ehcjuahy83" path="res://assety/final.png" id="3_aj7iy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3n2s"]
 
@@ -23,25 +22,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1836946, 0)
 shape = SubResource("CapsuleShape3D_rqoa2")
 
 [node name="Head" type="Node3D" parent="." unique_id=875197071]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.17423, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.085613, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=293298521]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030993, -0.148832, 0.0997055)
 script = ExtResource("2_plpq8")
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=1968863393]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030993, 0.14883184, -0.0997055)
 target_position = Vector3(0, 0, -4)
 collision_mask = 2
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D" unique_id=561780113]
-light_energy = 6.703
-light_volumetric_fog_energy = 3.059
-light_projector = ExtResource("3_aj7iy")
-shadow_enabled = true
-distance_fade_enabled = true
-spot_range = 13.432
-spot_angle = 37.53317
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=105857858]
 layer = 2

@@ -12,7 +12,7 @@ const BOB_AMP = 0.08
 var t_bob = 0.0
 
 const BASE_FOV = 75.0
-const FOV_CHANGE =1.5
+const FOV_CHANGE = 1.5
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
@@ -33,9 +33,14 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
-func start_dialog():
+func start_dialog(object):
 	talking = true
 	$CanvasLayer/Control/Panel.show()
+	camera.look_at(object.position)
+	camera.rotation.y = 0
+	camera.rotation.z = 0
+	var tween = get_tree().create_tween()
+	tween.tween_property(camera, "fov", 50.0, 0.2)
 
 # Przechowywanie aktualnej linii dialogu i indeksu litery
 var current_line_index = 0
@@ -75,7 +80,13 @@ func show_next_line():
 		start_typing_text()
 
 	else:
+		if Global.over:
+			Global.over = false
+			get_tree().change_scene_to_file("res://sceny/scena 1.tscn")
+			return
 		$CanvasLayer/Control/Panel.hide()
+		var tween = get_tree().create_tween()
+		tween.tween_property(camera, "fov", BASE_FOV, 0.2)
 		talking = false
 		current_line_index = 0
 		current_char_index = 0
@@ -127,8 +138,8 @@ func _physics_process(delta: float) -> void:
 				body.get_parent().interact()
 				print("int")
 			elif body.is_in_group("talking"):
-				dialog = body.get_parent().interact()
-				start_dialog()
+				dialog = body.get_parent().interact(self.global_position)
+				start_dialog(body)
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cya74n6djfbau" path="res://tekstury/black-fabric.jpg" id="1_yh0cj"]
 [ext_resource type="PackedScene" uid="uid://io4w536jw6ob" path="res://sceny/player/player.tscn" id="2_ghaev"]
 [ext_resource type="PackedScene" uid="uid://bxa4nk3jnoh3l" path="res://assety/kanapa.glb" id="3_la5s4"]
+[ext_resource type="Texture2D" uid="uid://d07ehcjuahy83" path="res://assety/final.png" id="3_srxep"]
 [ext_resource type="PackedScene" uid="uid://d2ievm1uqprx0" path="res://assety/telewizorglb.glb" id="4_1ry6j"]
 [ext_resource type="PackedScene" uid="uid://dj6a4g1c2x5oa" path="res://assety/stolnarad.glb" id="4_04to7"]
 [ext_resource type="PackedScene" uid="uid://d2v057p6nrhev" path="res://assety/mikrofala.glb" id="5_ud6l4"]
@@ -549,6 +550,15 @@ material = SubResource("StandardMaterial3D_r7e7w")
 
 [node name="player" parent="." unique_id=1535646083 instance=ExtResource("2_ghaev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736843, 0, -10.56991)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="player/Head/Camera3D" parent_id_path=PackedInt32Array(1535646083, 293298521) index="1" unique_id=489522963]
+light_energy = 6.703
+light_volumetric_fog_energy = 3.059
+light_projector = ExtResource("3_srxep")
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 13.432
+spot_angle = 37.53317
 
 [node name="kanapa" parent="." unique_id=1649565601 instance=ExtResource("3_la5s4")]
 transform = Transform3D(0.999968, 0, -0.0079936115, 0, 1, 0, 0.0079936115, 0, 0.999968, 47.410828, 1.0746579, 3.538128)
@@ -2112,3 +2122,5 @@ transform = Transform3D(0.03289352, 0, -0.99945885, 0, 1, 0, 0.99945885, 0, 0.03
 
 [node name="czerwony3" parent="." unique_id=719002852 instance=ExtResource("66_rhwnr")]
 transform = Transform3D(0.034401946, 0, 0.0846116, 0, 0.091337934, 0, -0.0846116, 0, 0.034401946, 26.089428, 1.9624367, 45.36298)
+
+[editable path="player"]
