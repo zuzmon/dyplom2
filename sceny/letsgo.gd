@@ -31,6 +31,8 @@ func _on_npc_kobieta_ask():
 	kobieta_ask_flag = true
 
 func _on_npc_boss_ask():
+	Global.kolega_game_start = false
+	$NPC_Kobieta/StaticBody3D/CollisionShape3D.set_deferred("disabled", false)
 	$AnimationPlayer.stop()
 	$NPC_Kobieta.global_position = Vector3(36.8, -0.1, 45.5)
 	$NPC_Kobieta.rotation = Vector3(0.0, -90.0, 0.0)
