@@ -1,6 +1,10 @@
 extends Node3D
+signal ask
 
 @onready var dialogi = $Dialogi
+
+func _ready():
+	$AnimatedSprite3D.hide()
 
 func interact(player_position):
 	self.look_at(player_position, Vector3(0,1,0), true)
@@ -16,10 +20,12 @@ func interact(player_position):
 		Global.boss_first_papers = true
 		return dialogi.get_node("AfterFirstPrinter").dialog
 	if Global.kobieta_ask:
+		emit_signal("ask")
 		Global.kobieta_ask = false
 		Global.boss_ask = true
 		return dialogi.get_node("Ask").dialog
 	if Global.kobieta_second_printer:
+		$AnimatedSprite3D.show()
 		Global.kobieta_second_printer = false
 		Global.boss_second_papers = true
 		return dialogi.get_node("SecondPrinter").dialog

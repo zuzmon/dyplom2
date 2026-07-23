@@ -2,10 +2,30 @@
 
 [ext_resource type="Script" uid="uid://dh7s2ekrt810y" path="res://sceny/npc/npc.gd" id="1_iptxb"]
 [ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="2_iptxb"]
+[ext_resource type="Texture2D" uid="uid://bl57hmhicum5r" path="res://assety/szum/kaltka0000.png" id="3_kdqcl"]
+[ext_resource type="Texture2D" uid="uid://dcly7ntxurk3t" path="res://assety/szum/kaltka0001.png" id="4_cdvtl"]
+[ext_resource type="Texture2D" uid="uid://bmbjjoqy5nyhb" path="res://assety/szum/kaltka0002.png" id="5_cpjk4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_exjxd"]
 radius = 0.6225586
 height = 5.351074
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v2qb2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kdqcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cdvtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cpjk4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="NPC" type="Node3D" unique_id=777428972]
 script = ExtResource("1_iptxb")
@@ -22,3 +42,10 @@ shape = SubResource("CapsuleShape3D_exjxd")
 
 [node name="Default" type="Node" parent="Dialogi" unique_id=151041152]
 script = ExtResource("2_iptxb")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=103366429]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+visible = false
+sprite_frames = SubResource("SpriteFrames_v2qb2")
+autoplay = "default"
+frame_progress = 0.26679993

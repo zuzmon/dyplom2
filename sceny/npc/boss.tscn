@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="5_5v8cb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cvwmt"]
-size = Vector3(2.516346, 3.345581, 5.773592)
+size = Vector3(5.491147, 3.345581, 5.773592)
 
 [node name="NPC_Boss" unique_id=777428972 instance=ExtResource("1_kjtfd")]
 script = ExtResource("2_gdgeb")
@@ -19,20 +19,23 @@ script = ExtResource("3_gdgeb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.891924, 0)
 
 [node name="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1653754383]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11807442, -1.1363919, 1.6287508)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106566906, -1.1363919, 1.6287508)
 shape = SubResource("BoxShape3D_cvwmt")
 
 [node name="Default" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="0" unique_id=151041152]
-dialog = Array[String](["domyślny dialog"])
+dialog = Array[String](["sdomyślny dialog"])
 
 [node name="FirstPapers" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="1" unique_id=861951256]
 script = ExtResource("5_5v8cb")
-dialog = Array[String](["pierwsze wręczenie papierów"])
+dialog = Array[String](["spierwsze wręczenie papierów"])
 
 [node name="Ask" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="2" unique_id=245339257]
 script = ExtResource("5_5v8cb")
-dialog = Array[String](["zapytanie o brak maila"])
+dialog = Array[String](["szapytanie o brak maila"])
 
 [node name="SecondPapers" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="3" unique_id=98931402]
 script = ExtResource("5_5v8cb")
-dialog = Array[String](["drugie wręczenie papierów"])
+dialog = Array[String](["sdrugie wręczenie papierów"])
+
+[node name="AnimatedSprite3D" parent="." index="3" unique_id=103366429]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 3.087595, 0.646616)

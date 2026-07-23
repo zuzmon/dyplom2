@@ -31,7 +31,7 @@ func _on_menu_button_pressed():
 	#$Press.play()
 	hide()
 	get_tree().paused = false
-	Fade.fade_out("res://sceny/menu/menu.tscn")
+	Fade.fade_out("res://sceny/letsgo.tscn")
 
 #func _on_resume_button_mouse_entered():
 	#Sfx.get_node("ButtonHover").play()

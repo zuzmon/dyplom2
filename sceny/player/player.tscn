@@ -10,6 +10,7 @@ radius = 0.7783203
 height = 4.411621
 
 [node name="player" type="CharacterBody3D" unique_id=1535646083]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 script = ExtResource("1_d6lse")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=544652675]
@@ -22,7 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1836946, 0)
 shape = SubResource("CapsuleShape3D_rqoa2")
 
 [node name="Head" type="Node3D" parent="." unique_id=875197071]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.085613, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4.085613, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=293298521]
 script = ExtResource("2_plpq8")
@@ -69,3 +70,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
 autowrap_mode = 2
+
+[node name="Name" type="Panel" parent="CanvasLayer/Control/Panel" unique_id=140872912]
+layout_mode = 1
+offset_top = -75.0
+offset_right = 319.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/Name" unique_id=1398604864]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48

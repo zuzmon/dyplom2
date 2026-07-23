@@ -30,8 +30,7 @@ Global="*uid://bkd17dj7anw47"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/mode="canvas_items"
 
 [filesystem]
 

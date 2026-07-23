@@ -1,4 +1,5 @@
 extends CharacterBody3D
+signal dialog_over
 
 var speed
 const WALK_SPEED = 5.0
@@ -14,19 +15,27 @@ var t_bob = 0.0
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
+@export var mouse_captured := true
+
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var raycast = $Head/Camera3D/RayCast3D
 @onready var dialog_text = $CanvasLayer/Control/Panel/Label
+@onready var dialog_name = $CanvasLayer/Control/Panel/Name/Label
 
 var talking := false
+var menu := false
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if mouse_captured:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		menu = true
 	$CanvasLayer/Control/Panel.hide()
 
 func _unhandled_input(event):
-	if talking:
+	if talking or menu:
 		return
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
@@ -67,11 +76,20 @@ func _process(_delta):
 func show_next_line():
 	if current_line_index < dialog.size():
 		full_line = dialog[current_line_index]
-		#if full_line[0] == "?":
-			#animation_player.play("ghost_talk")
-		#elif full_line[0] == "!":
-			#animation_player.play("burgmaster_talk")
-		#full_line[0] = ""
+		match full_line[0]:
+			"k":
+				dialog_name.text = "Kobieta"
+			"c":
+				dialog_name.text = "Chłop"
+			"s":
+				dialog_name.text = "Szef"
+			"b":
+				dialog_name.text = "Komputer"
+			"j":
+				dialog_name.text = "Ja"
+			_:
+				dialog_name.text = "(brak)"
+		full_line[0] = ""
 		current_char_index = 0
 		dialog_text.text = ""
 		is_text_scrolling = true
@@ -91,6 +109,7 @@ func show_next_line():
 		current_line_index = 0
 		current_char_index = 0
 		dialog = null
+		emit_signal("dialog_over")
 		#get_parent().get_parent().after_dialog()
 		#animation_player.play("popout")
 		#queue_free()
@@ -128,7 +147,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta * GRAVITY
 	
-	if talking:
+	if talking or menu:
 		return
 	
 	if Input.is_action_just_pressed("interact"):
