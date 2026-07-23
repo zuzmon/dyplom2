@@ -10,6 +10,7 @@ func _ready():
 	$"NPC_Kobieta/baba stoi".show()
 	$CanvasLayer/Control/Kursor.hide()
 	$CanvasMenu.show()
+	$"player/Head/Camera3D/papier do ręki".hide()
 
 func _on_start_button_pressed():
 	$AnimationPlayer.play("start_game")
@@ -49,3 +50,9 @@ func _on_player_dialog_over():
 
 func _on_czerwony_teddy_steal():
 	teddy_steal_flag = true
+
+func _on_npc_boss_give_paper():
+	$"player/Head/Camera3D/papier do ręki".hide()
+
+func _on_npc_kobieta_paper():
+	$"player/Head/Camera3D/papier do ręki".show()

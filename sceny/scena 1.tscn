@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dw63mn6c8yy0u"]
 
+[ext_resource type="Script" uid="uid://b8nvxg32xw2g4" path="res://sceny/scena_1.gd" id="1_pdd5c"]
 [ext_resource type="Texture2D" uid="uid://cya74n6djfbau" path="res://tekstury/black-fabric.jpg" id="1_yh0cj"]
 [ext_resource type="PackedScene" uid="uid://io4w536jw6ob" path="res://sceny/player/player.tscn" id="2_ghaev"]
 [ext_resource type="PackedScene" uid="uid://bxa4nk3jnoh3l" path="res://assety/kanapa.glb" id="3_la5s4"]
@@ -69,6 +70,40 @@
 [ext_resource type="PackedScene" uid="uid://b36sdpbt7rahu" path="res://assety/czerwony.glb" id="66_rhwnr"]
 [ext_resource type="PackedScene" uid="uid://chuqm0yrm35lh" path="res://Licencjat/licencjat modele final/plakat 1.glb" id="67_e0b86"]
 [ext_resource type="Shader" uid="uid://0loctdk2xig4" path="res://sceny/pixeloza.gdshader" id="68_uig7l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pdd5c"]
+shader = ExtResource("13_mlsrj")
+shader_parameter/color_bleed_enabled = true
+shader_parameter/chromatic_abberation_enabled = true
+shader_parameter/film_grain_enabled = true
+shader_parameter/sharpness_enabled = true
+shader_parameter/chromatic_abberation_seperation = 0.10000000149012
+shader_parameter/chromatic_abberation_intensity = 3.0
+shader_parameter/chromatic_abberation_blur_strength = 1.0
+shader_parameter/film_grain_intensity = 1.0
+shader_parameter/grain_size = 2.0
+shader_parameter/darkness_clamp = 0.28
+shader_parameter/sharpness_size = 1.0
+shader_parameter/sharpness_intensity = 0.7
+shader_parameter/color_bleed_seperation = 0.02
+shader_parameter/color_bleed_intensity = 0.2
+shader_parameter/anti_bleed_intensity = 1.8
+shader_parameter/color_bleed_blur_strength = 1.0
+shader_parameter/color_bleed_quality = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8m8tk"]
+shader = ExtResource("68_uig7l")
+shader_parameter/shake = 0.0
+shader_parameter/noiseQuality = 250.0
+shader_parameter/noiseIntensity = 0.001
+shader_parameter/offsetIntensity = 0.0
+shader_parameter/colorOffsetIntensity = 0.10000000149012
+shader_parameter/pixelSize = 800.0000379525
+shader_parameter/grainIntensity = 0.0
+shader_parameter/use_overlay = false
+shader_parameter/use_lens_distortion = false
+shader_parameter/overlay_color = Color(1, 1, 1, 10)
+shader_parameter/lens_distortion_strength = 0.0
 
 [sub_resource type="Environment" id="Environment_srxep"]
 background_energy_multiplier = 0.0
@@ -510,41 +545,60 @@ size = Vector3(0.49127102, 4.6358337, 9.983147)
 [sub_resource type="BoxShape3D" id="BoxShape3D_yiq6o"]
 size = Vector3(0.49127102, 4.6358337, 13.379269)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pdd5c"]
-shader = ExtResource("13_mlsrj")
-shader_parameter/color_bleed_enabled = true
-shader_parameter/chromatic_abberation_enabled = true
-shader_parameter/film_grain_enabled = true
-shader_parameter/sharpness_enabled = true
-shader_parameter/chromatic_abberation_seperation = 0.10000000149012
-shader_parameter/chromatic_abberation_intensity = 3.0
-shader_parameter/chromatic_abberation_blur_strength = 1.0
-shader_parameter/film_grain_intensity = 1.0
-shader_parameter/grain_size = 2.0
-shader_parameter/darkness_clamp = 0.28
-shader_parameter/sharpness_size = 1.0
-shader_parameter/sharpness_intensity = 0.7
-shader_parameter/color_bleed_seperation = 0.02
-shader_parameter/color_bleed_intensity = 0.2
-shader_parameter/anti_bleed_intensity = 1.8
-shader_parameter/color_bleed_blur_strength = 1.0
-shader_parameter/color_bleed_quality = 5
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8m8tk"]
-shader = ExtResource("68_uig7l")
-shader_parameter/shake = 0.0
-shader_parameter/noiseQuality = 250.0
-shader_parameter/noiseIntensity = 0.001
-shader_parameter/offsetIntensity = 0.0
-shader_parameter/colorOffsetIntensity = 0.10000000149012
-shader_parameter/pixelSize = 800.0000379525
-shader_parameter/grainIntensity = 0.0
-shader_parameter/use_overlay = false
-shader_parameter/use_lens_distortion = false
-shader_parameter/overlay_color = Color(1, 1, 1, 10)
-shader_parameter/lens_distortion_strength = 0.0
-
 [node name="world" type="Node3D" unique_id=1028837634]
+script = ExtResource("1_pdd5c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1185921732]
+layer = 2
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=416357524]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1387731650]
+visible = false
+material = SubResource("ShaderMaterial_pdd5c")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control" unique_id=396450084]
+material = SubResource("ShaderMaterial_8m8tk")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1379732186]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.25
+offset_top = -6.5
+offset_right = 6.25
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_a45ad")
+expand_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1701812493]
 environment = SubResource("Environment_srxep")
@@ -556,7 +610,7 @@ size = Vector3(2.0398788, 1, 1.2877884)
 material = SubResource("StandardMaterial3D_r7e7w")
 
 [node name="player" parent="." unique_id=1535646083 instance=ExtResource("2_ghaev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736843, 0, -10.56991)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736843, 0, 56.748436)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="player/Head/Camera3D" parent_id_path=PackedInt32Array(1535646083, 293298521) index="1" unique_id=489522963]
 light_energy = 6.703
@@ -1745,161 +1799,8 @@ transform = Transform3D(1, 4.5474735e-13, 0, 2.842171e-13, 1.0000001, 1.1641532e
 transform = Transform3D(1, -1.2562397e-11, 8.731155e-11, 1.2562399e-11, 1, -1.8626414e-08, -8.731155e-11, 1.8626414e-08, 1, 0.046369553, 0.6215557, 0.5697746)
 shape = SubResource("BoxShape3D_04to7")
 
-[node name="Lampa" parent="." unique_id=561674145 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.267723, 9.498528, 40.56635)
-visible = false
-
-[node name="Lampa2" parent="." unique_id=521165294 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.850128, 9.498528, 40.56635)
-visible = false
-
-[node name="Lampa21" parent="." unique_id=2034194464 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.102093, 9.498528, 55.717976)
-visible = false
-
-[node name="Lampa22" parent="." unique_id=1952478005 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.102093, 9.498528, 67.998764)
-visible = false
-
-[node name="Lampa23" parent="." unique_id=549302052 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.102093, 9.498528, 79.641594)
-visible = false
-
-[node name="Lampa27" parent="." unique_id=569478074 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(-0.0008377273, 0, 0.99999964, 0, 1, 0, -0.99999964, 0, -0.0008377273, 1.790966, 9.498528, 82.831406)
-visible = false
-
-[node name="Lampa28" parent="." unique_id=64675766 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(-0.0008377273, 0, 0.99999964, 0, 1, 0, -0.99999964, 0, -0.0008377273, 1.790966, 9.498528, 77.24922)
-visible = false
-
-[node name="Lampa29" parent="." unique_id=1373221701 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(-0.0008377273, 0, 0.99999964, 0, 1, 0, -0.99999964, 0, -0.0008377273, 1.790966, 9.498528, 71.42781)
-visible = false
-
-[node name="Lampa3" parent="." unique_id=1435679309 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.979485, 9.498528, 40.56635)
-visible = false
-
-[node name="Lampa4" parent="." unique_id=1538861815 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0231628, 9.498528, 40.56635)
-visible = false
-
-[node name="Lampa30" parent="." unique_id=2055723800 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.789047, 9.498528, 30.613735)
-visible = false
-
-[node name="Lampa31" parent="." unique_id=1458548944 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.603718, 9.498528, 30.613735)
-visible = false
-
-[node name="Lampa32" parent="." unique_id=869495006 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.789047, 9.498528, 42.42665)
-visible = false
-
-[node name="Lampa33" parent="." unique_id=2046330412 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.603718, 9.498528, 42.42665)
-visible = false
-
-[node name="Lampa5" parent="." unique_id=1885034097 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.267723, 9.498528, 27.09769)
-visible = false
-
-[node name="Lampa6" parent="." unique_id=536814865 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.850128, 9.498528, 27.09769)
-visible = false
-
-[node name="Lampa7" parent="." unique_id=610553763 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.979485, 9.498528, 27.09769)
-visible = false
-
-[node name="Lampa8" parent="." unique_id=912062923 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0231628, 9.498528, 27.09769)
-visible = false
-
-[node name="Lampa9" parent="." unique_id=1644124207 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.267723, 9.498528, 12.603495)
-visible = false
-
-[node name="Lampa10" parent="." unique_id=1516847089 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.850128, 9.498528, 12.603495)
-visible = false
-
-[node name="Lampa39" parent="." unique_id=1848237271 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.598804, 9.498528, 6.820548)
-visible = false
-
-[node name="Lampa40" parent="." unique_id=518102248 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.57412, 9.498528, 6.820548)
-visible = false
-
-[node name="Lampa41" parent="." unique_id=528000146 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.598804, 9.498528, 16.18708)
-visible = false
-
-[node name="Lampa42" parent="." unique_id=580767865 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.57412, 9.498528, 16.18708)
-visible = false
-
-[node name="Lampa11" parent="." unique_id=358517454 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.979485, 9.498528, 12.603495)
-visible = false
-
-[node name="Lampa12" parent="." unique_id=646082107 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0231628, 9.498528, 12.603495)
-visible = false
-
-[node name="Lampa13" parent="." unique_id=660120852 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.267723, 9.498528, -1.6855946)
-visible = false
-
-[node name="Lampa14" parent="." unique_id=1826737212 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.850128, 9.498528, -1.6855946)
-visible = false
-
-[node name="Lampa15" parent="." unique_id=444441936 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.979485, 9.498528, -1.6855946)
-visible = false
-
-[node name="Lampa16" parent="." unique_id=889325825 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0231628, 9.498528, -1.6855946)
-visible = false
-
-[node name="Lampa17" parent="." unique_id=709836158 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.267723, 9.498528, -16.248158)
-visible = false
-
-[node name="Lampa18" parent="." unique_id=1931389519 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.850128, 9.498528, -16.248158)
-visible = false
-
-[node name="Lampa19" parent="." unique_id=1163738143 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.979485, 9.498528, -16.248158)
-visible = false
-
-[node name="Lampa20" parent="." unique_id=170852726 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0231628, 9.498528, -16.248158)
-visible = false
-
-[node name="Lampa34" parent="." unique_id=1571727124 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.710747, 9.498528, -19.188017)
-visible = false
-
-[node name="Lampa43" parent="." unique_id=2105243881 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.667068, 9.498528, -19.188017)
-visible = false
-
-[node name="Lampa44" parent="." unique_id=192729465 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.710747, 9.498528, -6.881624)
-visible = false
-
-[node name="Lampa45" parent="." unique_id=29000744 instance=ExtResource("32_1qqa7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.667068, 9.498528, -6.881624)
-visible = false
-
 [node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("54_04to7")]
 transform = Transform3D(-0.98467106, 0, 0.17442165, 0, 1, 0, -0.17442165, 0, -0.98467106, 2.5077477, 2.1349697, 85.23558)
-scene = 2
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1323258308]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 11.147584, 7.0989704, 77.60808)
@@ -2067,7 +1968,7 @@ transform = Transform3D(0.31661177, 0, 0, 0, 0.31661177, 0, 0, 0, 0.31661177, 28
 [node name="czerwony t pose31" parent="." unique_id=349974444 instance=ExtResource("55_rqn2g")]
 transform = Transform3D(0.31661177, 0, 0, 0, 0.31661177, 0, 0, 0, 0.31661177, 28.856472, 5.00303, 28.78357)
 
-[node name="czerwony2" parent="." unique_id=1234374998 instance=ExtResource("66_rhwnr")]
+[node name="czerwony2" parent="." unique_id=161028666 instance=ExtResource("66_rhwnr")]
 transform = Transform3D(0.102337845, 0, 0, 0, 0.102337845, 0, 0, 0, 0.102337845, 14.616095, 0.50978947, -10.429682)
 
 [node name="dzrewko3" parent="." unique_id=1669399469 instance=ExtResource("61_mqyja")]
@@ -2088,60 +1989,9 @@ transform = Transform3D(0.026142078, 0, -0.9996582, 0, 1, 0, 0.9996582, 0, 0.026
 [node name="krzesło11" parent="." unique_id=719753971 instance=ExtResource("20_2fujo")]
 transform = Transform3D(0.03289352, 0, -0.99945885, 0, 1, 0, 0.99945885, 0, 0.03289352, 25.611876, 1.0057487, 45.684944)
 
-[node name="czerwony3" parent="." unique_id=719002852 instance=ExtResource("66_rhwnr")]
+[node name="czerwony3" parent="." unique_id=639957188 instance=ExtResource("66_rhwnr")]
 transform = Transform3D(0.034401946, 0, 0.0846116, 0, 0.091337934, 0, -0.0846116, 0, 0.034401946, 26.089428, 1.9624367, 45.36298)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1185921732]
-layer = 2
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=416357524]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1387731650]
-visible = false
-material = SubResource("ShaderMaterial_pdd5c")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control" unique_id=396450084]
-material = SubResource("ShaderMaterial_8m8tk")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1379732186]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -6.25
-offset_top = -6.5
-offset_right = 6.25
-offset_bottom = 6.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_a45ad")
-expand_mode = 1
+[connection signal="teleport" from="Teleport" to="." method="_on_teleport_teleport"]
 
 [editable path="player"]

@@ -14,3 +14,8 @@ var kobieta_second_printer := false
 var boss_second_papers := false
 var kolega_teddy := false
 var over := false
+
+var player_teleport_pos
+var player_teleport_rot
+var head_teleport_rot
+var cam_teleport_rot

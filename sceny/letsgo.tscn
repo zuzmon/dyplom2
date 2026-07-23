@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dd70sn13mr1y4" path="res://Licencjat/licencjat modele final/kosz.glb" id="10_s7xwn"]
 [ext_resource type="PackedScene" uid="uid://c3naqq12uoowf" path="res://Licencjat/licencjat modele final/krzak.glb" id="12_mf821"]
 [ext_resource type="PackedScene" uid="uid://n1dfnqmuh0if" path="res://assety/stanowsikaglb.glb" id="12_ygngh"]
+[ext_resource type="PackedScene" uid="uid://cgje2in507n10" path="res://Licencjat/licencjat modele final/papier do ręki.glb" id="14_rlv53"]
 [ext_resource type="PackedScene" uid="uid://8lsfwujed0h" path="res://assety/stol_szef.glb" id="17_e2m2r"]
 [ext_resource type="Texture2D" uid="uid://bpy0dr2lahuob" path="res://tekstury/white-wall-textures.jpg" id="18_7cpy4"]
 [ext_resource type="Texture2D" uid="uid://cjywwkxq8oddh" path="res://tekstury/gray-wall-textures.jpg" id="19_tv31b"]
@@ -908,6 +909,9 @@ mouse_captured = false
 
 [node name="Camera3D" parent="player/Head" parent_id_path=PackedInt32Array(1535646083, 875197071) index="0" unique_id=293298521]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3952127, -4.6953025)
+
+[node name="papier do ręki" parent="player/Head/Camera3D" index="1" unique_id=1819337477 instance=ExtResource("14_rlv53")]
+transform = Transform3D(-4.371136e-08, 0, 0.9999996, 0, 1, 0, -0.9999996, 0, -4.371136e-08, 0.12999916, -0.33554602, -0.44738865)
 
 [node name="kanapa" parent="." unique_id=1649565601 instance=ExtResource("3_tv31b")]
 transform = Transform3D(0.999968, 0, -0.0079936115, 0, 1, 0, 0.0079936115, 0, 0.999968, 47.410828, 1.0746579, 3.538128)
@@ -2124,7 +2128,9 @@ libraries/ = SubResource("AnimationLibrary_rlv53")
 [connection signal="dialog_over" from="player" to="." method="_on_player_dialog_over"]
 [connection signal="teddy_steal" from="czerwony" to="." method="_on_czerwony_teddy_steal"]
 [connection signal="ask" from="NPC_Boss" to="." method="_on_npc_boss_ask"]
+[connection signal="give_paper" from="NPC_Boss" to="." method="_on_npc_boss_give_paper"]
 [connection signal="ask" from="NPC_Kobieta" to="." method="_on_npc_kobieta_ask"]
+[connection signal="paper" from="NPC_Kobieta" to="." method="_on_npc_kobieta_paper"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="first_email" from="NaszeBiurko" to="." method="_on_nasze_biurko_first_email"]
 

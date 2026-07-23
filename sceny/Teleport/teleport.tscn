@@ -18,3 +18,5 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1374218497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14330614, 0.15796232, -0.11955178)
 shape = SubResource("BoxShape3D_ukdxx")
+
+[editable path="czerwony"]

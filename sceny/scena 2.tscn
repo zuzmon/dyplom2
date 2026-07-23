@@ -1,11 +1,13 @@
 [gd_scene format=4 uid="uid://c7bqoue8ral0k"]
 
 [ext_resource type="Texture2D" uid="uid://cya74n6djfbau" path="res://tekstury/black-fabric.jpg" id="1_psqpa"]
+[ext_resource type="Script" uid="uid://bwril2emf6vlq" path="res://sceny/scena_2.gd" id="1_uehd1"]
 [ext_resource type="PackedScene" uid="uid://io4w536jw6ob" path="res://sceny/player/player.tscn" id="2_eeock"]
 [ext_resource type="Texture2D" uid="uid://dni71lmsphr7w" path="res://tekstury/roboczo/office-wall-texture-12802925.webp" id="7_d5qac"]
 [ext_resource type="Texture2D" uid="uid://dtckr5sncol6n" path="res://tekstury/black-marble-patterned-texture-background-marble-thailand-abstract-natural-marble-black-white-design.jpg" id="8_2t3yc"]
 [ext_resource type="Texture2D" uid="uid://bpy0dr2lahuob" path="res://tekstury/white-wall-textures.jpg" id="9_4tv48"]
 [ext_resource type="Texture2D" uid="uid://cjywwkxq8oddh" path="res://tekstury/gray-wall-textures.jpg" id="10_e6hyi"]
+[ext_resource type="Shader" uid="uid://0loctdk2xig4" path="res://sceny/pixeloza.gdshader" id="10_kpw4q"]
 [ext_resource type="PackedScene" uid="uid://dd70sn13mr1y4" path="res://Licencjat/licencjat modele final/kosz.glb" id="11_blj0y"]
 [ext_resource type="Shader" uid="uid://cw164wcly5qnd" path="res://sceny/letsgo.gdshader" id="13_ws34d"]
 [ext_resource type="Texture2D" uid="uid://dd7djbf08jxr1" path="res://kursor.png" id="14_mcxmv"]
@@ -20,18 +22,11 @@
 [ext_resource type="PackedScene" uid="uid://cd4vdf82fafva" path="res://Licencjat/licencjat modele final/stanowisko solo.glb" id="54_4yosy"]
 [ext_resource type="PackedScene" uid="uid://d2h3uuuihn2ag" path="res://sceny/Teleport/teleport.tscn" id="55_4yosy"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orym7"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_ae3hb"]
-sky_material = SubResource("ProceduralSkyMaterial_orym7")
-
-[sub_resource type="Environment" id="Environment_rjvtb"]
-background_energy_multiplier = 0.1
-sky = SubResource("Sky_ae3hb")
-tonemap_mode = 2
+[sub_resource type="Environment" id="Environment_uehd1"]
+background_energy_multiplier = 0.0
 glow_enabled = true
+glow_bloom = 1.0
+fog_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7e7w"]
 albedo_texture = ExtResource("1_psqpa")
@@ -209,6 +204,20 @@ shader_parameter/anti_bleed_intensity = 1.8
 shader_parameter/color_bleed_blur_strength = 1.0
 shader_parameter/color_bleed_quality = 5
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_milfa"]
+shader = ExtResource("10_kpw4q")
+shader_parameter/shake = 0.0
+shader_parameter/noiseQuality = 250.0
+shader_parameter/noiseIntensity = 0.001
+shader_parameter/offsetIntensity = 0.0
+shader_parameter/colorOffsetIntensity = 0.10000000149012
+shader_parameter/pixelSize = 800.0000379525
+shader_parameter/grainIntensity = 0.0
+shader_parameter/use_overlay = false
+shader_parameter/use_lens_distortion = false
+shader_parameter/overlay_color = Color(1, 1, 1, 10)
+shader_parameter/lens_distortion_strength = 0.0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_gy0d6"]
 size = Vector3(11.637543, 2.0524597, 1.5026169)
 
@@ -216,6 +225,10 @@ size = Vector3(11.637543, 2.0524597, 1.5026169)
 size = Vector3(14.980469, 4.9837646, 2.5459595)
 
 [node name="world" type="Node3D" unique_id=1028837634]
+script = ExtResource("1_uehd1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1589751959]
+environment = SubResource("Environment_uehd1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=594626404]
 transform = Transform3D(-0.8660253, -0.4330129, 0.2500001, 0, 0.49999994, 0.86602545, -0.50000024, 0.74999994, -0.43301257, 0, 30.400063, 4.8208857)
@@ -223,9 +236,6 @@ visible = false
 light_color = Color(0.633757, 0.633757, 0.633757, 1)
 shadow_enabled = true
 shadow_bias = 0.0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2050605927]
-environment = SubResource("Environment_rjvtb")
 
 [node name="podłoga" type="CSGBox3D" parent="." unique_id=622585791]
 transform = Transform3D(63.11723, 0, 0, 0, 0.0021176797, 0, 0, 0, 113.75596, 17.708546, -0.15935223, -0.41781664)
@@ -384,7 +394,19 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1399894577]
+visible = false
 material = SubResource("ShaderMaterial_0rws3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control" unique_id=769331126]
+material = SubResource("ShaderMaterial_milfa")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -737,4 +759,3 @@ spot_angle = 50.029446
 
 [node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("55_4yosy")]
 transform = Transform3D(0.25411248, 0, -0.96717465, 0, 1, 0, 0.96717465, 0, 0.25411248, 21.453667, 2.0432146, -4.22204)
-scene = 3

@@ -45,6 +45,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=322657773]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -58,30 +59,71 @@ grow_vertical = 0
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/Panel" unique_id=1849489468]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -167.0
+offset_right = 0.5
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Panel/Label" unique_id=1968487114]
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 25.0
-offset_top = 14.0
-offset_right = -16.0
-offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-autowrap_mode = 2
+color = Color(0, 0, 0, 0.37254903)
 
 [node name="Name" type="Panel" parent="CanvasLayer/Control/Panel" unique_id=140872912]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
-offset_top = -75.0
-offset_right = 319.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -159.5
+offset_top = -275.0
+offset_right = 159.5
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/Panel/Name" unique_id=1398604864]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -67.0
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Panel/Name/Label" unique_id=1588982972]
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
+color = Color(0, 0, 0, 0.37254903)
