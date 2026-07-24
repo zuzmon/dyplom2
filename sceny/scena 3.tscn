@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://ctu66tujc51uc" path="res://assety/kuchnia1.glb" id="21_0nsnd"]
 [ext_resource type="PackedScene" uid="uid://bt4hwow5rb5y5" path="res://assety/dzrewko2.glb" id="22_axudq"]
 [ext_resource type="PackedScene" uid="uid://ejqwo3nnqdot" path="res://assety/umywalka1.glb" id="23_t1yyx"]
+[ext_resource type="Shader" uid="uid://0loctdk2xig4" path="res://sceny/pixeloza.gdshader" id="24_2ac46"]
 [ext_resource type="PackedScene" uid="uid://d2ievm1uqprx0" path="res://assety/telewizorglb.glb" id="24_cpdpx"]
 [ext_resource type="PackedScene" uid="uid://03sw3ttkt58l" path="res://assety/tablica.glb" id="25_t70p2"]
 [ext_resource type="PackedScene" uid="uid://dnx6hy3sgvqrh" path="res://assety/obraz1.glb" id="26_4pl60"]
@@ -446,6 +447,20 @@ shader_parameter/color_bleed_intensity = 0.2
 shader_parameter/anti_bleed_intensity = 1.8
 shader_parameter/color_bleed_blur_strength = 1.0
 shader_parameter/color_bleed_quality = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gkm8"]
+shader = ExtResource("24_2ac46")
+shader_parameter/shake = 0.0
+shader_parameter/noiseQuality = 250.0
+shader_parameter/noiseIntensity = 0.001
+shader_parameter/offsetIntensity = 0.0
+shader_parameter/colorOffsetIntensity = 0.10000000149012
+shader_parameter/pixelSize = 800.0000379525
+shader_parameter/grainIntensity = 0.0
+shader_parameter/use_overlay = false
+shader_parameter/use_lens_distortion = false
+shader_parameter/overlay_color = Color(1, 1, 1, 10)
+shader_parameter/lens_distortion_strength = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ctkkg"]
 size = Vector3(4.2756042, 5.3603516, 1.2416992)
@@ -1029,7 +1044,19 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1399894577]
+visible = false
 material = SubResource("ShaderMaterial_oqnvv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control" unique_id=1987013285]
+material = SubResource("ShaderMaterial_0gkm8")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1734,7 +1761,6 @@ material = SubResource("StandardMaterial3D_oqnvv")
 
 [node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("44_oqnvv")]
 transform = Transform3D(-0.90478987, 0, 0.42585832, 0, 1, 0, -0.42585832, 0, -0.90478987, 16.052374, 0.65597177, 62.508503)
-scene = 0
 
 [node name="damskie wc" parent="." unique_id=1113579959 instance=ExtResource("17_f2yyf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.810666, 6.1968193, 23.066858)

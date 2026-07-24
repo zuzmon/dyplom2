@@ -57,6 +57,7 @@ _data = {
 }
 
 [node name="Fade" type="CanvasLayer" unique_id=573746315]
+layer = 2
 script = ExtResource("1_denaw")
 
 [node name="Control" type="Control" parent="." unique_id=1680428925]

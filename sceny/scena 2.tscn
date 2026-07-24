@@ -224,6 +224,12 @@ size = Vector3(11.637543, 2.0524597, 1.5026169)
 [sub_resource type="BoxShape3D" id="BoxShape3D_jl2av"]
 size = Vector3(14.980469, 4.9837646, 2.5459595)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpw4q"]
+size = Vector3(3.418396, 3.8705444, 6.1557617)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_milfa"]
+size = Vector3(4.7612305, 6.9296875, 17.407715)
+
 [node name="world" type="Node3D" unique_id=1028837634]
 script = ExtResource("1_uehd1")
 
@@ -759,3 +765,31 @@ spot_angle = 50.029446
 
 [node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("55_4yosy")]
 transform = Transform3D(0.25411248, 0, -0.96717465, 0, 1, 0, 0.96717465, 0, 0.25411248, 21.453667, 2.0432146, -4.22204)
+
+[node name="CollisionShape3D" parent="Teleport/StaticBody3D" parent_id_path=PackedInt32Array(206469578, 706359907) index="0" unique_id=1374218497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14330626, 0.15796232, -0.17572021)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Teleport/StaticBody3D" parent_id_path=PackedInt32Array(206469578, 706359907) index="1" unique_id=1055835574]
+transform = Transform3D(0.9617413, 0, -0.27395916, 0, 1, 0, 0.27395916, 0, 0.9617413, -2.9706802, 0.054840088, 3.2270432)
+shape = SubResource("BoxShape3D_kpw4q")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1581974959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5615, 0, -13.71255)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=658650802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1102295, 2.9648438, 4.2886896)
+shape = SubResource("BoxShape3D_milfa")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2" unique_id=152809176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0794315, 2.9648438, 4.2886896)
+shape = SubResource("BoxShape3D_milfa")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1621634564]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.9863243, 2.9648438, -0.30213737)
+shape = SubResource("BoxShape3D_milfa")
+
+[connection signal="teleport" from="Teleport" to="." method="_on_teleport_teleport"]
+
+[editable path="player"]
+[editable path="Teleport"]
+[editable path="Teleport/czerwony"]

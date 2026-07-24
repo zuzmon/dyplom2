@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://7hl5s5ll3pa1" path="res://sceny/Teleport/teleport.gd" id="1_ukdxx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ukdxx"]
+size = Vector3(1, 1, 1.0027771)
 
 [node name="Teleport" type="Node3D" unique_id=206469578]
 script = ExtResource("1_ukdxx")
