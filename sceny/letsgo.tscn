@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bpy0dr2lahuob" path="res://tekstury/white-wall-textures.jpg" id="18_7cpy4"]
 [ext_resource type="Texture2D" uid="uid://cjywwkxq8oddh" path="res://tekstury/gray-wall-textures.jpg" id="19_tv31b"]
 [ext_resource type="PackedScene" uid="uid://d4is6ttxjq2e" path="res://assety/półka.glb" id="23_a4n3v"]
+[ext_resource type="PackedScene" uid="uid://chofemcnt7ecl" path="res://assety/stanowisko menu.glb" id="25_y4k6h"]
 [ext_resource type="Texture2D" uid="uid://dni71lmsphr7w" path="res://tekstury/roboczo/office-wall-texture-12802925.webp" id="28_bt1p6"]
 [ext_resource type="PackedScene" uid="uid://1ls02d4ewgue" path="res://assety/woda1.glb" id="28_jocoe"]
 [ext_resource type="PackedScene" uid="uid://bvac82etjgq45" path="res://assety/fotel.glb" id="28_wm6x7"]
@@ -1205,6 +1206,9 @@ transform = Transform3D(-2.0911222, 0, -0.007885059, 0, 1.9866022, 0, 0.00912431
 [node name="krzak3" parent="Sciany" unique_id=791471841 instance=ExtResource("12_mf821")]
 transform = Transform3D(0.007977369, 0, -1.3562778, 0, 1.3563013, 0, 1.3562778, 0, 0.007977369, -3.1014097, -0.0034624338, 5.05709)
 
+[node name="stanowisko menu" parent="Sciany" unique_id=1941828830 instance=ExtResource("25_y4k6h")]
+transform = Transform3D(-0.99999934, 0, 0.001134377, 0, 1, 0, -0.001134377, 0, -0.99999934, 25.614346, 1.4644268, -4.073291)
+
 [node name="drzwi" parent="." unique_id=1793167788 instance=ExtResource("34_mgq3b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.0854907, 1.8019617, -2.582337)
 
@@ -1270,9 +1274,6 @@ shape = SubResource("BoxShape3D_wm6x7")
 
 [node name="stanowsikaglb2" parent="." unique_id=1444384399 instance=ExtResource("12_ygngh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.169182, 1.4765341, -19.589745)
-
-[node name="stanowsikaglb3" parent="." unique_id=94033814 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 28.642733, 1.4765341, -4.058077)
 
 [node name="stanowsikaglb4" parent="." unique_id=2118440990 instance=ExtResource("12_ygngh")]
 transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 14.846298, 1.4765341, -4.0820045)
@@ -2014,7 +2015,7 @@ transform = Transform3D(0.024589282, 0, 0.9996976, 0, 1, 0, -0.9996976, 0, 0.024
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 540715288) index="0" unique_id=284198269]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2075,7 +2076,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=782166977]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="2" unique_id=1053622764]

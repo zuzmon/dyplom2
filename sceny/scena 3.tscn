@@ -471,6 +471,9 @@ size = Vector3(17.748001, 6.255707, 10.662903)
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ac46"]
 size = Vector3(14.443354, 6.255707, 10.662903)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gkm8"]
+size = Vector3(12.263062, 8.227051, 1.097168)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_wm6x7"]
 size = Vector3(16.880898, 5.564232, 10.877838)
 
@@ -1185,13 +1188,118 @@ transform = Transform3D(-0.99999255, 0, 0.003944539, 0, 1.2213321, 0, -0.0039445
 transform = Transform3D(-0.99999267, 0, 0.0039445395, 0, 1.2213321, 0, -0.0039445395, 0, -0.99999267, -10.759306, -1.3428562, -11.512601)
 
 [node name="belki17" parent="stanowsikaglb3/StaticBody3D" unique_id=1665549699 instance=ExtResource("27_45nco")]
-transform = Transform3D(-0.99999243, 0, 0.0039445385, 0, 1.3064073, 0, -0.0039445385, 0, -0.99999243, 19.584387, -1.3209512, -56.038986)
+transform = Transform3D(-0.9999934, 0, 0.0039445423, 0, 1.3064073, 0, -0.0039445423, 0, -0.9999934, 16.997025, -1.3209512, -69.09179)
 
 [node name="belki18" parent="stanowsikaglb3/StaticBody3D" unique_id=856274968 instance=ExtResource("27_45nco")]
-transform = Transform3D(-0.99999255, 0, 0.003944539, 0, 1.3064073, 0, -0.003944539, 0, -0.99999255, 19.942123, -1.3209512, -56.037575)
+transform = Transform3D(-0.9999935, 0, 0.0039445427, 0, 1.3064073, 0, -0.0039445427, 0, -0.9999935, 17.354752, -1.3209512, -69.0904)
 
 [node name="belki19" parent="stanowsikaglb3/StaticBody3D" unique_id=1349965799 instance=ExtResource("27_45nco")]
-transform = Transform3D(-0.99999267, 0, 0.0039445395, 0, 1.3064073, 0, -0.0039445395, 0, -0.99999267, 20.32101, -1.3209512, -56.036083)
+transform = Transform3D(-0.9999936, 0, 0.003944543, 0, 1.3064073, 0, -0.003944543, 0, -0.9999936, 17.73365, -1.3209512, -69.08889)
+
+[node name="belki20" parent="stanowsikaglb3/StaticBody3D" unique_id=2127280377 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999936, 0, 0.003944543, 0, 1.3064073, 0, -0.003944543, 0, -0.9999936, 15.938365, -0.99545956, -69.09597)
+
+[node name="belki21" parent="stanowsikaglb3/StaticBody3D" unique_id=1799376772 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999374, 0, 0.0039445437, 0, 1.3064073, 0, -0.0039445437, 0, -0.99999374, 16.29609, -0.99545956, -69.09458)
+
+[node name="belki22" parent="stanowsikaglb3/StaticBody3D" unique_id=772515717 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999386, 0, 0.003944544, 0, 1.3064073, 0, -0.003944544, 0, -0.99999386, 16.674994, -0.99545956, -69.09307)
+
+[node name="belki23" parent="stanowsikaglb3/StaticBody3D" unique_id=1523669331 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999935, 0, 0.0039445427, 0, 1.3064073, 0, -0.0039445427, 0, -0.9999935, 14.820129, -1.3209512, -69.10038)
+
+[node name="belki24" parent="stanowsikaglb3/StaticBody3D" unique_id=31847424 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999936, 0, 0.003944543, 0, 1.3064073, 0, -0.003944543, 0, -0.9999936, 15.177857, -1.3209512, -69.09899)
+
+[node name="belki25" parent="stanowsikaglb3/StaticBody3D" unique_id=295736716 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999374, 0, 0.0039445437, 0, 1.3064073, 0, -0.0039445437, 0, -0.99999374, 15.556755, -1.3209512, -69.09748)
+
+[node name="belki26" parent="stanowsikaglb3/StaticBody3D" unique_id=1389269611 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999374, 0, 0.0039445437, 0, 1.3064073, 0, -0.0039445437, 0, -0.99999374, 13.761471, -0.99545956, -69.10455)
+
+[node name="belki27" parent="stanowsikaglb3/StaticBody3D" unique_id=529109287 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999386, 0, 0.003944544, 0, 1.3064073, 0, -0.003944544, 0, -0.99999386, 14.119193, -0.99545956, -69.103165)
+
+[node name="belki28" parent="stanowsikaglb3/StaticBody3D" unique_id=1151050420 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.999994, 0, 0.0039445446, 0, 1.3064073, 0, -0.0039445446, 0, -0.999994, 14.498098, -0.99545956, -69.101654)
+
+[node name="belki29" parent="stanowsikaglb3/StaticBody3D" unique_id=780722107 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999936, 0, 0.003944543, 0, 1.3064073, 0, -0.003944543, 0, -0.9999936, 12.655642, -1.3209512, -69.10892)
+
+[node name="belki30" parent="stanowsikaglb3/StaticBody3D" unique_id=1773032124 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999374, 0, 0.0039445437, 0, 1.3064073, 0, -0.0039445437, 0, -0.99999374, 13.013367, -1.3209512, -69.10753)
+
+[node name="belki31" parent="stanowsikaglb3/StaticBody3D" unique_id=122545386 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999386, 0, 0.003944544, 0, 1.3064073, 0, -0.003944544, 0, -0.99999386, 13.392265, -1.3209512, -69.10602)
+
+[node name="belki32" parent="stanowsikaglb3/StaticBody3D" unique_id=1295314734 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999386, 0, 0.003944544, 0, 1.3064073, 0, -0.003944544, 0, -0.99999386, 11.596981, -0.99545956, -69.11309)
+
+[node name="belki33" parent="stanowsikaglb3/StaticBody3D" unique_id=2032028460 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.999994, 0, 0.0039445446, 0, 1.3064073, 0, -0.0039445446, 0, -0.999994, 11.954702, -0.99545956, -69.1117)
+
+[node name="belki34" parent="stanowsikaglb3/StaticBody3D" unique_id=527671645 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999941, 0, 0.003944545, 0, 1.3064073, 0, -0.003944545, 0, -0.9999941, 12.333609, -0.99545956, -69.11019)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb3/StaticBody3D/belki34" unique_id=1237179330]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb3/StaticBody3D/belki34/StaticBody3D" unique_id=452202308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17791748, 3.5349116, -0.048583984)
+shape = SubResource("BoxShape3D_0gkm8")
+
+[node name="belki35" parent="stanowsikaglb3/StaticBody3D" unique_id=1420350608 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999374, 0, 0.0039445437, 0, 1.3064073, 0, -0.0039445437, 0, -0.99999374, 10.464346, -1.3209512, -69.11756)
+
+[node name="belki36" parent="stanowsikaglb3/StaticBody3D" unique_id=1615253341 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999386, 0, 0.003944544, 0, 1.3064073, 0, -0.003944544, 0, -0.99999386, 10.822071, -1.3209512, -69.11617)
+
+[node name="belki37" parent="stanowsikaglb3/StaticBody3D" unique_id=900688684 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.999994, 0, 0.0039445446, 0, 1.3064073, 0, -0.0039445446, 0, -0.999994, 11.20097, -1.3209512, -69.11466)
+
+[node name="belki38" parent="stanowsikaglb3/StaticBody3D" unique_id=1962460987 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.999994, 0, 0.0039445446, 0, 1.3064073, 0, -0.0039445446, 0, -0.999994, 9.405685, -0.99545956, -69.121735)
+
+[node name="belki39" parent="stanowsikaglb3/StaticBody3D" unique_id=1101184168 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999941, 0, 0.003944545, 0, 1.3064073, 0, -0.003944545, 0, -0.9999941, 9.763407, -0.99545956, -69.120346)
+
+[node name="belki40" parent="stanowsikaglb3/StaticBody3D" unique_id=1123759260 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999942, 0, 0.0039445455, 0, 1.3064073, 0, -0.0039445455, 0, -0.9999942, 10.142313, -0.99545956, -69.118835)
+
+[node name="belki41" parent="stanowsikaglb3/StaticBody3D" unique_id=1329975340 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999386, 0, 0.003944544, 0, 1.3064073, 0, -0.003944544, 0, -0.99999386, 8.2668705, -1.3209512, -69.12623)
+
+[node name="belki42" parent="stanowsikaglb3/StaticBody3D" unique_id=1552363158 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.999994, 0, 0.0039445446, 0, 1.3064073, 0, -0.0039445446, 0, -0.999994, 8.624596, -1.3209512, -69.12484)
+
+[node name="belki43" parent="stanowsikaglb3/StaticBody3D" unique_id=792027514 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999941, 0, 0.003944545, 0, 1.3064073, 0, -0.003944545, 0, -0.9999941, 9.003494, -1.3209512, -69.12333)
+
+[node name="belki44" parent="stanowsikaglb3/StaticBody3D" unique_id=97869601 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999941, 0, 0.003944545, 0, 1.3064073, 0, -0.003944545, 0, -0.9999941, 7.208212, -0.99545956, -69.1304)
+
+[node name="belki45" parent="stanowsikaglb3/StaticBody3D" unique_id=1004143054 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999942, 0, 0.0039445455, 0, 1.3064073, 0, -0.0039445455, 0, -0.9999942, 7.5659313, -0.99545956, -69.12901)
+
+[node name="belki46" parent="stanowsikaglb3/StaticBody3D" unique_id=671698857 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999434, 0, 0.003944546, 0, 1.3064073, 0, -0.003944546, 0, -0.99999434, 7.9448395, -0.99545956, -69.1275)
+
+[node name="belki47" parent="stanowsikaglb3/StaticBody3D" unique_id=2122811998 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.999994, 0, 0.0039445446, 0, 1.3064073, 0, -0.0039445446, 0, -0.999994, 6.087097, -1.3209512, -69.13483)
+
+[node name="belki48" parent="stanowsikaglb3/StaticBody3D" unique_id=1212771176 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999941, 0, 0.003944545, 0, 1.3064073, 0, -0.003944545, 0, -0.9999941, 6.4448223, -1.3209512, -69.13344)
+
+[node name="belki49" parent="stanowsikaglb3/StaticBody3D" unique_id=58870568 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999942, 0, 0.0039445455, 0, 1.3064073, 0, -0.0039445455, 0, -0.9999942, 6.823721, -1.3209512, -69.13193)
+
+[node name="belki50" parent="stanowsikaglb3/StaticBody3D" unique_id=2133919583 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.9999942, 0, 0.0039445455, 0, 1.3064073, 0, -0.0039445455, 0, -0.9999942, 5.0284386, -0.99545956, -69.139)
+
+[node name="belki51" parent="stanowsikaglb3/StaticBody3D" unique_id=1717918596 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999434, 0, 0.003944546, 0, 1.3064073, 0, -0.003944546, 0, -0.99999434, 5.386158, -0.99545956, -69.13761)
+
+[node name="belki52" parent="stanowsikaglb3/StaticBody3D" unique_id=480437659 instance=ExtResource("27_45nco")]
+transform = Transform3D(-0.99999446, 0, 0.0039445464, 0, 1.3064073, 0, -0.0039445464, 0, -0.99999446, 5.765066, -0.99545956, -69.1361)
 
 [node name="stanowsikaglb4" parent="." unique_id=2118440990 instance=ExtResource("17_rmv2g")]
 transform = Transform3D(0.43965888, 0.13294204, 0.8882719, 0.005370073, -0.98935664, 0.14541294, 0.89814913, -0.059161782, -0.43569344, 9.853946, 11.3822365, -5.457428)
@@ -1539,7 +1647,7 @@ transform = Transform3D(-0.3519022, -0.029412908, -0.39284635, 0.22672112, 0.415
 transform = Transform3D(-0.3241402, -0.08614247, 0.2389455, -0.2537739, 0.093527995, -0.31053767, 0.010690613, -0.3916815, -0.12670317, 16.17032, 9.3619995, 36.80487)
 
 [node name="czerwony2" parent="." unique_id=2083713864 instance=ExtResource("45_i26te")]
-transform = Transform3D(-1.224907, -0.11510881, -0.096784554, -0.108059995, 1.2260262, -0.090540856, 0.10459617, -0.08139147, -1.2269675, 15.472359, -1.3798141, 70.60674)
+transform = Transform3D(-1.224907, -0.11510881, -0.096784554, -0.108059995, 1.2260262, -0.090540856, 0.10459617, -0.08139147, -1.2269675, 15.472359, -1.3798141, 71.138855)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="czerwony2" unique_id=1197631895]
 
@@ -1716,11 +1824,13 @@ shadow_enabled = true
 omni_range = 15.8505335
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=1858181330]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.949509, 10.068041, 65.6925)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.495722, 8.029423, 65.6925)
 light_color = Color(0.8619407, 0, 0.085468136, 1)
-light_energy = 5.75
+light_energy = 5.76
+light_volumetric_fog_energy = 4.96
+light_size = 0.09
 shadow_enabled = true
-omni_range = 15.8505335
+omni_range = 25.981
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=987873428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.280726, 4.1775994, -3.8467615)
