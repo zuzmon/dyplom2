@@ -1316,7 +1316,7 @@ transform = Transform3D(-0.84675086, 0, 0.5319898, 0, 1, 0, -0.5319898, 0, -0.84
 [node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb7" unique_id=829999498]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb7/StaticBody3D" unique_id=362377405]
-transform = Transform3D(1.0000079, 0, 2.0861626e-07, 0, 1, 0, -2.0861626e-07, 0, 1.0000079, 3.3496246, 0.087249756, 0.48947334)
+transform = Transform3D(1.0000079, 0, 2.0861626e-07, 0, 1, 0, -2.0861626e-07, 0, 1.0000079, 0.6014252, 0.087249756, 0.42120075)
 shape = SubResource("BoxShape3D_oqnvv")
 
 [node name="stanowsikaglb10" parent="." unique_id=1895043472 instance=ExtResource("17_rmv2g")]
@@ -1325,7 +1325,7 @@ transform = Transform3D(-0.9741853, 0, -0.2257504, 0, 1, 0, 0.2257504, 0, -0.974
 [node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb10" unique_id=259716168]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb10/StaticBody3D" unique_id=740065805]
-transform = Transform3D(1.0000079, 0, 5.8673322e-08, 0, 1, 0, -5.8673322e-08, 0, 1.0000079, 3.237667, 0.0975647, 0.61125946)
+transform = Transform3D(1.0000079, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 1.0000079, -0.057320595, 0.0975647, 0.64248276)
 shape = SubResource("BoxShape3D_0xhqn")
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=507043564]

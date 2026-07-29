@@ -12,7 +12,18 @@
 [ext_resource type="Shader" uid="uid://cw164wcly5qnd" path="res://sceny/letsgo.gdshader" id="13_ws34d"]
 [ext_resource type="Texture2D" uid="uid://dd7djbf08jxr1" path="res://kursor.png" id="14_mcxmv"]
 [ext_resource type="PackedScene" uid="uid://dycq0xeij5qsh" path="res://sceny/drzwi/drzwi.tscn" id="15_xgtly"]
+[ext_resource type="Texture2D" uid="uid://bwd83cd2bu250" path="res://assety/zegar/Frame 2.png" id="22_dmvde"]
+[ext_resource type="Texture2D" uid="uid://dfljp8boacm6l" path="res://assety/zegar/Frame 3.png" id="23_sajru"]
+[ext_resource type="Texture2D" uid="uid://c75uaiescvfqm" path="res://assety/zegar/Frame 4.png" id="24_aw84v"]
 [ext_resource type="PackedScene" uid="uid://ejqwo3nnqdot" path="res://assety/umywalka1.glb" id="24_ggs1i"]
+[ext_resource type="Texture2D" uid="uid://c4bhvtrrftq2e" path="res://assety/zegar/Frame 5.png" id="25_xwvqm"]
+[ext_resource type="Texture2D" uid="uid://cj8twob73aes0" path="res://assety/zegar/Frame 6.png" id="26_tgn6y"]
+[ext_resource type="Texture2D" uid="uid://b7sqgwb1hc1on" path="res://assety/zegar/Frame 7.png" id="27_0dvxh"]
+[ext_resource type="Texture2D" uid="uid://bdmgkx1semfp3" path="res://assety/zegar/Frame 8.png" id="28_k8kup"]
+[ext_resource type="Texture2D" uid="uid://7hahvmtodwgd" path="res://assety/zegar/Frame 9.png" id="29_q23dm"]
+[ext_resource type="Texture2D" uid="uid://bvh66kbfabj46" path="res://assety/zegar/Frame 10.png" id="30_suy6g"]
+[ext_resource type="Texture2D" uid="uid://bfc5bo34fhyme" path="res://assety/zegar/Frame 11.png" id="31_cersy"]
+[ext_resource type="Texture2D" uid="uid://b1th7lfktvclm" path="res://assety/zegar/Frame 12.png" id="32_53my5"]
 [ext_resource type="PackedScene" uid="uid://dxm7nha75cbhs" path="res://sceny/lampa/lampa.tscn" id="32_fj8h4"]
 [ext_resource type="PackedScene" uid="uid://b0hqq2gsqf1v0" path="res://Licencjat/licencjat modele final/wc znak baba.glb" id="33_w6xwe"]
 [ext_resource type="PackedScene" uid="uid://cx8hjxeauryy3" path="res://Licencjat/licencjat modele final/wc znak chlop.glb" id="34_qsg0w"]
@@ -229,6 +240,47 @@ size = Vector3(3.418396, 3.8705444, 6.1557617)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_milfa"]
 size = Vector3(4.7612305, 6.9296875, 17.407715)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_btev8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_dmvde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_sajru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_aw84v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xwvqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_tgn6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_0dvxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_k8kup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_q23dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_suy6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_cersy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_53my5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="world" type="Node3D" unique_id=1028837634]
 script = ExtResource("1_uehd1")
@@ -787,6 +839,13 @@ shape = SubResource("BoxShape3D_milfa")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1621634564]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.9863243, 2.9648438, -0.30213737)
 shape = SubResource("BoxShape3D_milfa")
+
+[node name="Zegar" type="AnimatedSprite3D" parent="." unique_id=1466972388]
+transform = Transform3D(0.39, 0, 0, 0, 0.39, 0, 0, 0, 0.39, 16.996326, 4.4847784, -11.786118)
+sprite_frames = SubResource("SpriteFrames_btev8")
+autoplay = "default"
+frame = 9
+frame_progress = 0.4501323
 
 [connection signal="teleport" from="Teleport" to="." method="_on_teleport_teleport"]
 

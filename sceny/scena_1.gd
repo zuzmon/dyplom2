@@ -1,15 +1,28 @@
 extends Node3D
 
+@onready var raycast = $player/Head/Camera3D/RayCastJumpscare
+var last_collider
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	randomize()
+	$Jumpscare.hide()
 
+func _physics_process(_delta):
+	if raycast.is_colliding():
+		var collider = raycast.get_collider()
+		if last_collider == collider:
+			return
+		else:
+			last_collider = collider
+		if collider.is_in_group("teddy"):
+			jumpscare()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+func jumpscare():
+	$Jumpscare/Control/AnimatedSprite2D.frame = randi() % 5
+	$Jumpscare.show()
+	$Jumpscare/Timer.start()
+	await $Jumpscare/Timer.timeout
+	$Jumpscare.hide()
 
 func _on_teleport_teleport():
 	Global.player_teleport_pos = $player.global_position

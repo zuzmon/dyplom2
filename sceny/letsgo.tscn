@@ -487,16 +487,16 @@ size = Vector3(5.647522, 4.2197266, 1.5701904)
 size = Vector3(4.2756042, 5.3603516, 1.2416992)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wm6x7"]
-size = Vector3(28.771355, 6.255707, 10.662903)
+size = Vector3(27.626827, 6.255707, 10.007252)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_18m5m"]
-size = Vector3(28.592434, 5.656189, 10.662903)
+size = Vector3(27.598427, 5.656189, 10.054886)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g7gjp"]
-size = Vector3(28.775452, 6.8454895, 10.580139)
+size = Vector3(27.670914, 6.8454895, 10.037003)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0xhqn"]
-size = Vector3(28.332657, 6.255707, 10.662903)
+size = Vector3(27.673985, 6.255707, 10.048889)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_18m5m"]
 _surfaces = [{
@@ -1269,55 +1269,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.37295, 1.4765341, -19.66809
 [node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb" unique_id=756081756]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb/StaticBody3D" unique_id=179709340]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.262665, 0.0975647, 0.6112366)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0511894, 0.0975647, 0.52313805)
 shape = SubResource("BoxShape3D_wm6x7")
 
 [node name="stanowsikaglb2" parent="." unique_id=1444384399 instance=ExtResource("12_ygngh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.169182, 1.4765341, -19.589745)
 
 [node name="stanowsikaglb4" parent="." unique_id=2118440990 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 14.846298, 1.4765341, -4.0820045)
+transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 11.851041, 1.4765341, -4.0820045)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb4" unique_id=1258976419]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb4/StaticBody3D" unique_id=1370956825]
-transform = Transform3D(1.0000079, 0, 2.8219074e-07, 0, 1, 0, -2.8219074e-07, 0, 1.0000079, -3.5484467, 0.3973236, 0.6112406)
+transform = Transform3D(1.0000079, 0, 3.441237e-07, 0, 1, 0, -3.441237e-07, 0, 1.0000079, -6.713372, 0.3973236, 0.39673853)
 shape = SubResource("BoxShape3D_wm6x7")
 
 [node name="stanowsikaglb5" parent="." unique_id=1850642289 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 28.642733, 1.4765341, 9.722527)
+transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 25.642733, 1.4765341, 9.722527)
 
 [node name="stanowsikaglb6" parent="." unique_id=789771682 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 14.846298, 1.4765341, 9.698599)
+transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 11.846298, 1.4765341, 9.698599)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb6" unique_id=182809837]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb6/StaticBody3D" unique_id=1239819625]
-transform = Transform3D(1.0000079, 0, 8.428469e-08, 0, 1, 0, -8.428469e-08, 0, 1.0000079, -3.4828024, 0.0975647, 0.61122894)
+transform = Transform3D(1.0000079, 0, 1.3969839e-07, 0, 1, 0, -1.3969839e-07, 0, 1.0000079, -6.73685, 0.0975647, 0.57422066)
 shape = SubResource("BoxShape3D_18m5m")
 
 [node name="stanowsikaglb7" parent="." unique_id=1127338370 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 28.642733, 1.4765341, 23.95365)
+transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 25.642733, 1.4765341, 23.95365)
 
 [node name="stanowsikaglb8" parent="." unique_id=1274992453 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 14.846298, 1.4765341, 24.043428)
+transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 11.846298, 1.4765341, 24.043428)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb8" unique_id=1976636832]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb8/StaticBody3D" unique_id=481210009]
-transform = Transform3D(1.0000079, 0, 2.3888424e-07, 0, 1, 0, -2.3888424e-07, 0, 1.0000079, -3.5872507, 3.0203378, 0.582037)
+transform = Transform3D(1.0000079, 0, 3.031455e-07, 0, 1, 0, -3.031455e-07, 0, 1.0000079, -6.74207, 3.0203378, 0.55659676)
 shape = SubResource("BoxShape3D_g7gjp")
 
 [node name="stanowsikaglb9" parent="." unique_id=2090951718 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 28.642733, 1.4765341, 38.36068)
+transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 25.642733, 1.4765341, 38.36068)
 
 [node name="stanowsikaglb10" parent="." unique_id=1895043472 instance=ExtResource("12_ygngh")]
-transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 14.846298, 1.4765341, 38.336754)
+transform = Transform3D(-0.9999922, 0, -0.0039445376, 0, 1, 0, 0.0039445376, 0, -0.9999922, 11.846298, 1.4765341, 38.336754)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stanowsikaglb10" unique_id=259716168]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stanowsikaglb10/StaticBody3D" unique_id=740065805]
-transform = Transform3D(1.0000079, 0, 3.3527613e-08, 0, 1, 0, -3.3527613e-08, 0, 1.0000079, -3.7364225, 0.0975647, 0.61125565)
+transform = Transform3D(1.0000079, 0, 9.9185854e-08, 0, 1, 0, -9.9185854e-08, 0, 1.0000079, -6.741255, 0.0975647, 0.40883255)
 shape = SubResource("BoxShape3D_0xhqn")
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=507043564]
@@ -2015,7 +2015,7 @@ transform = Transform3D(0.024589282, 0, 0.9996976, 0, 1, 0, -0.9996976, 0, 0.024
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2076,7 +2076,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="2" unique_id=1053622764]

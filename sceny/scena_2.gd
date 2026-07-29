@@ -4,18 +4,13 @@ extends Node3D
 @onready var player = $player
 @onready var biurko = $"stanowisko solo"
 
-var magnitude = 0.0
+var magnitude = 0.2
 
 func _ready():
 	$player.global_position = Global.player_teleport_pos
 	$player.rotation = Global.player_teleport_rot
 	$player/Head.rotation = Global.head_teleport_rot 
 	$player/Head/Camera3D.rotation = Global.cam_teleport_rot
-
-func _physics_process(_delta):
-	var distance = biurko.global_position.distance_to(player.global_position)
-	magnitude = clamp(-0.0215054 * distance + 0.4, 0.0, 0.4)
-	_camera_shake()
 
 func _camera_shake():
 	var initial_transform = camera.transform 
