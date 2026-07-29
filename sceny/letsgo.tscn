@@ -70,6 +70,11 @@
 [ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="58_ae3hb"]
 [ext_resource type="Script" uid="uid://bkxmv38knpa2s" path="res://sceny/nasze_biurko.gd" id="58_ylwli"]
 [ext_resource type="PackedScene" uid="uid://clob63qyrwvtm" path="res://assety/belki.glb" id="59_0d0t2"]
+[ext_resource type="PackedScene" uid="uid://nn345171e71k" path="res://assety/kwiatek.glb" id="71_ivq4e"]
+[ext_resource type="PackedScene" uid="uid://dfuggax7ga0ge" path="res://assety/karteczki.glb" id="72_ltqei"]
+[ext_resource type="PackedScene" uid="uid://cc5vt8v2wmyua" path="res://assety/teczka.glb" id="73_yfv8x"]
+[ext_resource type="PackedScene" uid="uid://cflrlf8tyfkc2" path="res://assety/papiery.glb" id="74_qbe7c"]
+[ext_resource type="PackedScene" uid="uid://bubphf8x88j3j" path="res://assety/zdjecie.glb" id="75_t2jue"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0rws3"]
 shader = ExtResource("32_tv31b")
@@ -2015,7 +2020,7 @@ transform = Transform3D(0.024589282, 0, 0.9996976, 0, 1, 0, -0.9996976, 0, 0.024
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2076,7 +2081,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="2" unique_id=1053622764]
@@ -2125,6 +2130,27 @@ dialog = Array[String](["jdrugie pisanie maila"])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=414750796]
 libraries/ = SubResource("AnimationLibrary_rlv53")
+
+[node name="kwiatek" parent="." unique_id=595084122 instance=ExtResource("71_ivq4e")]
+transform = Transform3D(-0.9178932, 0, 0.3968276, 0, 1, 0, -0.3968276, 0, -0.9178932, 22.05849, 2.2361553, -5.3502655)
+
+[node name="karteczki" parent="." unique_id=2143665243 instance=ExtResource("72_ltqei")]
+transform = Transform3D(-0.99998623, 0, 0.0052534714, 0, 1, 0, -0.0052534714, 0, -0.99998623, 25.320374, 2.9785051, -7.353015)
+
+[node name="teczka" parent="." unique_id=247481518 instance=ExtResource("73_yfv8x")]
+transform = Transform3D(-0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, -0.8433914, 20.997564, 2.024865, -6.0314827)
+
+[node name="papiery" parent="." unique_id=1991283196 instance=ExtResource("74_qbe7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.52775, 2.0202212, -7.2829666)
+
+[node name="papiery2" parent="." unique_id=626003031 instance=ExtResource("74_qbe7c")]
+transform = Transform3D(0.9625499, 0, 0.2711045, 0, 1, 0, -0.2711045, 0, 0.9625499, 24.52775, 2.2252486, -7.2165427)
+
+[node name="zdjecie" parent="." unique_id=288624186 instance=ExtResource("75_t2jue")]
+transform = Transform3D(-0.98768014, 0, 0.15648624, 0, 1, 0, -0.15648624, 0, -0.98768014, 21.192978, 2.4143636, -5.691023)
+
+[node name="monstera3" parent="." unique_id=1579415810 instance=ExtResource("34_kqbgl")]
+transform = Transform3D(0.27468452, 0, 0, 0, 0.27468452, 0, 0, 0, 0.27468452, 21.260317, 2.4609609, -5.1853786)
 
 [connection signal="pressed" from="CanvasMenu/Menu/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasMenu/Menu/QuitButton" to="." method="_on_quit_button_pressed"]
