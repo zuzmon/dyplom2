@@ -1035,6 +1035,7 @@ transform = Transform3D(0.96567917, 0.9123358, 0, -0.9123358, 0.96567917, 0, 0, 
 transform = Transform3D(0.3721454, 0, -1.2849499, 0, 1.337755, 0, 1.2849499, 0, 0.3721454, 15.672854, 10.866381, 14.527753)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=786400106]
+layer = 3
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=795703807]
 layout_mode = 3

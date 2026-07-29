@@ -901,7 +901,7 @@ metadata/_edit_use_anchors_ = true
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1185921732]
-layer = 2
+layer = 3
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=416357524]
 layout_mode = 3

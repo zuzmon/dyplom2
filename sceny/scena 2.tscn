@@ -440,6 +440,7 @@ shape = SubResource("ConcavePolygonShape3D_kypy6")
 transform = Transform3D(1.7479682, 0, 0, 0, 1.9061482, 0, 0, 0, 1.7479682, 8.562043, 0.6431873, 86.82469)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=786400106]
+layer = 3
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=795703807]
 layout_mode = 3
