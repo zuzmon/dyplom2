@@ -46,7 +46,7 @@ func _unhandled_input(event):
 func start_dialog(object):
 	talking = true
 	$CanvasLayer/Control/Panel.show()
-	camera.look_at(object.position)
+	camera.look_at(object.global_position)
 	camera.rotation.y = 0
 	camera.rotation.z = 0
 	var tween = get_tree().create_tween()

@@ -18,13 +18,14 @@ func _physics_process(_delta):
 			jumpscare()
 
 func jumpscare():
+	$JumpscareAudio.play()
 	$Jumpscare/Control/AnimatedSprite2D.frame = randi() % 5
 	$Jumpscare.show()
 	$Jumpscare/Timer.start()
 	await $Jumpscare/Timer.timeout
 	$Jumpscare.hide()
 
-func _on_teleport_teleport():
+func _on_bathroom_body_entered(_body):
 	Global.player_teleport_pos = $player.global_position
 	Global.player_teleport_rot = $player.rotation
 	Global.head_teleport_rot = $player/Head.rotation

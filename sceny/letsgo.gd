@@ -30,6 +30,7 @@ func _on_quit_button_pressed():
 func _on_nasze_biurko_first_email():
 	$NPC_Kobieta.global_position = Vector3(-3.7, -0.1, -3.7)
 	$NPC_Kobieta.rotation = Vector3(0.0, 88.6, 0.0)
+	$drzwi.close()
 
 func _on_npc_kobieta_ask():
 	kobieta_ask_flag = true

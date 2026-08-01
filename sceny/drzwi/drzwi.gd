@@ -19,3 +19,7 @@ func interact():
 			opened = true
 	else:
 		pass
+
+func close():
+	opened = false
+	rotation_degrees.y = close_degrees

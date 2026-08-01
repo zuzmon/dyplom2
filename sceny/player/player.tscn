@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://brgobbaxt67d0" path="res://sceny/player/player.gd" id="1_d6lse"]
 [ext_resource type="Script" uid="uid://dxl4nxcdctael" path="res://sceny/player/camera_3d.gd" id="2_plpq8"]
 [ext_resource type="FontFile" uid="uid://be558l1rwporf" path="res://Phatone-Regular.otf" id="3_aj7iy"]
+[ext_resource type="AudioStream" uid="uid://dnhal1pxqkgqk" path="res://sfx/tuptup.mp3" id="4_ewgsv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3n2s"]
 
@@ -72,7 +73,6 @@ offset_bottom = 40.0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_aj7iy")
 theme_override_font_sizes/font_size = 32
-text = "abcdefrgff"
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Panel/Label" unique_id=1968487114]
@@ -104,7 +104,6 @@ offset_bottom = 40.0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_aj7iy")
 theme_override_font_sizes/font_size = 32
-text = "mhjmjm"
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Panel/Name/Label" unique_id=1588982972]
@@ -118,3 +117,7 @@ offset_bottom = 3.5
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.37254903)
+
+[node name="Tup" type="AudioStreamPlayer" parent="." unique_id=550959774]
+stream = ExtResource("4_ewgsv")
+volume_db = -6.0

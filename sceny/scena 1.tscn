@@ -59,7 +59,6 @@
 [ext_resource type="PackedScene" uid="uid://byq8teaw17h51" path="res://Licencjat/licencjat modele final/automat1.glb" id="52_yiq6o"]
 [ext_resource type="PackedScene" uid="uid://blypjhmm1ifq0" path="res://Licencjat/licencjat modele final/telewizorglb.glb" id="53_mqyja"]
 [ext_resource type="PackedScene" uid="uid://cwgt6j6c2ovvs" path="res://Licencjat/licencjat modele final/ściana.glb" id="53_vkh3c"]
-[ext_resource type="PackedScene" uid="uid://d2h3uuuihn2ag" path="res://sceny/Teleport/teleport.tscn" id="54_04to7"]
 [ext_resource type="PackedScene" uid="uid://p5a2o4wvvoxr" path="res://assety/czerwony t pose.glb" id="55_rqn2g"]
 [ext_resource type="PackedScene" uid="uid://clob63qyrwvtm" path="res://assety/belki.glb" id="56_ipnme"]
 [ext_resource type="PackedScene" uid="uid://cmrnc5ptvyp3t" path="res://assety/tablica2.glb" id="56_tmnne"]
@@ -79,6 +78,7 @@
 [ext_resource type="PackedScene" uid="uid://bqy5u80udopbu" path="res://Licencjat/licencjat modele final/obraz zuzi.glb" id="71_8m8tk"]
 [ext_resource type="PackedScene" uid="uid://bx4cxh453mxkg" path="res://Licencjat/licencjat modele final/belki.glb" id="73_h6l61"]
 [ext_resource type="AudioStream" uid="uid://bbpukokgf2odp" path="res://sfx/labirynt.mp3" id="79_3s55o"]
+[ext_resource type="AudioStream" uid="uid://c3i58v3l7sbrj" path="res://sfx/jumpscare labirynt.mp3" id="79_fymhe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tejhb"]
 animations = [{
@@ -868,6 +868,9 @@ size = Vector3(5.0118103, 11.073608, 3.6766849)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pqhuq"]
 size = Vector3(5.9902573, 11.073608, 2.662794)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_excqs"]
+size = Vector3(13.089783, 7.383911, 13.608643)
+
 [node name="world" type="Node3D" unique_id=1028837634]
 script = ExtResource("1_pdd5c")
 
@@ -964,6 +967,12 @@ material = SubResource("StandardMaterial3D_r7e7w")
 
 [node name="player" parent="." unique_id=1535646083 instance=ExtResource("2_ghaev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736843, 0, 56.748436)
+collision_layer = 5
+collision_mask = 5
+
+[node name="RayCastJumpscare" type="RayCast3D" parent="player/Head/Camera3D" parent_id_path=PackedInt32Array(1535646083, 293298521) index="1" unique_id=1776342781]
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="player" unique_id=217363088]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4.085613, 0)
@@ -974,10 +983,6 @@ shadow_enabled = true
 distance_fade_enabled = true
 spot_range = 13.432
 spot_angle = 37.53317
-
-[node name="RayCastJumpscare" type="RayCast3D" parent="player/Head/Camera3D" parent_id_path=PackedInt32Array(1535646083, 293298521) index="1" unique_id=1776342781]
-target_position = Vector3(0, 0, -10)
-collide_with_areas = true
 
 [node name="kanapa" parent="." unique_id=1649565601 instance=ExtResource("3_la5s4")]
 transform = Transform3D(0.999968, 0, -0.0079936115, 0, 1, 0, 0.0079936115, 0, 0.999968, 47.410828, 1.0746579, 3.538128)
@@ -2518,9 +2523,6 @@ transform = Transform3D(1, 4.5474735e-13, 0, 2.842171e-13, 1.0000001, 1.1641532e
 transform = Transform3D(1, -1.2562397e-11, 8.731155e-11, 1.2562399e-11, 1, -1.8626414e-08, -8.731155e-11, 1.8626414e-08, 1, 0.046369553, 0.6215557, 0.5697746)
 shape = SubResource("BoxShape3D_04to7")
 
-[node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("54_04to7")]
-transform = Transform3D(-0.98467106, 0, 0.17442165, 0, 1, 0, -0.17442165, 0, -0.98467106, 2.5077477, 2.1349697, 85.23558)
-
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1323258308]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 11.147584, 7.73493, 77.60808)
 light_energy = 13.04
@@ -3024,7 +3026,20 @@ shape = SubResource("BoxShape3D_pqhuq")
 stream = ExtResource("79_3s55o")
 autoplay = true
 
-[connection signal="teleport" from="Teleport" to="." method="_on_teleport_teleport"]
+[node name="Bathroom" type="Area3D" parent="." unique_id=376849265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 79.08421)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom" unique_id=1176667553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.032196, 3.1919556, -0.49499512)
+shape = SubResource("BoxShape3D_excqs")
+
+[node name="JumpscareAudio" type="AudioStreamPlayer" parent="." unique_id=1160143295]
+stream = ExtResource("79_fymhe")
+volume_db = -3.0
+
+[connection signal="body_entered" from="Bathroom" to="." method="_on_bathroom_body_entered"]
 
 [editable path="player"]
 [editable path="ściana"]

@@ -721,7 +721,7 @@ uv1_scale = Vector3(7.785, 7.785, 7.785)
 uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f2yyf"]
-size = Vector3(12.012573, 12.12677, 1)
+size = Vector3(12.012573, 15.255768, 1)
 
 [node name="world" type="Node3D" unique_id=1028837634]
 script = ExtResource("1_en7r5")
@@ -737,7 +737,7 @@ shadow_bias = 0.0
 environment = SubResource("Environment_rjvtb")
 
 [node name="player" parent="." unique_id=1535646083 instance=ExtResource("2_gjhd7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3193, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3193, 0, 2.5051968)
 
 [node name="czerwony" parent="player/Head" parent_id_path=PackedInt32Array(1535646083, 875197071) index="1" unique_id=1856544760 instance=ExtResource("2_0gkm8")]
 transform = Transform3D(0.04102543, 0, 0.018490937, 0, 0.045, 0, -0.018490937, 0, 0.04102543, -0.35925484, -0.49460578, -0.46759245)
@@ -1896,7 +1896,7 @@ transform = Transform3D(0.99604297, 0.0188238, 0.08685842, -0.016138483, 0.99937
 shape = SubResource("BoxShape3D_qdkpk")
 
 [node name="FinalTeddy" type="Node3D" parent="." unique_id=1199331689]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.477474, 1.2777865, 61.439754)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.477474, 4.799961, 61.439754)
 script = ExtResource("52_f2yyf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FinalTeddy" unique_id=507504369 groups=["talking"]]
@@ -1905,7 +1905,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FinalTeddy/StaticBody3D" unique_id=866586549]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0922241, 5.563385, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0922241, 3.9988863, 0)
 shape = SubResource("BoxShape3D_f2yyf")
 
 [node name="Dialogi" type="Node" parent="FinalTeddy" unique_id=1934455043]

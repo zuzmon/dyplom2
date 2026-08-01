@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3i58v3l7sbrj"
+path="res://.godot/imported/jumpscare labirynt.mp3-b621f97f9395c7da2cb476a5d230617e.mp3str"
+
+[deps]
+
+source_file="res://sfx/jumpscare labirynt.mp3"
+dest_files=["res://.godot/imported/jumpscare labirynt.mp3-b621f97f9395c7da2cb476a5d230617e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -77,6 +77,7 @@
 [ext_resource type="PackedScene" uid="uid://cflrlf8tyfkc2" path="res://assety/papiery.glb" id="74_qbe7c"]
 [ext_resource type="PackedScene" uid="uid://bubphf8x88j3j" path="res://assety/zdjecie.glb" id="75_t2jue"]
 [ext_resource type="AudioStream" uid="uid://cgbjqtl6brur6" path="res://sfx/myszka klik.mp3" id="76_ltqei"]
+[ext_resource type="AudioStream" uid="uid://smxkcitj2dma" path="res://sfx/komputer szum.mp3" id="78_qbe7c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0rws3"]
 shader = ExtResource("32_tv31b")
@@ -587,6 +588,10 @@ albedo_texture = ExtResource("49_q50ps")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0d0t2"]
 size = Vector3(63.203903, 35.4209, 52.40425)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_exjxd"]
+radius = 0.53222656
+height = 5.2629395
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_572ec"]
 size = Vector3(2.6774902, 3.4115295, 4.1137695)
@@ -2099,6 +2104,14 @@ input_ray_pickable = false
 visible = true
 frame_progress = 0.39863622
 
+[node name="StaticBody3D2" type="StaticBody3D" parent="NPC_Kobieta" unique_id=1962766353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.131975, 0)
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC_Kobieta/StaticBody3D2" unique_id=306728954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.1855097, 0)
+shape = SubResource("CapsuleShape3D_exjxd")
+
 [node name="NPC_Kolega" parent="." unique_id=1857254386 instance=ExtResource("56_rq3hr")]
 transform = Transform3D(-0.28279343, 0, 0.95918095, 0, 1, 0, -0.95918095, 0, -0.28279343, 16.761683, -0.18574882, -10.9037895)
 
@@ -2162,6 +2175,11 @@ transform = Transform3D(0.27468452, 0, 0, 0, 0.27468452, 0, 0, 0, 0.27468452, 21
 
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=1212564766]
 stream = ExtResource("76_ltqei")
+
+[node name="Szum" type="AudioStreamPlayer" parent="." unique_id=1682986769]
+stream = ExtResource("78_qbe7c")
+volume_db = 12.0
+autoplay = true
 
 [connection signal="pressed" from="CanvasMenu/Menu/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasMenu/Menu/QuitButton" to="." method="_on_quit_button_pressed"]
