@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgbjqtl6brur6"
+path="res://.godot/imported/myszka klik.mp3-0469a6ee13f27dc86f5047dab023e8d5.mp3str"
+
+[deps]
+
+source_file="res://sfx/myszka klik.mp3"
+dest_files=["res://.godot/imported/myszka klik.mp3-0469a6ee13f27dc86f5047dab023e8d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

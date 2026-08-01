@@ -20,6 +20,7 @@ const FOV_CHANGE = 1.5
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var raycast = $Head/Camera3D/RayCast3D
+@onready var lamp = $SpotLight3D2
 @onready var dialog_text = $CanvasLayer/Control/Panel/Label
 @onready var dialog_name = $CanvasLayer/Control/Panel/Name/Label
 
@@ -87,6 +88,8 @@ func show_next_line():
 				dialog_name.text = "Komputer"
 			"j":
 				dialog_name.text = "Ja"
+			"t":
+				dialog_name.text = "Teddy"
 			_:
 				dialog_name.text = "(brak)"
 		full_line[0] = ""
@@ -146,6 +149,10 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta * GRAVITY
+	
+	if find_child("SpotLight3D2"):
+		lamp.rotation.y = lerp_angle(lamp.rotation.y, head.rotation.y, 0.25)
+		lamp.rotation.x = lerp_angle(lamp.rotation.x, camera.rotation.x, 0.25)
 	
 	if talking or menu:
 		return

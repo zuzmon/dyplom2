@@ -13,6 +13,7 @@ func _ready():
 	$"player/Head/Camera3D/papier do ręki".hide()
 
 func _on_start_button_pressed():
+	$Click.play()
 	$AnimationPlayer.play("start_game")
 	$CanvasMenu.hide()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -22,6 +23,8 @@ func _on_start_end():
 	$player.menu = false
 
 func _on_quit_button_pressed():
+	$Click.play()
+	await $Click.finished
 	get_tree().quit()
 
 func _on_nasze_biurko_first_email():
@@ -56,3 +59,7 @@ func _on_npc_boss_give_paper():
 
 func _on_npc_kobieta_paper():
 	$"player/Head/Camera3D/papier do ręki".show()
+
+func _on_line_edit_editing_toggled(toggled_on):
+	if toggled_on:
+		$Click.play()

@@ -20,6 +20,7 @@ func _input(event):
 			show()
 
 func _on_resume_button_pressed():
+	$Click.play()
 	#Sfx.get_node("ButtonClick").play()
 	Input.set_mouse_mode(last_mode)
 	#$Press.play()
@@ -27,6 +28,7 @@ func _on_resume_button_pressed():
 	get_tree().paused = false
 
 func _on_menu_button_pressed():
+	$Click.play()
 	#Sfx.get_node("ButtonClick").play()
 	#$Press.play()
 	hide()

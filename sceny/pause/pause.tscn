@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://pcoho3wte1ud" path="res://sceny/pause/pause.gd" id="1_h1w7q"]
 [ext_resource type="Texture2D" uid="uid://dg42hk4kbtw28" path="res://assety/pauza.png" id="2_mf236"]
 [ext_resource type="FontFile" uid="uid://be558l1rwporf" path="res://Phatone-Regular.otf" id="3_pgvfa"]
+[ext_resource type="AudioStream" uid="uid://cgbjqtl6brur6" path="res://sfx/myszka klik.mp3" id="4_pgvfa"]
 
 [node name="Pause" type="CanvasLayer" unique_id=1434705603]
 process_mode = 3
@@ -78,6 +79,9 @@ theme_override_fonts/font = ExtResource("3_pgvfa")
 theme_override_font_sizes/font_size = 36
 text = "MENU"
 flat = true
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1800935678]
+stream = ExtResource("4_pgvfa")
 
 [connection signal="pressed" from="Control/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Control/MenuButton" to="." method="_on_menu_button_pressed"]
