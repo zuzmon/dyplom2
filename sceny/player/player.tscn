@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dxl4nxcdctael" path="res://sceny/player/camera_3d.gd" id="2_plpq8"]
 [ext_resource type="FontFile" uid="uid://be558l1rwporf" path="res://Phatone-Regular.otf" id="3_aj7iy"]
 [ext_resource type="AudioStream" uid="uid://dnhal1pxqkgqk" path="res://sfx/tuptup.mp3" id="4_ewgsv"]
+[ext_resource type="AudioStream" uid="uid://dojwq01oyjjp2" path="res://sfx/wodne tup tup.mp3" id="5_hpd55"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3n2s"]
 
@@ -121,3 +122,6 @@ color = Color(0, 0, 0, 0.37254903)
 [node name="Tup" type="AudioStreamPlayer" parent="." unique_id=550959774]
 stream = ExtResource("4_ewgsv")
 volume_db = -6.0
+
+[node name="TupWater" type="AudioStreamPlayer" parent="." unique_id=317496952]
+stream = ExtResource("5_hpd55")

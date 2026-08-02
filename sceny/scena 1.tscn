@@ -1188,7 +1188,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_s7xwn")
 shape = SubResource("ConcavePolygonShape3D_qnjt1")
 
 [node name="CSGBakedMeshInstance3D18" type="MeshInstance3D" parent="Sciany" unique_id=1412352528]
-transform = Transform3D(1.3690866, 0, -3.85385e-15, 0, 1, 0, 0, 0, 1.0847627, 17.671375, 30.066717, 30.787544)
+transform = Transform3D(1.3690866, 0, -3.85385e-15, 0, 1, 0, 0, 0, 1.0847627, 17.671375, 10.941334, 30.787544)
 mesh = SubResource("ArrayMesh_0ls24")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sciany/CSGBakedMeshInstance3D18" unique_id=1792307520]

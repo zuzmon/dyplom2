@@ -4,6 +4,7 @@ var over_flag := false
 var begin_dialog := ["tCome to me"]
 
 func _ready():
+	$player.water = true
 	$player.dialog = begin_dialog
 	$player.start_dialog($FinalTeddy)
 

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://d122rldkwn4mi" path="res://assety/szef_siedzi.gd" id="3_ev7wg"]
 [ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="5_jciym"]
 [ext_resource type="PackedScene" uid="uid://dio51jbstxe6q" path="res://animacje/baba idzie.glb" id="5_uvgi3"]
+[ext_resource type="PackedScene" uid="uid://wyq7w4fmsvtb" path="res://animacje/baba grzebie.glb" id="6_naaei"]
 
 [node name="NPC_Kobieta" unique_id=777428972 instance=ExtResource("1_sv16d")]
 script = ExtResource("2_co7cq")
@@ -15,7 +16,9 @@ script = ExtResource("3_ev7wg")
 
 [node name="baba idzie" parent="." index="1" unique_id=1359519651 instance=ExtResource("5_uvgi3")]
 
-[node name="StaticBody3D" parent="." index="2" unique_id=1053622764]
+[node name="baba grzebie" parent="." index="2" unique_id=1527248216 instance=ExtResource("6_naaei")]
+
+[node name="StaticBody3D" parent="." index="3" unique_id=1053622764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.131975, 0)
 
 [node name="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1653754383]
@@ -44,5 +47,5 @@ dialog = Array[String](["kzapyatnie o misia"])
 script = ExtResource("5_jciym")
 dialog = Array[String](["kdrugie drukowanie"])
 
-[node name="AnimatedSprite3D" parent="." index="4" unique_id=103366429]
+[node name="AnimatedSprite3D" parent="." index="5" unique_id=103366429]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 4.1373587, 0.31798524)

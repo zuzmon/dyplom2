@@ -1,16 +1,28 @@
 extends Node3D
 signal ask
 signal paper
+signal on_printer
 
 @onready var dialogi = $Dialogi
+
+var printing := false
 
 func _ready():
 	$AnimatedSprite3D.hide()
 
+func printer():
+	printing = true
+	$"baba stoi".hide()
+	$"baba grzebie".show()
+	$"baba grzebie/AnimationPlayer".play("mixamo_com")
+	self.rotation.y = 0.0
+
 func interact(player_position):
-	self.look_at(player_position, Vector3(0,1,0), true)
+	if not printing:
+		self.look_at(player_position, Vector3(0,1,0), true)
 	
 	if Global.kobieta_first_printer:
+		emit_signal("on_printer")
 		Global.kobieta_first_printer = false
 		Global.teddy_steal = true
 		return dialogi.get_node("FirstPrinter").dialog

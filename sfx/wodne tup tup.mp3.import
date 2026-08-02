@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dojwq01oyjjp2"
+path="res://.godot/imported/wodne tup tup.mp3-3108047fff17ecf25aa8e5fd67390048.mp3str"
+
+[deps]
+
+source_file="res://sfx/wodne tup tup.mp3"
+dest_files=["res://.godot/imported/wodne tup tup.mp3-3108047fff17ecf25aa8e5fd67390048.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

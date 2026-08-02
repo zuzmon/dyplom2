@@ -26,8 +26,10 @@ const FOV_CHANGE = 1.5
 
 var talking := false
 var menu := false
+var water := false
 
 func _ready():
+	randomize()
 	if mouse_captured:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else:
@@ -171,7 +173,7 @@ func _physics_process(delta: float) -> void:
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
 		
-	if Input.is_action_pressed("sprint"):
+	if Input.is_action_pressed("sprint") and not water:
 		speed = SPRINT_SPEED
 	else:
 		speed = WALK_SPEED
@@ -198,11 +200,20 @@ func _physics_process(delta: float) -> void:
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
-
-	move_and_slide()
 	
+	move_and_slide()
+
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP 
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
+	if pos.y <= -0.07:
+		if water:
+			if not $TupWater.playing:
+				$TupWater.pitch_scale = randf_range(0.8, 1.2)
+				$TupWater.play()
+		else:
+			if not $Tup.playing:
+				$Tup.pitch_scale = randf_range(0.8, 1.2)
+				$Tup.play()
 	return pos

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dfah3dw0exp5d"]
+
+[ext_resource type="Script" uid="uid://o7vf6qtuu5a4" path="res://sceny/interakcja.gd" id="1_aq561"]
+[ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="1_q4krt"]
+
+[node name="Interakcja" type="Node3D" unique_id=651005222]
+script = ExtResource("1_aq561")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1472911159 groups=["talking"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1126950461]
+
+[node name="Dialogi" type="Node" parent="." unique_id=1980774679]
+
+[node name="Default" type="Node" parent="Dialogi" unique_id=1938900361]
+script = ExtResource("1_q4krt")

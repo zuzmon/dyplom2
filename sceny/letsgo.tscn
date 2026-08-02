@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ba3h6pdkeeo0g" path="res://assety/menu/Slide_16_9_-_1_2.png" id="1_wqoie"]
 [ext_resource type="Texture2D" uid="uid://cdv0ht44jmrmj" path="res://assety/menu/ikona ze strzałką.png" id="2_kpjmx"]
 [ext_resource type="PackedScene" uid="uid://io4w536jw6ob" path="res://sceny/player/player.tscn" id="2_mgq3b"]
+[ext_resource type="PackedScene" uid="uid://dfah3dw0exp5d" path="res://sceny/interakcja.tscn" id="2_t2jue"]
 [ext_resource type="Texture2D" uid="uid://1k3ad8qhsx76" path="res://assety/menu/ikona ze strzałką klik.png" id="3_e614a"]
 [ext_resource type="PackedScene" uid="uid://bxa4nk3jnoh3l" path="res://assety/kanapa.glb" id="3_tv31b"]
 [ext_resource type="Texture2D" uid="uid://olff4jfwn2at" path="res://assety/menu/ikona ze strzałką hover.png" id="4_rlv53"]
@@ -78,6 +79,9 @@
 [ext_resource type="PackedScene" uid="uid://bubphf8x88j3j" path="res://assety/zdjecie.glb" id="75_t2jue"]
 [ext_resource type="AudioStream" uid="uid://cgbjqtl6brur6" path="res://sfx/myszka klik.mp3" id="76_ltqei"]
 [ext_resource type="AudioStream" uid="uid://smxkcitj2dma" path="res://sfx/komputer szum.mp3" id="78_qbe7c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_esj46"]
+size = Vector3(1, 1.387146, 1.4233398)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0rws3"]
 shader = ExtResource("32_tv31b")
@@ -709,7 +713,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 2, 11, 17),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-3.7940924, -0.15051264, -3.7146814), Vector3(1.0211613, -0.15051264, -3.7146814), Vector3(1.0211613, -0.15051264, 46.459557), Vector3(36.8, -0.151, 45.5)]
+"values": [Vector3(-3.7940924, -0.15051264, -3.7146814), Vector3(1.0211613, -0.15051264, -3.7146814), Vector3(1.0211613, -0.15051264, 46.459557), Vector3(34.345, -0.151, 47.225)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -776,6 +780,18 @@ _data = {
 
 [node name="world" type="Node3D" unique_id=1028837634]
 script = ExtResource("1_kpjmx")
+
+[node name="ZestawInterakcji" type="Node3D" parent="." unique_id=79339139]
+
+[node name="Interakcja" parent="ZestawInterakcji" unique_id=790866529 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, -2.9802322e-07, 1.3411045e-07, 0, 1.0000005, -2.682209e-07, 0, 2.9802322e-08, 1.0000007, 57.547977, 2.7130985, 20.737766)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/Interakcja/StaticBody3D" parent_id_path=PackedInt32Array(790866529, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, -3.9967974e-15, 0, 0, 1, 0, 0, 0, 1, 0, 0.19357204, -0.03930664)
+shape = SubResource("BoxShape3D_esj46")
+
+[node name="Default" parent="ZestawInterakcji/Interakcja/Dialogi" parent_id_path=PackedInt32Array(790866529, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["jKawa"])
 
 [node name="CanvasMenu" type="CanvasLayer" parent="." unique_id=951012984]
 
@@ -2028,7 +2044,7 @@ visible = true
 frame_progress = 0.39863622
 
 [node name="NPC_Kobieta" parent="." unique_id=839009704 instance=ExtResource("57_bt1p6")]
-transform = Transform3D(0.024589282, 0, 0.9996976, 0, 1, 0, -0.9996976, 0, 0.024589282, -3.7940924, -0.15051264, -3.7146814)
+transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02458928, -3.7940924, -0.15051264, -3.7146814)
 
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
@@ -2097,10 +2113,10 @@ bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 [node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
 autoplay = &"mixamo_com"
 
-[node name="StaticBody3D" parent="NPC_Kobieta" index="2" unique_id=1053622764]
+[node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]
 input_ray_pickable = false
 
-[node name="AnimatedSprite3D" parent="NPC_Kobieta" index="4" unique_id=103366429]
+[node name="AnimatedSprite3D" parent="NPC_Kobieta" index="5" unique_id=103366429]
 visible = true
 frame_progress = 0.39863622
 
@@ -2189,10 +2205,12 @@ autoplay = true
 [connection signal="ask" from="NPC_Boss" to="." method="_on_npc_boss_ask"]
 [connection signal="give_paper" from="NPC_Boss" to="." method="_on_npc_boss_give_paper"]
 [connection signal="ask" from="NPC_Kobieta" to="." method="_on_npc_kobieta_ask"]
+[connection signal="on_printer" from="NPC_Kobieta" to="." method="_on_npc_kobieta_on_printer"]
 [connection signal="paper" from="NPC_Kobieta" to="." method="_on_npc_kobieta_paper"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="first_email" from="NaszeBiurko" to="." method="_on_nasze_biurko_first_email"]
 
+[editable path="ZestawInterakcji/Interakcja"]
 [editable path="player"]
 [editable path="NPC_Boss"]
 [editable path="NPC_Boss/szef siedzi"]

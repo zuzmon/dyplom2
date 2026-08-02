@@ -821,6 +821,7 @@ transform = Transform3D(0.25411248, 0, -0.96717465, 0, 1, 0, 0.96717465, 0, 0.25
 
 [node name="CollisionShape3D" parent="Teleport/StaticBody3D" parent_id_path=PackedInt32Array(206469578, 706359907) index="0" unique_id=1374218497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14330626, 0.15796232, -0.17572021)
+disabled = true
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Teleport/StaticBody3D" parent_id_path=PackedInt32Array(206469578, 706359907) index="1" unique_id=1055835574]
 transform = Transform3D(0.9617413, 0, -0.27395916, 0, 1, 0, 0.27395916, 0, 0.9617413, -2.9706802, 0.054840088, 3.2270432)
