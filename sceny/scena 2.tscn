@@ -10,7 +10,6 @@
 [ext_resource type="Shader" uid="uid://0loctdk2xig4" path="res://sceny/pixeloza.gdshader" id="10_kpw4q"]
 [ext_resource type="PackedScene" uid="uid://dd70sn13mr1y4" path="res://Licencjat/licencjat modele final/kosz.glb" id="11_blj0y"]
 [ext_resource type="Shader" uid="uid://cw164wcly5qnd" path="res://sceny/letsgo.gdshader" id="13_ws34d"]
-[ext_resource type="Texture2D" uid="uid://dd7djbf08jxr1" path="res://kursor.png" id="14_mcxmv"]
 [ext_resource type="PackedScene" uid="uid://dycq0xeij5qsh" path="res://sceny/drzwi/drzwi.tscn" id="15_xgtly"]
 [ext_resource type="Texture2D" uid="uid://bwd83cd2bu250" path="res://assety/zegar/Frame 2.png" id="22_dmvde"]
 [ext_resource type="Texture2D" uid="uid://dfljp8boacm6l" path="res://assety/zegar/Frame 3.png" id="23_sajru"]
@@ -474,22 +473,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
-
-[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=758078935]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -6.25
-offset_top = -6.5
-offset_right = 6.25
-offset_bottom = 6.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_mcxmv")
-expand_mode = 1
 
 [node name="umywalka1" parent="." unique_id=694371108 instance=ExtResource("24_ggs1i")]
 transform = Transform3D(-1.0614268, 0, 0.030538205, 0, 1.0618659, 0, -0.030538205, 0, -1.0614268, 5.9802804, 2.539366, 86.63404)

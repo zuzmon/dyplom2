@@ -15,7 +15,6 @@
 [ext_resource type="Shader" uid="uid://cw164wcly5qnd" path="res://sceny/letsgo.gdshader" id="11_7bdtf"]
 [ext_resource type="PackedScene" uid="uid://c3naqq12uoowf" path="res://Licencjat/licencjat modele final/krzak.glb" id="11_yawpl"]
 [ext_resource type="PackedScene" uid="uid://clte36cnnuamw" path="res://assety/kanapa1.glb" id="12_45nco"]
-[ext_resource type="Texture2D" uid="uid://dd7djbf08jxr1" path="res://kursor.png" id="13_a5rlq"]
 [ext_resource type="PackedScene" uid="uid://dycq0xeij5qsh" path="res://sceny/drzwi/drzwi.tscn" id="14_g6qfv"]
 [ext_resource type="PackedScene" uid="uid://w83sukj5d8s7" path="res://assety/krzesłonarad.glb" id="15_2ac46"]
 [ext_resource type="PackedScene" uid="uid://cc0rrtwfvv1ef" path="res://assety/biblioteczka.glb" id="15_ffi42"]
@@ -54,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://bw2vaogy1hmh4" path="res://assety/mikrofala.1glb.glb" id="50_en7r5"]
 [ext_resource type="Script" uid="uid://ce4b32pp4puyj" path="res://sceny/final_teddy.gd" id="52_f2yyf"]
 [ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="53_en7r5"]
+[ext_resource type="AudioStream" uid="uid://smd5a8kawstd" path="res://sfx/scena 3.mp3" id="55_r2vai"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orym7"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1080,22 +1080,6 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1972867590]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -6.25
-offset_top = -6.5
-offset_right = 6.25
-offset_bottom = 6.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_a5rlq")
-expand_mode = 1
-
 [node name="drzwi" parent="." unique_id=1793167788 instance=ExtResource("14_g6qfv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.0854907, 1.8019617, -2.582337)
 
@@ -1913,6 +1897,10 @@ shape = SubResource("BoxShape3D_f2yyf")
 [node name="Default" type="Node" parent="FinalTeddy/Dialogi" unique_id=1700979724]
 script = ExtResource("53_en7r5")
 dialog = Array[String](["tdomyślny dialog"])
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1117103949]
+stream = ExtResource("55_r2vai")
+autoplay = true
 
 [connection signal="dialog_over" from="player" to="." method="_on_player_dialog_over"]
 [connection signal="over" from="FinalTeddy" to="." method="_on_final_teddy_over"]

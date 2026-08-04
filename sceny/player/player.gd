@@ -46,8 +46,11 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
 func start_dialog(object):
+	$CanvasLayer/Control/Kursor.hide()
 	talking = true
 	$CanvasLayer/Control/Panel.show()
+	if object == null:
+		return
 	camera.look_at(object.global_position)
 	camera.rotation.y = 0
 	camera.rotation.z = 0
@@ -101,6 +104,7 @@ func show_next_line():
 		typing_active = true
 		# Rozpoczynamy animację liter
 		start_typing_text()
+		$Yap.play()
 
 	else:
 		if Global.over:
@@ -115,6 +119,7 @@ func show_next_line():
 		current_char_index = 0
 		dialog = null
 		emit_signal("dialog_over")
+		$CanvasLayer/Control/Kursor.show()
 		#get_parent().get_parent().after_dialog()
 		#animation_player.play("popout")
 		#queue_free()
@@ -133,6 +138,7 @@ func start_typing_text():
 			start_typing_text()
 		else:
 			# Cała linia została wyświetlona
+			$Yap.stop()
 			is_text_scrolling = false
 			typing_active = false
 			#display_label.text = full_line
@@ -140,6 +146,7 @@ func start_typing_text():
 
 # Funkcja natychmiastowego wyświetlenia całego tekstu
 func skip_text_animation():
+	$Yap.stop()
 	is_text_scrolling = false
 	typing_active = false  # Przerywamy dalsze animowanie liter
 	dialog_text.text = full_line
@@ -159,16 +166,28 @@ func _physics_process(delta: float) -> void:
 	if talking or menu:
 		return
 	
-	if Input.is_action_just_pressed("interact"):
-		if raycast.is_colliding():
-			var body = raycast.get_collider()
-			if body.is_in_group("interactable"):
+	#if Input.is_action_just_pressed("interact"):
+		#if raycast.is_colliding():
+			#var body = raycast.get_collider()
+			#if body.is_in_group("interactable"):
+				#body.get_parent().interact()
+			#elif body.is_in_group("talking"):
+				#dialog = body.get_parent().interact(self.global_position)
+				#start_dialog(body)
+	
+	$CanvasLayer/Control/Kursor.frame = 0
+	if raycast.is_colliding():
+		var body = raycast.get_collider()
+		if body.is_in_group("interactable"):
+			$CanvasLayer/Control/Kursor.frame = 2
+			if Input.is_action_just_pressed("interact"):
 				body.get_parent().interact()
-				print("int")
-			elif body.is_in_group("talking"):
+		elif body.is_in_group("talking"):
+			$CanvasLayer/Control/Kursor.frame = 1
+			if Input.is_action_just_pressed("interact"):
 				dialog = body.get_parent().interact(self.global_position)
 				start_dialog(body)
-
+	
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
@@ -195,7 +214,8 @@ func _physics_process(delta: float) -> void:
 		
 		
 	t_bob += delta * velocity.length() * float(is_on_floor())
-	camera.transform.origin = _headbob(t_bob)
+	if direction:
+		camera.transform.origin = _headbob(t_bob)
 	
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
@@ -207,7 +227,7 @@ func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP 
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
-	if pos.y <= -0.07:
+	if pos.y <= -0.074:
 		if water:
 			if not $TupWater.playing:
 				$TupWater.pitch_scale = randf_range(0.8, 1.2)

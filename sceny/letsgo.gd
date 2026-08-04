@@ -3,6 +3,7 @@ extends Node3D
 var kobieta_ask_flag := false
 var teddy_steal_flag := false
 var kobieta_print_flag := false
+var begin_dialog := ["cdialog na start gry"]
 
 func _ready():
 	$NPC_Kobieta.global_position = Vector3(34.345, -0.1, 47.2)
@@ -10,9 +11,13 @@ func _ready():
 	$"NPC_Kobieta/baba idzie".hide()
 	$"NPC_Kobieta/baba grzebie".hide()
 	$"NPC_Kobieta/baba stoi".show()
-	$CanvasLayer/Control/Kursor.hide()
+	$player/CanvasLayer/Control/Kursor.hide()
 	$CanvasMenu.show()
 	$"player/Head/Camera3D/papier do ręki".hide()
+
+func begin():
+	$player.dialog = begin_dialog
+	$player.start_dialog(null)
 
 func _on_start_button_pressed():
 	$Click.play()
@@ -21,8 +26,10 @@ func _on_start_button_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _on_start_end():
-	$CanvasLayer/Control/Kursor.show()
+	$player/CanvasLayer/Control/Kursor.show()
 	$player.menu = false
+	call_deferred("begin")
+	#begin()
 
 func _on_quit_button_pressed():
 	$Click.play()

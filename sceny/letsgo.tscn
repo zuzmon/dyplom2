@@ -31,7 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://bvac82etjgq45" path="res://assety/fotel.glb" id="28_wm6x7"]
 [ext_resource type="PackedScene" uid="uid://ctu66tujc51uc" path="res://assety/kuchnia1.glb" id="29_7cpy4"]
 [ext_resource type="PackedScene" uid="uid://c6rygtfckhc6v" path="res://assety/krzesło.glb" id="29_jocoe"]
-[ext_resource type="Texture2D" uid="uid://dd7djbf08jxr1" path="res://kursor.png" id="32_0rws3"]
 [ext_resource type="PackedScene" uid="uid://03sw3ttkt58l" path="res://assety/tablica.glb" id="32_0xhqn"]
 [ext_resource type="PackedScene" uid="uid://bt4hwow5rb5y5" path="res://assety/dzrewko2.glb" id="32_18m5m"]
 [ext_resource type="PackedScene" uid="uid://ejqwo3nnqdot" path="res://assety/umywalka1.glb" id="32_g7gjp"]
@@ -904,22 +903,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
-
-[node name="Kursor" type="TextureRect" parent="CanvasLayer/Control" unique_id=1388661416]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -6.25
-offset_top = -6.5
-offset_right = 6.25
-offset_bottom = 6.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("32_0rws3")
-expand_mode = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=594626404]
 transform = Transform3D(-0.8660253, -0.4330129, 0.2500001, 0, 0.49999994, 0.86602545, -0.50000024, 0.74999994, -0.43301257, 0, 30.400063, 4.8208857)
@@ -2049,7 +2032,7 @@ transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 540715288) index="0" unique_id=284198269]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2110,7 +2093,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=782166977]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]

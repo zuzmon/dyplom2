@@ -14,9 +14,11 @@ func interact():
 		if opened:
 			rotation_degrees.y = close_degrees
 			opened = false
+			$Close.play()
 		else:
 			rotation_degrees.y = open_degrees
 			opened = true
+			$Open.play()
 	else:
 		pass
 

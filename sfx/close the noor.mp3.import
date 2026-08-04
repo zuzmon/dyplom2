@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cberapejw3e8v"
+path="res://.godot/imported/close the noor.mp3-635a3b1e06e85c87fcb651f869374e66.mp3str"
+
+[deps]
+
+source_file="res://sfx/close the noor.mp3"
+dest_files=["res://.godot/imported/close the noor.mp3-635a3b1e06e85c87fcb651f869374e66.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

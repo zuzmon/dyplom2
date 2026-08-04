@@ -21,11 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.9283028, 0)
 [node name="Default" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="0" unique_id=151041152]
 dialog = Array[String](["cdomyśny dialog"])
 
-[node name="GameStart" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="1" unique_id=354664786]
-script = ExtResource("4_e2542")
-dialog = Array[String](["cdialog na start gry"])
-
-[node name="Teddy" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="2" unique_id=1041400089]
+[node name="Teddy" type="Node" parent="Dialogi" parent_id_path=PackedInt32Array(569248006) index="1" unique_id=1041400089]
 script = ExtResource("4_e2542")
 dialog = Array[String](["cdialog o misia"])
 

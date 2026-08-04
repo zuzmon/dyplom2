@@ -8,9 +8,9 @@ func _ready():
 func interact(player_position):
 	self.look_at(player_position, Vector3(0,1,0), true)
 	
-	if Global.kolega_game_start:
-		Global.kolega_game_start = false
-		return dialogi.get_node("GameStart").dialog
+	#if Global.kolega_game_start:
+	#	Global.kolega_game_start = false
+	#	return dialogi.get_node("GameStart").dialog
 	if Global.kolega_teddy:
 		$AnimatedSprite3D.show()
 		Global.kolega_teddy = false

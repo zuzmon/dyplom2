@@ -4,13 +4,34 @@
 [ext_resource type="Script" uid="uid://dxl4nxcdctael" path="res://sceny/player/camera_3d.gd" id="2_plpq8"]
 [ext_resource type="FontFile" uid="uid://be558l1rwporf" path="res://Phatone-Regular.otf" id="3_aj7iy"]
 [ext_resource type="AudioStream" uid="uid://dnhal1pxqkgqk" path="res://sfx/tuptup.mp3" id="4_ewgsv"]
+[ext_resource type="Texture2D" uid="uid://bl657wx4v06uu" path="res://assety/kursor/Ellipse_13.png" id="4_wtpwt"]
+[ext_resource type="Texture2D" uid="uid://den8h4hbo1qje" path="res://assety/kursor/Frame_132.png" id="5_hd7y6"]
 [ext_resource type="AudioStream" uid="uid://dojwq01oyjjp2" path="res://sfx/wodne tup tup.mp3" id="5_hpd55"]
+[ext_resource type="Texture2D" uid="uid://e02d3myp1m53" path="res://assety/kursor/Frame_14.png" id="6_45f8i"]
+[ext_resource type="AudioStream" uid="uid://c2ncvt0hxfgeq" path="res://sfx/mimimimimi.mp3" id="6_mswvw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3n2s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rqoa2"]
 radius = 0.7783203
 height = 4.411621
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4y1rg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wtpwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hd7y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_45f8i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="player" type="CharacterBody3D" unique_id=1535646083]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -74,6 +95,7 @@ offset_bottom = 40.0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_aj7iy")
 theme_override_font_sizes/font_size = 32
+text = ". . ."
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Panel/Label" unique_id=1968487114]
@@ -119,9 +141,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.37254903)
 
+[node name="Kursor" type="AnimatedSprite2D" parent="CanvasLayer/Control" unique_id=1013383991]
+position = Vector2(960, 545)
+sprite_frames = SubResource("SpriteFrames_4y1rg")
+
 [node name="Tup" type="AudioStreamPlayer" parent="." unique_id=550959774]
 stream = ExtResource("4_ewgsv")
 volume_db = -6.0
 
 [node name="TupWater" type="AudioStreamPlayer" parent="." unique_id=317496952]
 stream = ExtResource("5_hpd55")
+
+[node name="Yap" type="AudioStreamPlayer" parent="." unique_id=1734219860]
+stream = ExtResource("6_mswvw")
+volume_db = 6.0
