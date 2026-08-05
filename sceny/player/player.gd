@@ -62,7 +62,7 @@ var current_line_index = 0
 var current_char_index = 0
 var is_text_scrolling = false
 var full_line = ""
-var typing_speed = 0.05  # Czas (w sekundach) między literami
+var typing_speed = 0.02  # Czas (w sekundach) między literami
 var typing_active = false  # Flaga kontrolująca, czy animacja jest aktywna
 var dialog = null
 

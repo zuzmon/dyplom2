@@ -1896,7 +1896,7 @@ shape = SubResource("BoxShape3D_f2yyf")
 
 [node name="Default" type="Node" parent="FinalTeddy/Dialogi" unique_id=1700979724]
 script = ExtResource("53_en7r5")
-dialog = Array[String](["tdomyślny dialog"])
+dialog = Array[String](["tSo, how do you feel?", "jWhat?", "tWhat was all of this for?", "j...I don’t know.", "tYou’re pathetic.", "tStuck in a pathetic job with a pathetic salary.", "tYou’re nobody.", "jI know.", "tYou could do something about it, but why would you? You’re comfortable.", "jThat’s not true.", "tYou could change something, but you’re too afraid.", "jTHAT’S NOT TRUE!"])
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1117103949]
 stream = ExtResource("55_r2vai")
