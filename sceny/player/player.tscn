@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dojwq01oyjjp2" path="res://sfx/wodne tup tup.mp3" id="5_hpd55"]
 [ext_resource type="Texture2D" uid="uid://e02d3myp1m53" path="res://assety/kursor/Frame_14.png" id="6_45f8i"]
 [ext_resource type="AudioStream" uid="uid://c2ncvt0hxfgeq" path="res://sfx/mimimimimi.mp3" id="6_mswvw"]
+[ext_resource type="Texture2D" uid="uid://cq7d6pb4aw3go" path="res://winieta.png" id="7_hd7y6"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3n2s"]
 
@@ -145,6 +146,16 @@ color = Color(0, 0, 0, 0.37254903)
 [node name="Kursor" type="AnimatedSprite2D" parent="CanvasLayer/Control" unique_id=1013383991]
 position = Vector2(960, 545)
 sprite_frames = SubResource("SpriteFrames_4y1rg")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=30866833]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_hd7y6")
 
 [node name="Tup" type="AudioStreamPlayer" parent="." unique_id=550959774]
 stream = ExtResource("4_ewgsv")

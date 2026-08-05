@@ -83,16 +83,40 @@
 size = Vector3(1.299015, 1.0626736, 1.0327759)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t2jue"]
-size = Vector3(2.846222, 5.1052055, 3.7336426)
+size = Vector3(3.0411377, 5.4655037, 3.5864868)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_esj46"]
-size = Vector3(2.846222, 4.25753, 3.7336426)
+size = Vector3(0.30273438, 3.5529785, 2.675293)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6i36o"]
-size = Vector3(2.2834625, 3.7439995, 2.9129639)
+size = Vector3(2.824463, 4.0720825, 0.5932617)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_equvf"]
-size = Vector3(14.386539, 6.526594, 3.0124207)
+size = Vector3(2.8779297, 5.0477295, 1.133728)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nso21"]
+size = Vector3(0.61083984, 2.5201492, 1.610199)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_einfk"]
+size = Vector3(1.6942139, 2.5092773, 0.83984375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ge4gr"]
+size = Vector3(4.5321045, 3.8535156, 1.7724609)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p63o4"]
+size = Vector3(2.4867554, 6.029663, 0.6094971)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dre38"]
+size = Vector3(7.6470795, 3.1898193, 0.51416016)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvjsu"]
+size = Vector3(0.6524658, 5.7265625, 3.2352295)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0k1xw"]
+size = Vector3(2.4091797, 5.7459717, 2.2382813)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l00cr"]
+size = Vector3(0.2939453, 3.1583862, 2.0737915)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0rws3"]
 shader = ExtResource("32_tv31b")
@@ -805,69 +829,123 @@ shape = SubResource("BoxShape3D_qbe7c")
 dialog = Array[String](["jThe coffee machine isn’t working again. What a surprise."])
 
 [node name="automat" parent="ZestawInterakcji" unique_id=651005222 instance=ExtResource("2_t2jue")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.554867, 0, 2.7165694)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.2379, 4.123649, 2.7165694)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="ZestawInterakcji/automat" unique_id=1331576464 groups=["talking"]]
-collision_layer = 3
-collision_mask = 3
+[node name="StaticBody3D" parent="ZestawInterakcji/automat" index="0" unique_id=1472911159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9157982, 5.3007565, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ZestawInterakcji/automat/StaticBody3D2" unique_id=1165172509]
-transform = Transform3D(1, -3.9967974e-15, 0, 0, 1, 0, 0, 0, 1, 0.86431885, 2.8278131, 1.1158447)
+[node name="CollisionShape3D" parent="ZestawInterakcji/automat/StaticBody3D" index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44849777, -6.7518597, 1.0281677)
 shape = SubResource("BoxShape3D_t2jue")
 
-[node name="Dialogi2" type="Node" parent="ZestawInterakcji/automat" unique_id=690233936]
-
-[node name="Default" type="Node" parent="ZestawInterakcji/automat/Dialogi2" unique_id=1649203413]
-script = ExtResource("58_ae3hb")
+[node name="Default" parent="ZestawInterakcji/automat/Dialogi" parent_id_path=PackedInt32Array(651005222, 1980774679) index="0" unique_id=1938900361]
 dialog = Array[String](["jThe prices in the vending machine are ridiculous."])
 
 [node name="teamwork" parent="ZestawInterakcji" unique_id=1618850256 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.528316, 5.7990246, -16.594688)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="ZestawInterakcji/teamwork" unique_id=480922640 groups=["talking"]]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ZestawInterakcji/teamwork/StaticBody3D2" unique_id=1189079231]
-transform = Transform3D(1, -3.9967974e-15, 0, 0, 1, 0, 0, 0, 1, 4.2880383, 4.9848275, 52.24928)
+[node name="CollisionShape3D" parent="ZestawInterakcji/teamwork/StaticBody3D" parent_id_path=PackedInt32Array(1618850256, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12741089, -0.5494385, -0.11275864)
 shape = SubResource("BoxShape3D_esj46")
 
-[node name="Dialogi2" type="Node" parent="ZestawInterakcji/teamwork" unique_id=1452434383]
-
-[node name="Default" type="Node" parent="ZestawInterakcji/teamwork/Dialogi2" unique_id=92539211]
-script = ExtResource("58_ae3hb")
+[node name="Default" parent="ZestawInterakcji/teamwork/Dialogi" parent_id_path=PackedInt32Array(1618850256, 1980774679) index="0" unique_id=1938900361]
 dialog = Array[String](["jLies."])
 
 [node name="plakat work harder" parent="ZestawInterakcji" unique_id=1409793878 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.285657, 5.289832, 50.493046)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="ZestawInterakcji/plakat work harder" unique_id=962528623 groups=["talking"]]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ZestawInterakcji/plakat work harder/StaticBody3D2" unique_id=395465238]
-transform = Transform3D(1, -3.9967974e-15, 0, 0, 1, 0, 0, 0, 1, 40.36879, 5.241593, -16.699886)
+[node name="CollisionShape3D" parent="ZestawInterakcji/plakat work harder/StaticBody3D" parent_id_path=PackedInt32Array(1409793878, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025268555, -0.28738403, 0.20336914)
 shape = SubResource("BoxShape3D_6i36o")
 
-[node name="Dialogi2" type="Node" parent="ZestawInterakcji/plakat work harder" unique_id=1518619870]
-
-[node name="Default" type="Node" parent="ZestawInterakcji/plakat work harder/Dialogi2" unique_id=717734770]
-script = ExtResource("58_ae3hb")
+[node name="Default" parent="ZestawInterakcji/plakat work harder/Dialogi" parent_id_path=PackedInt32Array(1409793878, 1980774679) index="0" unique_id=1938900361]
 dialog = Array[String](["jNo, thank you."])
 
 [node name="toaleta" parent="ZestawInterakcji" unique_id=613288830 instance=ExtResource("2_t2jue")]
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="ZestawInterakcji/toaleta" unique_id=1645049939 groups=["talking"]]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ZestawInterakcji/toaleta/StaticBody3D2" unique_id=1113443494]
-transform = Transform3D(1, -3.9967974e-15, 0, 0, 1, 0, 0, 0, 1, 2.641405, 1.9841709, 71.007904)
+[node name="CollisionShape3D" parent="ZestawInterakcji/toaleta/StaticBody3D" parent_id_path=PackedInt32Array(613288830, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4546404, 2.5264153, 71.881165)
 shape = SubResource("BoxShape3D_equvf")
 
-[node name="Dialogi2" type="Node" parent="ZestawInterakcji/toaleta" unique_id=1378640120]
-
-[node name="Default" type="Node" parent="ZestawInterakcji/toaleta/Dialogi2" unique_id=715111342]
-script = ExtResource("58_ae3hb")
+[node name="Default" parent="ZestawInterakcji/toaleta/Dialogi" parent_id_path=PackedInt32Array(613288830, 1980774679) index="0" unique_id=1938900361]
 dialog = Array[String](["jIt really stinks in here."])
+
+[node name="tablica" parent="ZestawInterakcji" unique_id=443363371 instance=ExtResource("2_t2jue")]
+transform = Transform3D(-0.9711052, 0, -0.23865214, 0, 1, 0, 0.23865214, 0, -0.9711052, -19.693392, 4.4040856, 47.484234)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/tablica/StaticBody3D" parent_id_path=PackedInt32Array(443363371, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(0.8776741, 0, 0.47925884, 0, 1, 0, -0.47925884, 0, 0.8776741, 0.16743469, -0.8835182, -0.09938812)
+shape = SubResource("BoxShape3D_nso21")
+
+[node name="employee of the month" parent="ZestawInterakcji" unique_id=764035689 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.444862, 6.1078224, 50.59172)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/employee of the month/StaticBody3D" parent_id_path=PackedInt32Array(764035689, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050231934, -0.5979004, 0.080078125)
+shape = SubResource("BoxShape3D_einfk")
+
+[node name="Default" parent="ZestawInterakcji/employee of the month/Dialogi" parent_id_path=PackedInt32Array(764035689, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["jMost Two-Faced Employee of the Month"])
+
+[node name="drukarka" parent="ZestawInterakcji" unique_id=1523297629 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.629248, 3.1569707, 49.373913)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/drukarka/StaticBody3D" parent_id_path=PackedInt32Array(1523297629, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105895996, -1.4267578, -0.38623047)
+shape = SubResource("BoxShape3D_ge4gr")
+
+[node name="Default" parent="ZestawInterakcji/drukarka/Dialogi" parent_id_path=PackedInt32Array(1523297629, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["jThe other printer hasn't worked since I started working here... and that was quite a while ago."])
+
+[node name="obraz artbook" parent="ZestawInterakcji" unique_id=2055896693 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.523518, 6.922627, 23.495173)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/obraz artbook/StaticBody3D" parent_id_path=PackedInt32Array(2055896693, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017242432, -1.5701294, -0.19525146)
+shape = SubResource("BoxShape3D_p63o4")
+
+[node name="Default" parent="ZestawInterakcji/obraz artbook/Dialogi" parent_id_path=PackedInt32Array(2055896693, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["jThat's the boss's favorite painting. He brought it back from one of his ridiculously expensive vacations in Egypt."])
+
+[node name="obraz zuzi" parent="ZestawInterakcji" unique_id=1159010148 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.467283, 5.913454, 1.0737268)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/obraz zuzi/StaticBody3D" parent_id_path=PackedInt32Array(1159010148, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22885895, -0.21905518, 0.24291992)
+shape = SubResource("BoxShape3D_dre38")
+
+[node name="Default" parent="ZestawInterakcji/obraz zuzi/Dialogi" parent_id_path=PackedInt32Array(1159010148, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["jThe boss believes humans evolved from birds, and he thinks we're all idiots for not believing it."])
+
+[node name="damska toaleta" parent="ZestawInterakcji" unique_id=139722230 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.996454, 0, 61.177704)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/damska toaleta/StaticBody3D" parent_id_path=PackedInt32Array(139722230, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17376709, 2.3632813, 0.028259277)
+shape = SubResource("BoxShape3D_uvjsu")
+
+[node name="Default" parent="ZestawInterakcji/damska toaleta/Dialogi" parent_id_path=PackedInt32Array(139722230, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["I wish I could use a restroom that doesn't stink for once."])
+
+[node name="kwiatek" parent="ZestawInterakcji" unique_id=689387525 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.475094, 4.4132338, 3.136135)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/kwiatek/StaticBody3D" parent_id_path=PackedInt32Array(689387525, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014648438, -1.9473267, -0.09765625)
+shape = SubResource("BoxShape3D_0k1xw")
+
+[node name="Default" parent="ZestawInterakcji/kwiatek/Dialogi" parent_id_path=PackedInt32Array(689387525, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["jIt's a miracle that this plant is still alive after not being watered for so long."])
+
+[node name="plakat vision" parent="ZestawInterakcji" unique_id=21095958 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.01484, 3.8985374, 8.030116)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/plakat vision/StaticBody3D" parent_id_path=PackedInt32Array(21095958, 1472911159) index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32676697, 0.4613955, -0.14468384)
+shape = SubResource("BoxShape3D_l00cr")
+
+[node name="Default" parent="ZestawInterakcji/plakat vision/Dialogi" parent_id_path=PackedInt32Array(21095958, 1980774679) index="0" unique_id=1938900361]
+dialog = Array[String](["jA vision of a stuffed wallet and unpaid salaries."])
 
 [node name="CanvasMenu" type="CanvasLayer" parent="." unique_id=951012984]
 
@@ -2121,7 +2199,7 @@ transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 540715288) index="0" unique_id=284198269]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2182,7 +2260,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=782166977]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]
@@ -2307,6 +2385,18 @@ autoplay = true
 [connection signal="first_email" from="NaszeBiurko" to="." method="_on_nasze_biurko_first_email"]
 
 [editable path="ZestawInterakcji/kawa"]
+[editable path="ZestawInterakcji/automat"]
+[editable path="ZestawInterakcji/teamwork"]
+[editable path="ZestawInterakcji/plakat work harder"]
+[editable path="ZestawInterakcji/toaleta"]
+[editable path="ZestawInterakcji/tablica"]
+[editable path="ZestawInterakcji/employee of the month"]
+[editable path="ZestawInterakcji/drukarka"]
+[editable path="ZestawInterakcji/obraz artbook"]
+[editable path="ZestawInterakcji/obraz zuzi"]
+[editable path="ZestawInterakcji/damska toaleta"]
+[editable path="ZestawInterakcji/kwiatek"]
+[editable path="ZestawInterakcji/plakat vision"]
 [editable path="player"]
 [editable path="NPC_Boss"]
 [editable path="NPC_Boss/szef siedzi"]
