@@ -28,6 +28,7 @@ func _on_resume_button_pressed():
 	get_tree().paused = false
 
 func _on_menu_button_pressed():
+	Global.reset()
 	$Click.play()
 	#Sfx.get_node("ButtonClick").play()
 	#$Press.play()

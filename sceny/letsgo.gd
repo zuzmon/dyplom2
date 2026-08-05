@@ -3,7 +3,8 @@ extends Node3D
 var kobieta_ask_flag := false
 var teddy_steal_flag := false
 var kobieta_print_flag := false
-var begin_dialog := ["cdialog na start gry"]
+var begin_dialog := ["cHey man, are you okay?", "jHuh? Oh... yeah.",
+"cOkay. In that case, here are the files. Print these documents and take them to the boss."]
 
 func _ready():
 	$NPC_Kobieta.global_position = Vector3(34.345, -0.1, 47.2)
