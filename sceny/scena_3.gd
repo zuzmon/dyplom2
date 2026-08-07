@@ -13,4 +13,5 @@ func _on_final_teddy_over():
 
 func _on_player_dialog_over():
 	if over_flag:
+		Global.ending = true
 		Fade.fade_out("res://sceny/letsgo.tscn")

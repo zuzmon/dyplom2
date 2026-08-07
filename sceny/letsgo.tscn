@@ -832,10 +832,10 @@ dialog = Array[String](["jThe coffee machine isn’t working again. What a surpr
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.2379, 4.123649, 2.7165694)
 
 [node name="StaticBody3D" parent="ZestawInterakcji/automat" index="0" unique_id=1472911159]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9157982, 5.3007565, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9157982, -0.4804988, 0)
 
 [node name="CollisionShape3D" parent="ZestawInterakcji/automat/StaticBody3D" index="0" unique_id=1126950461]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44849777, -6.7518597, 1.0281677)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44849777, -1.0083694, 1.0281677)
 shape = SubResource("BoxShape3D_t2jue")
 
 [node name="Default" parent="ZestawInterakcji/automat/Dialogi" parent_id_path=PackedInt32Array(651005222, 1980774679) index="0" unique_id=1938900361]
@@ -862,9 +862,13 @@ shape = SubResource("BoxShape3D_6i36o")
 dialog = Array[String](["jNo, thank you."])
 
 [node name="toaleta" parent="ZestawInterakcji" unique_id=613288830 instance=ExtResource("2_t2jue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9982436, 0, 71.01121)
 
-[node name="CollisionShape3D" parent="ZestawInterakcji/toaleta/StaticBody3D" parent_id_path=PackedInt32Array(613288830, 1472911159) index="0" unique_id=1126950461]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4546404, 2.5264153, 71.881165)
+[node name="StaticBody3D" parent="ZestawInterakcji/toaleta" index="0" unique_id=1472911159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2845008, 0)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/toaleta/StaticBody3D" index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.381366, -0.86797357, 0.9878006)
 shape = SubResource("BoxShape3D_equvf")
 
 [node name="Default" parent="ZestawInterakcji/toaleta/Dialogi" parent_id_path=PackedInt32Array(613288830, 1980774679) index="0" unique_id=1938900361]
@@ -920,8 +924,11 @@ dialog = Array[String](["jThe boss believes humans evolved from birds, and he th
 [node name="damska toaleta" parent="ZestawInterakcji" unique_id=139722230 instance=ExtResource("2_t2jue")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.996454, 0, 61.177704)
 
-[node name="CollisionShape3D" parent="ZestawInterakcji/damska toaleta/StaticBody3D" parent_id_path=PackedInt32Array(139722230, 1472911159) index="0" unique_id=1126950461]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17376709, 2.3632813, 0.028259277)
+[node name="StaticBody3D" parent="ZestawInterakcji/damska toaleta" index="0" unique_id=1472911159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5848777, 0)
+
+[node name="CollisionShape3D" parent="ZestawInterakcji/damska toaleta/StaticBody3D" index="0" unique_id=1126950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17376709, -0.948894, 0.028259277)
 shape = SubResource("BoxShape3D_uvjsu")
 
 [node name="Default" parent="ZestawInterakcji/damska toaleta/Dialogi" parent_id_path=PackedInt32Array(139722230, 1980774679) index="0" unique_id=1938900361]
@@ -1978,6 +1985,14 @@ dialog = Array[String](["jWhat is this?"])
 script = ExtResource("58_ae3hb")
 dialog = Array[String](["jShe doesn't need this."])
 
+[node name="PostSteal" type="Node" parent="czerwony/Dialogi" unique_id=1190219870]
+script = ExtResource("58_ae3hb")
+dialog = Array[String](["jI don't care."])
+
+[node name="czerwony2" parent="." unique_id=777005374 instance=ExtResource("50_nulnx")]
+transform = Transform3D(-0.05913307, -0.006346487, 0.003122976, -0.0060113906, 0.05894884, 0.005970612, -0.0037274696, 0.0056131193, -0.0591722, 23.8533, 2.4341602, -6.2134085)
+script = ExtResource("48_ae3hb")
+
 [node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("51_nudkn")]
 transform = Transform3D(-0.96761674, 0, 0.2524239, 0, 1, 0, -0.2524239, 0, -0.96761674, 16.70742, 2.6122818, 84.55833)
 visible = false
@@ -2199,7 +2214,7 @@ transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2260,7 +2275,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]
@@ -2270,7 +2285,7 @@ input_ray_pickable = false
 dialog = Array[String](["kHow can I help you?"])
 
 [node name="FirstPrinter" parent="NPC_Kobieta/Dialogi" parent_id_path=PackedInt32Array(839009704, 569248006) index="1" unique_id=341674911]
-dialog = Array[String](["khi, Simon!", "jHi, Betty. How are you? Did you like the cake I brought you yesterday?", "kI loved it! I even shared some with Patrick because we had a date yesterday.", "jPatrick? Who's Patrick?", "kOh, didn't I tell you? He's my new boyfriend. We've been seeing each other since last week. He's such an amazing guy.", "kWe had the best date yesterday—we went to the movies, then had a romantic dinner. He even brought me a little gift: my favorite chocolates and a teddy bear!", "kI know it sounds a bit childish, but I actually brought the teddy bear to work with me. Haha. It's sitting on my desk to remind me of him.", "jOh... that's great.", "kOh, Simon, actually, I have a small favor to ask. I realized I made a few mistakes in the documents you want to print, and I really need to fix them before they go to the boss.", "kWould you mind waiting a few minutes? I'll correct them quickly and print them out right away.", "jBetty, you know the boss doesn't like waiting.", "kI know, I know. But he'll be even angrier if he gets documents with mistakes in them. Please? It'll only take a minute.", "j...okay."])
+dialog = Array[String](["kHi, Simon!", "jHi, Betty. How are you? Did you like the cake I brought you yesterday?", "kI loved it! I even shared some with Patrick because we had a date yesterday.", "jPatrick? Who's Patrick?", "kOh, didn't I tell you? He's my new boyfriend. We've been seeing each other since last week. He's such an amazing guy.", "kWe had the best date yesterday—we went to the movies, then had a romantic dinner. He even brought me a little gift: my favorite chocolates and a teddy bear!", "kI know it sounds a bit childish, but I actually brought the teddy bear to work with me. Haha. It's sitting on my desk to remind me of him.", "jOh... that's great.", "kOh, Simon, actually, I have a small favor to ask. I realized I made a few mistakes in the documents you want to print, and I really need to fix them before they go to the boss.", "kWould you mind waiting a few minutes? I'll correct them quickly and print them out right away.", "jBetty, you know the boss doesn't like waiting.", "kI know, I know. But he'll be even angrier if he gets documents with mistakes in them. Please? It'll only take a minute.", "j...okay."])
 
 [node name="DefaultFirstPrinter" parent="NPC_Kobieta/Dialogi" parent_id_path=PackedInt32Array(839009704, 569248006) index="2" unique_id=513868141]
 dialog = Array[String](["kJust one more minute."])
@@ -2376,6 +2391,7 @@ autoplay = true
 [connection signal="editing_toggled" from="CanvasMenu/Menu/LineEdit" to="." method="_on_line_edit_editing_toggled"]
 [connection signal="dialog_over" from="player" to="." method="_on_player_dialog_over"]
 [connection signal="teddy_steal" from="czerwony" to="." method="_on_czerwony_teddy_steal"]
+[connection signal="teddy_steal" from="czerwony2" to="." method="_on_czerwony_teddy_steal"]
 [connection signal="ask" from="NPC_Boss" to="." method="_on_npc_boss_ask"]
 [connection signal="give_paper" from="NPC_Boss" to="." method="_on_npc_boss_give_paper"]
 [connection signal="ask" from="NPC_Kobieta" to="." method="_on_npc_kobieta_ask"]

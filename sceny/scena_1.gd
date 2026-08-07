@@ -30,4 +30,5 @@ func _on_bathroom_body_entered(_body):
 	Global.player_teleport_rot = $player.rotation
 	Global.head_teleport_rot = $player/Head.rotation
 	Global.cam_teleport_rot = $player/Head/Camera3D.rotation
-	Fade.fade_out("res://sceny/scena 2.tscn")
+	get_tree().change_scene_to_file("res://sceny/scena 2.tscn")
+	#Fade.fade_out("res://sceny/scena 2.tscn")

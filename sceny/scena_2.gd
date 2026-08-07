@@ -4,9 +4,11 @@ extends Node3D
 @onready var player = $player
 @onready var biurko = $"stanowisko solo"
 
-var magnitude = 0.2
+var magnitude = 0.1
 var period = 0.3
 var clicks = 4
+var begin_dialog = ["bSzybciej", "bTu do poprawy", "bJeszcze to popraw", "bPilne", "bZle zrobione"]
+var dialog_flag = false
 
 func _ready():
 	$player.global_position = Global.player_teleport_pos
@@ -18,7 +20,7 @@ func _camera_shake():
 	var initial_transform = camera.transform 
 	var elapsed_time = 0.0
 	
-	while elapsed_time < period:
+	while true:
 		var offset = Vector3(
 			randf_range(-magnitude, magnitude),
 			randf_range(-magnitude, magnitude),
@@ -32,9 +34,16 @@ func _camera_shake():
 	camera.transform = initial_transform
 
 func _on_teleport_teleport():
-	_camera_shake()
-	clicks -= 1
-	if clicks <= 0:
-		Fade.fade_out("res://sceny/scena 3.tscn")
-		clicks = 10
-		return
+	if not dialog_flag:
+		dialog_flag = true
+		_camera_shake()
+		$player.dialog = begin_dialog
+		$player.start_dialog(null)
+
+func _on_player_next_line():
+	magnitude += 0.05
+	$Tiktak.pitch_scale += 0.2
+
+func _on_player_dialog_over():
+	#Fade.fade_out("res://sceny/scena 3.tscn")
+	get_tree().change_scene_to_file("res://sceny/scena 3.tscn")

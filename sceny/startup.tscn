@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://tm2fklqvmmh7"]
+
+[ext_resource type="Script" uid="uid://hgws8hloe7h3" path="res://sceny/startup.gd" id="1_1isbn"]
+[ext_resource type="VideoStream" uid="uid://bt22voitqj4ql" path="res://assety/windows-startup.ogv" id="1_gfqnr"]
+
+[node name="Startup" type="Control" unique_id=1069406766]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1isbn")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1573007799]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_gfqnr")
+autoplay = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

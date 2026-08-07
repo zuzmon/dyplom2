@@ -1884,12 +1884,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.477474, 9.71097, 65.415665
 script = ExtResource("52_f2yyf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FinalTeddy" unique_id=507504369 groups=["talking"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.630661, -6.1305013, -1.9723206)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.630661, -4.4024324, -1.9723206)
 collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FinalTeddy/StaticBody3D" unique_id=866586549]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0922241, 3.9988863, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0922241, 1.4521089, 0)
 shape = SubResource("BoxShape3D_f2yyf")
 
 [node name="Dialogi" type="Node" parent="FinalTeddy" unique_id=1934455043]

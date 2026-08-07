@@ -12,3 +12,8 @@ func fade_out(scene):
 	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_file(scene)
 	fade_in()
+
+func fade_quit():
+	$AnimationPlayer.play("fade_out")
+	await $AnimationPlayer.animation_finished
+	get_tree().quit()

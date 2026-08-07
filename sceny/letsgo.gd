@@ -7,6 +7,10 @@ var begin_dialog := ["cHey man, are you okay?", "jHuh? Oh... yeah.",
 "cOkay. In that case, here are the files. Print these documents and take them to the boss."]
 
 func _ready():
+	if Global.ending:
+		$czerwony2.show()
+	else:
+		$czerwony2.hide()
 	$NPC_Kobieta.global_position = Vector3(34.345, -0.1, 47.2)
 	$NPC_Kobieta.rotation = Vector3(0.0, -90.0, 0.0)
 	$"NPC_Kobieta/baba idzie".hide()
@@ -15,6 +19,7 @@ func _ready():
 	$player/CanvasLayer/Control/Kursor.hide()
 	$CanvasMenu.show()
 	$"player/Head/Camera3D/papier do ręki".hide()
+	$player/CanvasLayer/Control/TextureRect.hide()
 
 func begin():
 	$player.dialog = begin_dialog
@@ -25,6 +30,7 @@ func _on_start_button_pressed():
 	$AnimationPlayer.play("start_game")
 	$CanvasMenu.hide()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	$player/CanvasLayer/Control/TextureRect.show()
 
 func _on_start_end():
 	$player/CanvasLayer/Control/Kursor.show()
@@ -55,6 +61,8 @@ func _on_npc_boss_ask():
 	$"NPC_Kobieta/baba stoi".show()
 
 func _on_player_dialog_over():
+	if Global.ending:
+		Fade.fade_quit()
 	if kobieta_ask_flag:
 		kobieta_ask_flag = false
 		$AnimationPlayer.play("baba_pojdzie")
@@ -74,6 +82,12 @@ func _on_czerwony_teddy_steal():
 
 func _on_npc_boss_give_paper():
 	$"player/Head/Camera3D/papier do ręki".hide()
+	if $player/CanvasLayer/Control/Winieta2.visible:
+		$player/CanvasLayer/Control/Winieta3.show()
+		$player/AnimationPlayer.play("winieta3")
+	else:
+		$player/CanvasLayer/Control/Winieta2.show()
+		$player/AnimationPlayer.play("winieta2")
 
 func _on_npc_kobieta_paper():
 	$"player/Head/Camera3D/papier do ręki".show()

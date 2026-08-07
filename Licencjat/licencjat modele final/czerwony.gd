@@ -9,5 +9,8 @@ func interact(_player_position):
 		Global.teddy_steal = false
 		Global.kobieta_default_first_printer = false
 		Global.kobieta_after_first_printer = true
+		Global.teddy_stolen = true
 		return dialogi.get_node("Steal").dialog
+	if Global.teddy_stolen:
+		return dialogi.get_node("PostSteal").dialog
 	return dialogi.get_node("Default").dialog

@@ -1,5 +1,6 @@
 extends Node
 
+var ending := false
 var kolega_game_start := true
 var kobieta_first_printer := true
 var kobieta_default_first_printer := true
@@ -14,6 +15,7 @@ var kobieta_second_printer := false
 var boss_second_papers := false
 var kolega_teddy := false
 var over := false
+var teddy_stolen := false
 
 var player_teleport_pos
 var player_teleport_rot

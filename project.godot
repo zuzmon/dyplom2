@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="lets go"
-run/main_scene="uid://cnefl5m4me3xr"
+run/main_scene="uid://tm2fklqvmmh7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -29,7 +29,7 @@ Global="*uid://bkd17dj7anw47"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [filesystem]

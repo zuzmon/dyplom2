@@ -1,5 +1,6 @@
 extends CharacterBody3D
 signal dialog_over
+signal next_line
 
 var speed
 const WALK_SPEED = 5.0
@@ -21,8 +22,8 @@ const FOV_CHANGE = 1.5
 @onready var camera = $Head/Camera3D
 @onready var raycast = $Head/Camera3D/RayCast3D
 @onready var lamp = $SpotLight3D2
-@onready var dialog_text = $CanvasLayer/Control/Panel/Label
-@onready var dialog_name = $CanvasLayer/Control/Panel/Name/Label
+@onready var dialog_text = $CanvasLayer/Control/Dymek/Label
+@onready var dialog_name = $CanvasLayer/Control/Dymek/Name
 
 var talking := false
 var menu := false
@@ -35,7 +36,7 @@ func _ready():
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		menu = true
-	$CanvasLayer/Control/Panel.hide()
+	$CanvasLayer/Control/Dymek.hide()
 
 func _unhandled_input(event):
 	if talking or menu:
@@ -48,7 +49,7 @@ func _unhandled_input(event):
 func start_dialog(object):
 	$CanvasLayer/Control/Kursor.hide()
 	talking = true
-	$CanvasLayer/Control/Panel.show()
+	$CanvasLayer/Control/Dymek.show()
 	if object == null:
 		return
 	camera.look_at(object.global_position)
@@ -80,23 +81,24 @@ func _process(_delta):
 
 # Funkcja do wyświetlenia kolejnej linii dialogu
 func show_next_line():
+	emit_signal("next_line")
 	if current_line_index < dialog.size():
 		full_line = dialog[current_line_index]
 		match full_line[0]:
 			"k":
-				dialog_name.text = "Kobieta"
+				dialog_name.text = "Betty"
 			"c":
-				dialog_name.text = "Chłop"
+				dialog_name.text = "Man"
 			"s":
-				dialog_name.text = "Szef"
+				dialog_name.text = "Boss"
 			"b":
-				dialog_name.text = "Komputer"
+				dialog_name.text = "computer"
 			"j":
-				dialog_name.text = "Ja"
+				dialog_name.text = "You"
 			"t":
 				dialog_name.text = "Teddy"
 			_:
-				dialog_name.text = "(brak)"
+				dialog_name.text = "???"
 		full_line[0] = ""
 		current_char_index = 0
 		dialog_text.text = ""
@@ -111,7 +113,7 @@ func show_next_line():
 			Global.over = false
 			get_tree().change_scene_to_file("res://sceny/scena 1.tscn")
 			return
-		$CanvasLayer/Control/Panel.hide()
+		$CanvasLayer/Control/Dymek.hide()
 		var tween = get_tree().create_tween()
 		tween.tween_property(camera, "fov", BASE_FOV, 0.2)
 		talking = false
