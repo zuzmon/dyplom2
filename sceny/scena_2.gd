@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var camera = $player/Head/Camera3D
+@onready var camera = $Camera3D
 @onready var player = $player
 @onready var biurko = $"stanowisko solo"
 
@@ -26,7 +26,7 @@ func _camera_shake():
 			randf_range(-magnitude, magnitude),
 			0.0
 		)
-	
+		
 		camera.transform.origin = initial_transform.origin + offset
 		elapsed_time += get_process_delta_time()
 		await get_tree().process_frame
@@ -35,6 +35,7 @@ func _camera_shake():
 
 func _on_teleport_teleport():
 	if not dialog_flag:
+		$Camera3D.current = true
 		dialog_flag = true
 		_camera_shake()
 		$player.dialog = begin_dialog

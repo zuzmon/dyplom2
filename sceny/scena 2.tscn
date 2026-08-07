@@ -304,6 +304,9 @@ material = SubResource("StandardMaterial3D_r7e7w")
 [node name="player" parent="." unique_id=1535646083 instance=ExtResource("2_eeock")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.512776, 0, 82.99729)
 
+[node name="Camera3D" parent="player/Head" parent_id_path=PackedInt32Array(1535646083, 875197071) index="0" unique_id=293298521]
+current = true
+
 [node name="Sciany" type="Node3D" parent="." unique_id=518232063]
 
 [node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="Sciany" unique_id=1284053333]
@@ -837,6 +840,9 @@ frame_progress = 0.4501323
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.678225, 4.1987724, -10.551771)
 stream = ExtResource("32_dmvde")
 autoplay = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1115853448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.92776, 3.3915854, -5.655912)
 
 [connection signal="dialog_over" from="player" to="." method="_on_player_dialog_over"]
 [connection signal="next_line" from="player" to="." method="_on_player_next_line"]

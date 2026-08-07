@@ -1090,6 +1090,7 @@ mouse_captured = false
 
 [node name="Camera3D" parent="player/Head" parent_id_path=PackedInt32Array(1535646083, 875197071) index="0" unique_id=293298521]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3952127, -4.6953025)
+current = true
 
 [node name="papier do ręki" parent="player/Head/Camera3D" index="1" unique_id=1819337477 instance=ExtResource("14_rlv53")]
 transform = Transform3D(-4.371136e-08, 0, 0.9999996, 0, 1, 0, -0.9999996, 0, -4.371136e-08, 0.12999916, -0.33554602, -0.44738865)
@@ -2217,7 +2218,7 @@ transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2278,7 +2279,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]
@@ -2315,7 +2316,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.1855097, 0)
 shape = SubResource("CapsuleShape3D_exjxd")
 
 [node name="NPC_Kolega" parent="." unique_id=1857254386 instance=ExtResource("56_rq3hr")]
-transform = Transform3D(-0.28279343, 0, 0.95918095, 0, 1, 0, -0.95918095, 0, -0.28279343, 16.761683, -0.18574882, -10.9037895)
+transform = Transform3D(-0.039887533, 0, 0.9992042, 0, 1, 0, -0.9992042, 0, -0.039887533, 16.761683, -0.18574882, -10.9037895)
 
 [node name="Default" parent="NPC_Kolega/Dialogi" parent_id_path=PackedInt32Array(1857254386, 569248006) index="0" unique_id=151041152]
 dialog = Array[String](["cWhat are you waiting for? There's work to do."])
@@ -2389,10 +2390,15 @@ stream = ExtResource("78_qbe7c")
 volume_db = 12.0
 autoplay = true
 
+[node name="Camera3D" type="Camera3D" parent="." unique_id=157382418]
+transform = Transform3D(-0.007853851, 0, 0.9999692, 0, 1, 0, -0.9999692, 0, -0.007853851, 22.625578, 4.053177, -10.434863)
+fov = 50.0
+
 [connection signal="pressed" from="CanvasMenu/Menu/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasMenu/Menu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="editing_toggled" from="CanvasMenu/Menu/LineEdit" to="." method="_on_line_edit_editing_toggled"]
 [connection signal="dialog_over" from="player" to="." method="_on_player_dialog_over"]
+[connection signal="next_line" from="player" to="." method="_on_player_next_line"]
 [connection signal="teddy_steal" from="czerwony" to="." method="_on_czerwony_teddy_steal"]
 [connection signal="teddy_steal" from="czerwony2" to="." method="_on_czerwony_teddy_steal"]
 [connection signal="ask" from="NPC_Boss" to="." method="_on_npc_boss_ask"]
@@ -2402,6 +2408,7 @@ autoplay = true
 [connection signal="paper" from="NPC_Kobieta" to="." method="_on_npc_kobieta_paper"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="first_email" from="NaszeBiurko" to="." method="_on_nasze_biurko_first_email"]
+[connection signal="second_email" from="NaszeBiurko" to="." method="_on_nasze_biurko_second_email"]
 
 [editable path="ZestawInterakcji/kawa"]
 [editable path="ZestawInterakcji/automat"]

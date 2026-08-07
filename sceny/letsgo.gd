@@ -6,6 +6,10 @@ var kobieta_print_flag := false
 var begin_dialog := ["cHey man, are you okay?", "jHuh? Oh... yeah.",
 "cOkay. In that case, here are the files. Print these documents and take them to the boss."]
 
+var first_turn_flag := false
+var second_turn_flag := false
+var flag_count := 0
+
 func _ready():
 	if Global.ending:
 		$czerwony2.show()
@@ -24,6 +28,7 @@ func _ready():
 func begin():
 	$player.dialog = begin_dialog
 	$player.start_dialog(null)
+	first_turn_flag = true
 
 func _on_start_button_pressed():
 	$Click.play()
@@ -61,8 +66,9 @@ func _on_npc_boss_ask():
 	$"NPC_Kobieta/baba stoi".show()
 
 func _on_player_dialog_over():
+	$player/Head/Camera3D.current = true
 	if Global.ending:
-		Fade.fade_quit()
+		Fade.fade_out("res://sceny/ending.tscn")
 	if kobieta_ask_flag:
 		kobieta_ask_flag = false
 		$AnimationPlayer.play("baba_pojdzie")
@@ -98,3 +104,16 @@ func _on_line_edit_editing_toggled(toggled_on):
 
 func _on_npc_kobieta_on_printer():
 	kobieta_print_flag = true
+
+func _on_nasze_biurko_second_email():
+	second_turn_flag = true
+
+func _on_player_next_line():
+	if first_turn_flag:
+		first_turn_flag = false
+		$Camera3D.current = true
+	if second_turn_flag:
+		flag_count += 1
+		if flag_count == 6:
+			second_turn_flag = false
+			$Camera3D.current = true

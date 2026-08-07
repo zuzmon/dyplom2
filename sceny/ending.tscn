@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://by6tv7idct440"]
+
+[ext_resource type="Script" uid="uid://c0wfmjabc68xu" path="res://sceny/ending.gd" id="1_2lxmj"]
+[ext_resource type="FontFile" uid="uid://be558l1rwporf" path="res://Phatone-Regular.otf" id="1_ge73c"]
+[ext_resource type="AudioStream" uid="uid://cgbjqtl6brur6" path="res://sfx/myszka klik.mp3" id="3_4o7p5"]
+
+[node name="Ending" type="Control" unique_id=787767904]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2lxmj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=825247603]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1031435331]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ge73c")
+theme_override_font_sizes/font_size = 48
+text = "TYTUŁ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1195161660]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -427.0
+offset_top = -383.0
+offset_right = -169.0
+offset_bottom = -263.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_ge73c")
+theme_override_font_sizes/font_size = 32
+text = "AGAIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RetryButton" type="Button" parent="Label2" unique_id=856645463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Label3" type="Label" parent="." unique_id=50966587]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 181.0
+offset_top = -383.0
+offset_right = 439.0
+offset_bottom = -263.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_ge73c")
+theme_override_font_sizes/font_size = 32
+text = "QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitButton" type="Button" parent="Label3" unique_id=448562250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1627797330]
+stream = ExtResource("3_4o7p5")
+
+[connection signal="pressed" from="Label2/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Label3/QuitButton" to="." method="_on_quit_button_pressed"]
