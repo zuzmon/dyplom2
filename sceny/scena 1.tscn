@@ -76,7 +76,7 @@
 [ext_resource type="Shader" uid="uid://0loctdk2xig4" path="res://sceny/pixeloza.gdshader" id="68_uig7l"]
 [ext_resource type="PackedScene" uid="uid://bqy5u80udopbu" path="res://Licencjat/licencjat modele final/obraz zuzi.glb" id="71_8m8tk"]
 [ext_resource type="PackedScene" uid="uid://bx4cxh453mxkg" path="res://Licencjat/licencjat modele final/belki.glb" id="73_h6l61"]
-[ext_resource type="AudioStream" uid="uid://bbpukokgf2odp" path="res://sfx/labirynt.mp3" id="79_3s55o"]
+[ext_resource type="AudioStream" uid="uid://csxodipoda44b" path="res://assety/szum/labirynt.mp3" id="77_7qj31"]
 [ext_resource type="AudioStream" uid="uid://c3i58v3l7sbrj" path="res://sfx/jumpscare labirynt.mp3" id="79_fymhe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tejhb"]
@@ -1714,7 +1714,7 @@ transform = Transform3D(0.07151485, 0, -0.99743956, 0, 1, 0, 0.99743956, 0, 0.07
 [node name="ściana" parent="." unique_id=752324080 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 2.137438, 17.835302, 2.529806, -5.742133)
 
-[node name="Cube_047" parent="ściana" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_eyloy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana" unique_id=886147445]
@@ -1727,7 +1727,7 @@ shape = SubResource("BoxShape3D_7qj31")
 [node name="ściana8" parent="." unique_id=815927225 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.4088469, 0, 0, 0, 0.40914744, 17.599651, 2.1036897, -22.500725)
 
-[node name="Cube_047" parent="ściana8" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana8" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_odyjk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana8" unique_id=1492630617]
@@ -1740,7 +1740,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana2" parent="." unique_id=56274769 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 0.79700273, 23.326664, 2.529806, -11.727241)
 
-[node name="Cube_047" parent="ściana2" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana2" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_wv1r2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana2" unique_id=1197408488]
@@ -1753,7 +1753,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana23" parent="." unique_id=1780651723 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 1.2259903, 23.661606, 2.529806, 4.4420757)
 
-[node name="Cube_047" parent="ściana23" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana23" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_5hr6u")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana23" unique_id=223565781]
@@ -1776,7 +1776,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana16" parent="." unique_id=1451784542 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 1.5532959, 7.242138, 2.529806, -8.258029)
 
-[node name="Cube_047" parent="ściana16" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana16" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_u0bdn")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana16" unique_id=1488214258]
@@ -1792,7 +1792,7 @@ transform = Transform3D(1.3827157, 0, 0, 0, 0.59780926, 0, 0, 0, 0.64379233, 1.1
 [node name="ściana11" parent="." unique_id=1243879908 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 1.7141191, 30.731466, 2.529806, -16.711086)
 
-[node name="Cube_047" parent="ściana11" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana11" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_pdd5c")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana11" unique_id=607739564]
@@ -1805,7 +1805,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana21" parent="." unique_id=392216817 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 0.6952836, 30.731466, 2.529806, 2.1140304)
 
-[node name="Cube_047" parent="ściana21" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana21" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_aat5o")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana21" unique_id=1074944920]
@@ -1818,7 +1818,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana15" parent="." unique_id=1923602439 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(0.0034966434, 0, -0.87594694, 0, 3.0937505, 0, 1.0017151, 0, 0.0030576303, 26.872427, 2.529806, -7.250085)
 
-[node name="Cube_047" parent="ściana15" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana15" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_8m8tk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana15" unique_id=766076677]
@@ -1831,7 +1831,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana12" parent="." unique_id=883492247 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 5.73691, 37.058586, 2.529806, -20.821457)
 
-[node name="Cube_047" parent="ściana12" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana12" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_ipihm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana12" unique_id=1042422594]
@@ -1844,7 +1844,7 @@ shape = SubResource("BoxShape3D_3s55o")
 [node name="ściana3" parent="." unique_id=1967915227 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012919136, -0.011564409, -0.5409142, -5.7806752e-05, 3.15515, -0.0019825469, 0.987958, 0.0001694898, -0.00070744794, 20.881912, 2.529806, -7.2185736)
 
-[node name="Cube_047" parent="ściana3" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana3" index="0" unique_id=1855342616]
 transform = Transform3D(1, 0, 5.820766e-11, -1.8189894e-12, 1.0000001, -5.3813842e-11, -2.3283064e-10, -2.0804691e-11, 1, -0.009171486, 0.5842261, 0.5789795)
 surface_material_override/0 = SubResource("StandardMaterial3D_tjge2")
 
@@ -1858,7 +1858,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana4" parent="." unique_id=234800036 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012923863, 0.016299894, -0.5449812, -4.6395748e-05, 3.1551197, 0.0028155067, 0.9879677, 0.00016948929, -0.00071277184, 15.4425125, 2.529806, -15.263482)
 
-[node name="Cube_047" parent="ściana4" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana4" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_x2m5a")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana4" unique_id=1938745116]
@@ -1871,7 +1871,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana10" parent="." unique_id=195657522 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012931618, 0.01626122, -0.74208915, -4.6423585e-05, 3.1476338, 0.003833815, 0.9885605, 0.00016908716, -0.00097056606, 27.428003, 2.529806, -15.263482)
 
-[node name="Cube_047" parent="ściana10" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana10" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_vpe8l")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana10" unique_id=643871902]
@@ -1884,7 +1884,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana37" parent="." unique_id=1178727052 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 0.73769784, 20.08881, 2.529806, 30.369244)
 
-[node name="Cube_047" parent="ściana37" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana37" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_t55ka")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana37" unique_id=1914524580]
@@ -1897,7 +1897,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana51" parent="." unique_id=1018112428 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 0.73769784, 13.550627, 2.529806, 36.4105)
 
-[node name="Cube_047" parent="ściana51" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana51" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_phhuy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana51" unique_id=1012888564]
@@ -1920,7 +1920,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana46" parent="." unique_id=988234388 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 1.1116345, 22.76646, 2.529806, 45.453434)
 
-[node name="Cube_047" parent="ściana46" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana46" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_ipnme")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana46" unique_id=1186669137]
@@ -1933,7 +1933,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana38" parent="." unique_id=2057745415 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 0.79700273, 25.580172, 2.7048938, 30.581478)
 
-[node name="Cube_047" parent="ściana38" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana38" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_u65hb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana38" unique_id=211232214]
@@ -1946,7 +1946,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana39" parent="." unique_id=1775557853 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012930023, 0.01626914, -0.6721244, -4.641786e-05, 3.149167, 0.0034723599, 0.9884386, 0.00016916952, -0.0008790603, 29.3195, 2.529806, 27.045238)
 
-[node name="Cube_047" parent="ściana39" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana39" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_ex0gp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana39" unique_id=929178221]
@@ -1969,7 +1969,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana5" parent="." unique_id=1452252953 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012954223, 0.016011963, -0.6279442, -4.6640576e-05, 3.16351, 0.0031783564, 0.99029225, 0.00016993989, -0.0008212772, 9.604126, 2.3055103, -20.18668)
 
-[node name="Cube_047" parent="ściana5" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana5" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_7d4kw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana5" unique_id=355691233]
@@ -1981,7 +1981,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana7" parent="." unique_id=1630157706 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012957718, 0.015995272, -0.7910217, -4.665316e-05, 3.1602128, 0.0040037776, 0.9905594, 0.00016976274, -0.0010345635, 22.00767, 2.7979856, -20.18668)
 
-[node name="Cube_047" parent="ściana7" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana7" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_0m3rq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana7" unique_id=943462225]
@@ -1994,7 +1994,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana9" parent="." unique_id=1347293307 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012969183, 0.01594051, -1.316816, -4.6694444e-05, 3.149393, 0.0066650994, 0.9914359, 0.00016918154, -0.0017222407, 24.95347, 2.7979856, -24.306221)
 
-[node name="Cube_047" parent="ściana9" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana9" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_h6l61")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana9" unique_id=80341169]
@@ -2007,7 +2007,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana22" parent="." unique_id=451241336 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.001296152, 0.015976958, -0.7220063, -4.6666853e-05, 3.1565938, 0.0036544544, 0.9908501, 0.00016956836, -0.00094429945, 27.584618, 2.354497, -1.0040731)
 
-[node name="Cube_047" parent="ściana22" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana22" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_s817y")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana22" unique_id=501073167]
@@ -2020,7 +2020,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana17" parent="." unique_id=1574317639 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012965548, 0.016658463, -1.0494392, -4.6681354e-05, 3.2912397, 0.005311764, 0.991158, 0.00017680138, -0.0013725432, 13.124106, 1.9381621, 0.4197998)
 
-[node name="Cube_047" parent="ściana17" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana17" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_ex824")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana17" unique_id=745396799]
@@ -2033,7 +2033,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana25" parent="." unique_id=467816732 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.001297852, 0.01589611, -2.0094962, -4.6728055e-05, 3.1406205, 0.010171119, 0.9921496, 0.00016871028, -0.0026281849, 8.885139, 2.4435678, 6.1905117)
 
-[node name="Cube_047" parent="ściana25" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana25" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_bun8f")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana25" unique_id=1928342695]
@@ -2046,7 +2046,7 @@ shape = SubResource("BoxShape3D_fymhe")
 [node name="ściana24" parent="." unique_id=2001914315 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012990753, 0.015837952, -2.9639301, -4.6772093e-05, 3.1291301, 0.015002011, 0.99308467, 0.00016809303, -0.0038764726, 31.134272, 2.7979856, 11.339028)
 
-[node name="Cube_047" parent="ściana24" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana24" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_7qj31")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana24" unique_id=749137409]
@@ -2059,7 +2059,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana6" parent="." unique_id=1579482954 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.98789203, 2.4443401e-05, -0.00018787122, 6.8059408e-06, 3.1014874, 0.0050583016, 0.0001895809, 0.016022936, -0.9791144, 12.366022, 2.529806, -24.510086)
 
-[node name="Cube_047" parent="ściana6" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana6" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_efoy7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana6" unique_id=2090685591]
@@ -2071,7 +2071,7 @@ shape = SubResource("BoxShape3D_rqn2g")
 [node name="ściana13" parent="." unique_id=1568926940 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.98734635, 2.4080568e-05, -0.0006953979, 6.802181e-06, 3.0554492, 0.0187231, 0.0001894762, 0.015785092, -3.6241527, 0.4688778, 2.529806, -9.984934)
 
-[node name="Cube_047" parent="ściana13" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana13" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_mymp7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana13" unique_id=933662343]
@@ -2084,7 +2084,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana19" parent="." unique_id=1785310223 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.9879981, 2.4514087e-05, -9.428898e-05, 6.8066715e-06, 3.110456, 0.002538665, 0.00018960125, 0.01606927, -0.49139887, 6.1076975, 2.529806, -22.435703)
 
-[node name="Cube_047" parent="ściana19" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana19" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_3s55o")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana19" unique_id=518853769]
@@ -2097,7 +2097,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana34" parent="." unique_id=747867841 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012954223, 0.016011963, -0.6279442, -4.6640576e-05, 3.16351, 0.0031783564, 0.99029225, 0.00016993989, -0.0008212772, 24.214787, 2.4065776, 21.193153)
 
-[node name="Cube_047" parent="ściana34" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana34" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_nc6o2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana34" unique_id=422250316]
@@ -2110,13 +2110,13 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana53" parent="." unique_id=955819843 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012958592, 0.015991066, -0.78985584, -4.6656307e-05, 3.1593816, 0.003997877, 0.9906262, 0.00016971811, -0.0010330385, 36.33377, 2.2897737, 21.094503)
 
-[node name="Cube_047" parent="ściana53" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana53" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_jp5aj")
 
 [node name="ściana35" parent="." unique_id=344627521 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.98789203, 2.4443401e-05, -0.00018787122, 6.8059408e-06, 3.1014874, 0.0050583016, 0.0001895809, 0.016022936, -0.9791144, 26.976683, 2.529806, 16.869747)
 
-[node name="Cube_047" parent="ściana35" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana35" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_pqhuq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana35" unique_id=1821093349]
@@ -2129,7 +2129,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana43" parent="." unique_id=703590 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.98768437, 2.4304598e-05, -0.00025903902, 6.8045106e-06, 3.0838754, 0.006974445, 0.00018954107, 0.015931945, -1.3500146, 32.337177, 2.529806, 34.56433)
 
-[node name="Cube_047" parent="ściana43" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana43" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_fymhe")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana43" unique_id=512304950]
@@ -2259,13 +2259,13 @@ transform = Transform3D(-1.0124692, 8.843122e-06, 0.00019430753, 2.5554104e-06, 
 [node name="ściana36" parent="." unique_id=815843465 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.9879981, 2.4514087e-05, -9.428898e-05, 6.8066715e-06, 3.110456, 0.002538665, 0.00018960125, 0.01606927, -0.49139887, 20.718357, 2.529806, 18.944132)
 
-[node name="Cube_047" parent="ściana36" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana36" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_excqs")
 
 [node name="ściana52" parent="." unique_id=1562659309 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.9879685, 2.4494318e-05, -0.000109006214, 6.8064674e-06, 3.1079476, 0.0029349162, 0.00018959556, 0.016056312, -0.56809956, 31.942625, 2.529806, 18.67669)
 
-[node name="Cube_047" parent="ściana52" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana52" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_h2n7p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana52" unique_id=659487295]
@@ -2291,7 +2291,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana14" parent="." unique_id=1384642765 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.98789203, 2.4443401e-05, -0.00018787122, 6.8059408e-06, 3.1014874, 0.0050583016, 0.0001895809, 0.016022936, -0.9791144, 12.429988, 2.529806, -9.793906)
 
-[node name="Cube_047" parent="ściana14" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana14" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_nmbah")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana14" unique_id=1253653295]
@@ -2304,7 +2304,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana29" parent="." unique_id=1595729422 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 2.3543222, -1.2035446, 2.529806, 15.674715)
 
-[node name="Cube_047" parent="ściana29" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana29" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_7imq4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana29" unique_id=389871891]
@@ -2317,7 +2317,7 @@ shape = SubResource("BoxShape3D_yiq6o")
 [node name="ściana30" parent="." unique_id=1860729393 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012923863, 0.016299894, -0.5449812, -4.6395748e-05, 3.1551197, 0.0028155067, 0.9879677, 0.00016948929, -0.00071277184, 6.99683, 2.529806, 11.401814)
 
-[node name="Cube_047" parent="ściana30" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana30" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_8l3mw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana30" unique_id=1880980805]
@@ -2330,7 +2330,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana31" parent="." unique_id=1444100622 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012965811, 0.015956556, -1.0637586, -4.6682297e-05, 3.1525629, 0.005384243, 0.991178, 0.00016935183, -0.0013912714, 4.7660255, 2.7979856, 27.085094)
 
-[node name="Cube_047" parent="ściana31" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana31" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_f56ok")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana31" unique_id=908734325]
@@ -2343,7 +2343,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana32" parent="." unique_id=90319989 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.98789203, 2.4443401e-05, -0.00018787122, 6.8059408e-06, 3.1014874, 0.0050583016, 0.0001895809, 0.016022936, -0.9791144, 3.9843054, 2.529806, 16.87139)
 
-[node name="Cube_047" parent="ściana32" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana32" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_uxyst")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana32" unique_id=582126292]
@@ -2356,7 +2356,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana26" parent="." unique_id=971929161 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 1.5532959, 9.431255, 2.529806, 18.36832)
 
-[node name="Cube_047" parent="ściana26" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana26" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_v2pcc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana26" unique_id=1631202898]
@@ -2369,7 +2369,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana47" parent="." unique_id=1351284174 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(1, 0, 0, 0, 3.0937505, 0, 0, 0, 2.4804237, 2.0400333, 2.529806, 38.176575)
 
-[node name="Cube_047" parent="ściana47" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana47" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_icv3p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana47" unique_id=1776537943]
@@ -2457,7 +2457,7 @@ transform = Transform3D(1, 0, 0, 0, 0.3474387, 0, 0, 0, 0.40315694, 1.8147125, -
 [node name="ściana48" parent="." unique_id=613519679 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.9878215, 2.43964e-05, -0.0002577939, 6.8054546e-06, 3.0955236, 0.0069409204, 0.00018956736, 0.015992124, -1.3435252, 7.414152, 2.529806, 40.125263)
 
-[node name="Cube_047" parent="ściana48" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana48" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_at24j")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana48" unique_id=292994566]
@@ -2470,7 +2470,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana27" parent="." unique_id=638915264 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.0012965811, 0.015956556, -1.0637586, -4.6682297e-05, 3.1525629, 0.005384243, 0.991178, 0.00016935183, -0.0013912714, 15.4008255, 2.7979856, 27.046146)
 
-[node name="Cube_047" parent="ściana27" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana27" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_m46p2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana27" unique_id=1446024078]
@@ -2483,7 +2483,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana45" parent="." unique_id=1278350341 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.001297843, 0.015896477, -1.8616644, -4.6727728e-05, 3.140693, 0.009422865, 0.9921426, 0.00016871418, -0.0024348383, 24.000776, 2.4404688, 40.50175)
 
-[node name="Cube_047" parent="ściana45" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana45" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_tejhb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana45" unique_id=323377703]
@@ -2496,7 +2496,7 @@ shape = SubResource("BoxShape3D_04to7")
 [node name="ściana28" parent="." unique_id=1550202400 instance=ExtResource("53_vkh3c")]
 transform = Transform3D(-0.98789203, 2.4443401e-05, -0.00018787122, 6.8059408e-06, 3.1014874, 0.0050583016, 0.0001895809, 0.016022936, -0.9791144, 14.619105, 2.529806, 16.832441)
 
-[node name="Cube_047" parent="ściana28" index="0" unique_id=1978452541]
+[node name="Cube_047" parent="ściana28" index="0" unique_id=1855342616]
 surface_material_override/0 = SubResource("StandardMaterial3D_ckq65")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ściana28" unique_id=988873209]
@@ -3006,7 +3006,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6439171, 5.036804, -1.1728
 shape = SubResource("BoxShape3D_pqhuq")
 
 [node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=559735702]
-stream = ExtResource("79_3s55o")
+stream = ExtResource("77_7qj31")
+volume_db = -1.323
 autoplay = true
 
 [node name="Bathroom" type="Area3D" parent="." unique_id=376849265]

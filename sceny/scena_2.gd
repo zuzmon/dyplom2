@@ -7,7 +7,7 @@ extends Node3D
 var magnitude = 0.1
 var period = 0.3
 var clicks = 4
-var begin_dialog = ["bSzybciej", "bTu do poprawy", "bJeszcze to popraw", "bPilne", "bZle zrobione"]
+var begin_dialog = ["bFASTER", "bFIX THIS", "bFIX IT AGAIN", "bDO IT NOW", "bYOU DID THIS WRONG", "bAGAIN"]
 var dialog_flag = false
 
 func _ready():

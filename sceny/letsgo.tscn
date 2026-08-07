@@ -2203,7 +2203,7 @@ dialog = Array[String](["sWhat are you doing here? Get back to work!"])
 dialog = Array[String](["sWhat took you so long? As usual, you're slow and you're never on time.", "sTch. Forget it. Send the email to the company I mentioned yesterday. ", "sTell them that we’d like to meet on Friday at 4:00 PM to discuss the price changes.And make sure you don't take too long this time!"])
 
 [node name="Ask" parent="NPC_Boss/Dialogi" parent_id_path=PackedInt32Array(777428972, 569248006) index="2" unique_id=245339257]
-dialog = Array[String](["jExcuse me, but you didn’t say where you wanted to have the meeting.", "sI didn’t? Don’t be ridiculous. You forgot. Again.", "sLike I told you earlier, we want to meet on FRIDAY at 4:00 PM in OUR OFFICE on the second floor.", "sDid you understand? OUR OFFCIE."])
+dialog = Array[String](["jExcuse me Sir, but you didn’t say where you wanted to have the meeting.", "sI didn’t? Don’t be ridiculous. You forgot. Again.", "sLike I told you earlier, we want to meet on FRIDAY at 4:00 PM in OUR OFFICE on the second floor.", "sDid you understand? OUR OFFICE."])
 
 [node name="SecondPapers" parent="NPC_Boss/Dialogi" parent_id_path=PackedInt32Array(777428972, 569248006) index="3" unique_id=98931402]
 dialog = Array[String](["sAre you out of your mind?! What the hell did you write?!"])
@@ -2218,7 +2218,7 @@ transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2279,7 +2279,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]
@@ -2322,7 +2322,7 @@ transform = Transform3D(-0.039887533, 0, 0.9992042, 0, 1, 0, -0.9992042, 0, -0.0
 dialog = Array[String](["cWhat are you waiting for? There's work to do."])
 
 [node name="Teddy" parent="NPC_Kolega/Dialogi" parent_id_path=PackedInt32Array(1857254386, 569248006) index="1" unique_id=1041400089]
-dialog = Array[String](["cWhat the hell is this? Where did you get it? Is this Betty’s? ", "cYou f*cking creep..."])
+dialog = Array[String](["cWhere did you get it? Is this Betty’s? ", "cYou f*cking creep..."])
 
 [node name="AnimatedSprite3D" parent="NPC_Kolega" index="3" unique_id=103366429]
 visible = true
@@ -2352,7 +2352,7 @@ dialog = Array[String](["jI hate this place."])
 
 [node name="WorkFirstEmail" type="Node" parent="NaszeBiurko/Dialogi" unique_id=908286878]
 script = ExtResource("58_ae3hb")
-dialog = Array[String](["jOkay. \"Dear Sir or Madam... \"", "cDid you hear about Arthur's divorce? They say it's because he cheated on his wife...", "\"We would like to meet at 4:00 PM...\"", "And that old secretary? She's as fat as a pig. cI can't even stand looking at her.", "j\"regarding the price changes...\"", "jWait. Where does that old fool want to meet them anyway?", "jUgh, I guess I have to go and ask him."])
+dialog = Array[String](["jOkay. \"Dear Sir or Madam... \"", "cDid you hear about Arthur's divorce? They say it's because he cheated on his wife...", "j\"We would like to meet at 4:00 PM...\"", "cAnd that old secretary? She's as fat as a pig. I can't even stand looking at her.", "j\"regarding the price changes...\"", "jWait. Where does that old fool want to meet them anyway?", "jUgh, I guess I have to go and ask him."])
 
 [node name="WorkSecondEmail" type="Node" parent="NaszeBiurko/Dialogi" unique_id=854447147]
 script = ExtResource("58_ae3hb")

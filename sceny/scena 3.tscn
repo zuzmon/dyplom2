@@ -53,7 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://bw2vaogy1hmh4" path="res://assety/mikrofala.1glb.glb" id="50_en7r5"]
 [ext_resource type="Script" uid="uid://ce4b32pp4puyj" path="res://sceny/final_teddy.gd" id="52_f2yyf"]
 [ext_resource type="Script" uid="uid://bfu7hc2dsos5n" path="res://sceny/npc/dialog_option.gd" id="53_en7r5"]
-[ext_resource type="AudioStream" uid="uid://smd5a8kawstd" path="res://sfx/scena 3.mp3" id="55_r2vai"]
+[ext_resource type="AudioStream" uid="uid://bswgondyi2gfn" path="res://assety/winieta/scena 3.mp3" id="54_en7r5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orym7"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1899,7 +1899,8 @@ script = ExtResource("53_en7r5")
 dialog = Array[String](["tSo, how do you feel?", "jWhat?", "tWhat was all of this for?", "j...I don’t know.", "tYou’re pathetic.", "tStuck in a pathetic job with a pathetic salary.", "tYou’re nobody.", "jI know.", "tYou could do something about it, but why would you? You’re comfortable.", "jThat’s not true.", "tYou could change something, but you’re too afraid.", "jTHAT’S NOT TRUE!"])
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1117103949]
-stream = ExtResource("55_r2vai")
+stream = ExtResource("54_en7r5")
+volume_db = -4.21
 autoplay = true
 
 [connection signal="dialog_over" from="player" to="." method="_on_player_dialog_over"]
