@@ -2356,7 +2356,7 @@ dialog = Array[String](["jOkay. \"Dear Sir or Madam... \"", "cDid you hear about
 
 [node name="WorkSecondEmail" type="Node" parent="NaszeBiurko/Dialogi" unique_id=854447147]
 script = ExtResource("58_ae3hb")
-dialog = Array[String](["j \"Dear Sir or Madam... \"", "j\"You’ve got to be f*cking kidding me. You’re not serious, and your f*cking conditions are complete bullsh*t.\"", "j\"I don’t give a damn about your terms, and I don’t give a sh*t about you either.\"", "j\"Yours sincerely...\"", "j Aaaand... sent.", "cDude, what's wrong with you?", "cAre you even listening to me?", "j What do you want?", "cNever mind. Here's another file for you to print."])
+dialog = Array[String](["j \"Dear Sir or Madam... \"", "j\"You’ve got to be f*cking kidding me. You’re not serious, and your f*cking conditions are complete bullsh*t.\"", "cHello?", "j\"I don’t give a damn about your terms, and I don’t give a sh*t about you either.\"", "j\"Yours sincerely...\"", "j Aaaand... sent.", "cDude, what's wrong with you?", "cAre you even listening to me?", "j What do you want?", "cNever mind. Here's another file for you to print."])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=414750796]
 libraries/ = SubResource("AnimationLibrary_rlv53")

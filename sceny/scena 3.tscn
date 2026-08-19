@@ -1900,7 +1900,7 @@ dialog = Array[String](["tSo, how do you feel?", "jWhat?", "tWhat was all of thi
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1117103949]
 stream = ExtResource("54_en7r5")
-volume_db = -4.21
+volume_db = 2.324
 autoplay = true
 
 [connection signal="dialog_over" from="player" to="." method="_on_player_dialog_over"]
