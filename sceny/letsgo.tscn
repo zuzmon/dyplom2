@@ -1997,6 +1997,11 @@ dialog = Array[String](["jI don't care."])
 transform = Transform3D(-0.05913307, -0.006346487, 0.003122976, -0.0060113906, 0.05894884, 0.005970612, -0.0037274696, 0.0056131193, -0.0591722, 23.8533, 2.4341602, -6.2134085)
 script = ExtResource("48_ae3hb")
 
+[node name="Dialogi" type="Node" parent="czerwony2" unique_id=589865718]
+
+[node name="Default" type="Node" parent="czerwony2/Dialogi" unique_id=1232780254]
+script = ExtResource("58_ae3hb")
+
 [node name="Teleport" parent="." unique_id=206469578 instance=ExtResource("51_nudkn")]
 transform = Transform3D(-0.96761674, 0, 0.2524239, 0, 1, 0, -0.2524239, 0, -0.96761674, 16.70742, 2.6122818, 84.55833)
 visible = false
@@ -2218,7 +2223,7 @@ transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2279,7 +2284,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]
@@ -2316,7 +2321,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.1855097, 0)
 shape = SubResource("CapsuleShape3D_exjxd")
 
 [node name="NPC_Kolega" parent="." unique_id=1857254386 instance=ExtResource("56_rq3hr")]
-transform = Transform3D(-0.039887533, 0, 0.9992042, 0, 1, 0, -0.9992042, 0, -0.039887533, 16.761683, -0.18574882, -10.9037895)
+transform = Transform3D(-0.0401318, 0, 0.9991944, 0, 1, 0, -0.9991944, 0, -0.0401318, 16.761683, -0.18574882, -10.9037895)
 
 [node name="Default" parent="NPC_Kolega/Dialogi" parent_id_path=PackedInt32Array(1857254386, 569248006) index="0" unique_id=151041152]
 dialog = Array[String](["cWhat are you waiting for? There's work to do."])

@@ -112,8 +112,10 @@ func _on_player_next_line():
 	if first_turn_flag:
 		first_turn_flag = false
 		$Camera3D.current = true
+		$NPC_Kolega.rotation_degrees = Vector3(0, 92.3, 0)
 	if second_turn_flag:
 		flag_count += 1
-		if flag_count == 6:
+		if flag_count == 7:
 			second_turn_flag = false
 			$Camera3D.current = true
+			$NPC_Kolega.rotation_degrees = Vector3(0, 92.3, 0)
