@@ -4,6 +4,91 @@
 [ext_resource type="FontFile" uid="uid://be558l1rwporf" path="res://Phatone-Regular.otf" id="1_ge73c"]
 [ext_resource type="AudioStream" uid="uid://cgbjqtl6brur6" path="res://sfx/myszka klik.mp3" id="3_4o7p5"]
 
+[sub_resource type="Animation" id="Animation_4o7p5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sxfhe"]
+resource_name = "inrto"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666667, 1.9666667, 3.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.06666667, 1.9666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ecxur"]
+_data = {
+&"RESET": SubResource("Animation_4o7p5"),
+&"inrto": SubResource("Animation_sxfhe")
+}
+
 [node name="Ending" type="Control" unique_id=787767904]
 layout_mode = 3
 anchors_preset = 15
@@ -43,6 +128,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=1195161660]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -72,6 +158,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Label3" type="Label" parent="." unique_id=50966587]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -102,6 +189,10 @@ flat = true
 
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=1627797330]
 stream = ExtResource("3_4o7p5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1458146388]
+libraries/ = SubResource("AnimationLibrary_ecxur")
+autoplay = &"inrto"
 
 [connection signal="pressed" from="Label2/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Label3/QuitButton" to="." method="_on_quit_button_pressed"]
