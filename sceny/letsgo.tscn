@@ -2357,7 +2357,7 @@ dialog = Array[String](["j(I hate this place.)"])
 
 [node name="WorkFirstEmail" type="Node" parent="NaszeBiurko/Dialogi" unique_id=908286878]
 script = ExtResource("58_ae3hb")
-dialog = Array[String](["jOkay. \"Dear Sir or Madam... \"", "cDid you hear about Arthur's divorce? They say it's because he cheated on his wife...", "j\"We would like to meet at 4:00 PM...\"", "cAnd that old secretary? She's as fat as a pig. I can't even stand looking at her.", "j\"regarding the price changes...\"", "jWait. Where does that old fool want to meet them anyway?", "jUgh, I guess I have to go and ask him."])
+dialog = Array[String](["jOkay. \"Dear Sir or Madam... \"", "cDid you hear about Arthur's divorce? They say it's because he cheated on his wife...", "j\"We would like to meet at 4:00 PM...\"", "cAnd that old secretary? She's as fat as a pig. I can't even stand looking at her.", "j\"regarding the price changes...\"", "j(Wait. Where does that old fool want to meet them anyway?)", "j(Ugh, I guess I have to go and ask him.)"])
 
 [node name="WorkSecondEmail" type="Node" parent="NaszeBiurko/Dialogi" unique_id=854447147]
 script = ExtResource("58_ae3hb")
