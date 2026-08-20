@@ -76,7 +76,6 @@
 [ext_resource type="Shader" uid="uid://0loctdk2xig4" path="res://sceny/pixeloza.gdshader" id="68_uig7l"]
 [ext_resource type="PackedScene" uid="uid://bqy5u80udopbu" path="res://Licencjat/licencjat modele final/obraz zuzi.glb" id="71_8m8tk"]
 [ext_resource type="PackedScene" uid="uid://bx4cxh453mxkg" path="res://Licencjat/licencjat modele final/belki.glb" id="73_h6l61"]
-[ext_resource type="AudioStream" uid="uid://csxodipoda44b" path="res://assety/szum/labirynt.mp3" id="77_7qj31"]
 [ext_resource type="AudioStream" uid="uid://c3i58v3l7sbrj" path="res://sfx/jumpscare labirynt.mp3" id="79_fymhe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tejhb"]
@@ -949,7 +948,7 @@ size = Vector3(2.0398788, 1, 1.2877884)
 material = SubResource("StandardMaterial3D_r7e7w")
 
 [node name="player" parent="." unique_id=1535646083 instance=ExtResource("2_ghaev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736843, 0, 56.748436)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736843, 0, -10.845917)
 collision_layer = 5
 collision_mask = 5
 
@@ -1171,7 +1170,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_s7xwn")
 shape = SubResource("ConcavePolygonShape3D_qnjt1")
 
 [node name="CSGBakedMeshInstance3D18" type="MeshInstance3D" parent="Sciany" unique_id=1412352528]
-transform = Transform3D(1.3690866, 0, -3.85385e-15, 0, 1, 0, 0, 0, 1.0847627, 17.671375, 10.941334, 30.787544)
+transform = Transform3D(1.3690866, 0, -3.85385e-15, 0, 1, 0, 0, 0, 1.0847627, 17.671375, 10.635854, 30.787544)
 mesh = SubResource("ArrayMesh_0ls24")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sciany/CSGBakedMeshInstance3D18" unique_id=1792307520]
@@ -3006,7 +3005,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6439171, 5.036804, -1.1728
 shape = SubResource("BoxShape3D_pqhuq")
 
 [node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=559735702]
-stream = ExtResource("77_7qj31")
 volume_db = -1.323
 autoplay = true
 

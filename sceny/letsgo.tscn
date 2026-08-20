@@ -1983,11 +1983,11 @@ shape = SubResource("BoxShape3D_0d0t2")
 
 [node name="Default" type="Node" parent="czerwony/Dialogi" unique_id=1241858938]
 script = ExtResource("58_ae3hb")
-dialog = Array[String](["jWhat is this?"])
+dialog = Array[String](["j(What is this?)"])
 
 [node name="Steal" type="Node" parent="czerwony/Dialogi" unique_id=1793679598]
 script = ExtResource("58_ae3hb")
-dialog = Array[String](["jShe doesn't need this."])
+dialog = Array[String](["j(She doesn't need this.)"])
 
 [node name="PostSteal" type="Node" parent="czerwony/Dialogi" unique_id=1190219870]
 script = ExtResource("58_ae3hb")
@@ -2202,16 +2202,16 @@ transform = Transform3D(1, 0, 0, 0, 1.1104597, 0, 0, 0, 1, -9.396303, -0.1724656
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.747495, 0.39487362, -18.630308)
 
 [node name="Default" parent="NPC_Boss/Dialogi" parent_id_path=PackedInt32Array(777428972, 569248006) index="0" unique_id=151041152]
-dialog = Array[String](["sWhat are you doing here? Get back to work!"])
+dialog = Array[String](["sWhat are you doing here? Get back to work!", "j(I’m always working, stupid old man.)"])
 
 [node name="FirstPapers" parent="NPC_Boss/Dialogi" parent_id_path=PackedInt32Array(777428972, 569248006) index="1" unique_id=861951256]
 dialog = Array[String](["sWhat took you so long? As usual, you're slow and you're never on time.", "sTch. Forget it. Send the email to the company I mentioned yesterday. ", "sTell them that we’d like to meet on Friday at 4:00 PM to discuss the price changes.And make sure you don't take too long this time!"])
 
 [node name="Ask" parent="NPC_Boss/Dialogi" parent_id_path=PackedInt32Array(777428972, 569248006) index="2" unique_id=245339257]
-dialog = Array[String](["jExcuse me Sir, but you didn’t say where you wanted to have the meeting.", "sI didn’t? Don’t be ridiculous. You forgot. Again.", "sLike I told you earlier, we want to meet on FRIDAY at 4:00 PM in OUR OFFICE on the second floor.", "sDid you understand? OUR OFFICE."])
+dialog = Array[String](["jExcuse me Sir, but you didn’t say where you wanted to have the meeting.", "sI didn’t? Don’t be ridiculous. You forgot. Again.", "j(No I don't.)", "sLike I told you earlier, we want to meet on FRIDAY at 4:00 PM in OUR OFFICE on the second floor.", "sDid you understand? OUR OFFICE.", "j(Oh shut up.)"])
 
 [node name="SecondPapers" parent="NPC_Boss/Dialogi" parent_id_path=PackedInt32Array(777428972, 569248006) index="3" unique_id=98931402]
-dialog = Array[String](["sAre you out of your mind?! What the hell did you write?!"])
+dialog = Array[String](["sAre you out of your mind?! What the hell did you write?!", "j(I wrote the truth.)", "sAre you listening to me?!", "j(After treating me like that? No.)", "j(I should go ask that guy who’s always gossiping about everyone if he has something else for me to print. Again.)"])
 
 [node name="AnimatedSprite3D" parent="NPC_Boss" index="3" unique_id=103366429]
 visible = true
@@ -2223,7 +2223,7 @@ transform = Transform3D(0.02458928, 0, 0.99969757, 0, 1, 0, -0.99969757, 0, 0.02
 [node name="baba idzie" parent="NPC_Kobieta" index="1" unique_id=1359519651]
 visible = false
 
-[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 381145584) index="0" unique_id=230795778]
+[node name="Skeleton3D" parent="NPC_Kobieta/baba idzie/Armature" parent_id_path=PackedInt32Array(839009704, 1359519651, 1657577727) index="0" unique_id=418859914]
 bones/0/position = Vector3(1.9000311, 1.615325, -248.34874)
 bones/0/rotation = Quaternion(-0.7077352, 0.039762188, -0.08219458, 0.7005526)
 bones/1/rotation = Quaternion(-0.002167112, 0.16220795, 0.9867542, -0.00012122652)
@@ -2284,7 +2284,7 @@ bones/39/position = Vector3(-0.02850376, 7.494411, 1.3330413e-05)
 bones/39/rotation = Quaternion(-0.028420676, 0.079499714, -0.23529747, 0.9682495)
 bones/40/position = Vector3(-1.4406303, 6.1521244, -1.0430813e-05)
 
-[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=1535664241]
+[node name="AnimationPlayer" parent="NPC_Kobieta/baba idzie" index="1" unique_id=887903960]
 autoplay = &"mixamo_com"
 
 [node name="StaticBody3D" parent="NPC_Kobieta" index="3" unique_id=1053622764]
@@ -2303,7 +2303,7 @@ dialog = Array[String](["kJust one more minute."])
 dialog = Array[String](["kI've corrected the documents. You can take them to the boss now."])
 
 [node name="Ask" parent="NPC_Kobieta/Dialogi" parent_id_path=PackedInt32Array(839009704, 569248006) index="4" unique_id=828152197]
-dialog = Array[String](["kHave you seen my teddy bear? It’s not on my desk where I left it. I don’t know where it could be.", "jNo."])
+dialog = Array[String](["kHave you seen my teddy bear? It’s not on my desk where I left it. I don’t know where it could be.", "jNo.", "kOkay..."])
 
 [node name="SecondPrinter" parent="NPC_Kobieta/Dialogi" parent_id_path=PackedInt32Array(839009704, 569248006) index="5" unique_id=2017042308]
 dialog = Array[String](["kI'm really sorry, Simon, but I made some more mistakes in the documents again. Could you please-", "jI don't care."])
@@ -2324,10 +2324,10 @@ shape = SubResource("CapsuleShape3D_exjxd")
 transform = Transform3D(-0.0401318, 0, 0.9991944, 0, 1, 0, -0.9991944, 0, -0.0401318, 16.761683, -0.18574882, -10.9037895)
 
 [node name="Default" parent="NPC_Kolega/Dialogi" parent_id_path=PackedInt32Array(1857254386, 569248006) index="0" unique_id=151041152]
-dialog = Array[String](["cWhat are you waiting for? There's work to do."])
+dialog = Array[String](["cWhat are you waiting for? There's work to do.", "j(You keep telling me off, but you’re not doing anything yourself.)"])
 
 [node name="Teddy" parent="NPC_Kolega/Dialogi" parent_id_path=PackedInt32Array(1857254386, 569248006) index="1" unique_id=1041400089]
-dialog = Array[String](["cWhere did you get it? Is this Betty’s? ", "cYou f*cking creep..."])
+dialog = Array[String](["cWhere did you get that teddy bear that's in your trash? Is this Betty’s? ", "cYou f*cking creep...", "jNo I'm not-", "cI will tell everyone.", "jNO!"])
 
 [node name="AnimatedSprite3D" parent="NPC_Kolega" index="3" unique_id=103366429]
 visible = true
@@ -2353,7 +2353,7 @@ shape = SubResource("BoxShape3D_572ec")
 
 [node name="Default" type="Node" parent="NaszeBiurko/Dialogi" unique_id=2026390189]
 script = ExtResource("58_ae3hb")
-dialog = Array[String](["jI hate this place."])
+dialog = Array[String](["j(I hate this place.)"])
 
 [node name="WorkFirstEmail" type="Node" parent="NaszeBiurko/Dialogi" unique_id=908286878]
 script = ExtResource("58_ae3hb")
